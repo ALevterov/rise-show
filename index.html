@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rise</title>
+    <script src="bundle.js" defer></script>
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__logo">
+        <img
+          src="./assets/images/first-section/logo.svg"
+          alt="logo"
+          class="header__logo_img"
+        />
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav_list">
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#why">Why RISE</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#how">How it was</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#speakers">Speakers</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#program">Program</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#tickets">Tickets</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#where">Where</a>
+          </li>
+          <li class="header__nav_elem">
+            <a class="header__nav_link" href="#sponsors">Sponsors</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__get_ticket">
+        <button class="get_ticket_btn">GET TICKET</button>
+      </div>
+      <div class="header__social">
+        <a
+          class="header__social_item"
+          href="https://instagram.com"
+          target="_blank"
+        >
+          <svg
+            width="28"
+            height="29"
+            viewBox="0 0 28 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.03817 0.0806423C7.14809 0.148043 6.18092 0.287527 5.20121 0.633807C2.76815 1.49376 1.06787 3.40908 0.431871 6.00636C0.0333389 7.63414 0 8.28783 0 14.4741C0 20.6645 0.0374317 21.4036 0.433491 23.0314C1.09336 25.7433 3.00698 27.7813 5.58141 28.5142C7.18842 28.9716 7.76942 29.0059 13.8131 28.9993C20.5386 28.992 21.4796 28.9171 23.1278 28.2576C24.1686 27.8411 24.838 27.3891 25.6224 26.5731C26.7224 25.4288 27.3594 24.1065 27.7133 22.2327C27.9749 20.8479 28.0831 14.6058 27.9291 9.7922C27.8734 8.054 27.8149 7.32938 27.6729 6.61889C27.3059 4.78192 26.72 3.59344 25.6228 2.46026C24.5301 1.33176 23.3135 0.6846 21.6172 0.329398C20.1798 0.0283469 13.9545 -0.0947061 9.03817 0.0806423ZM22.1938 5.19013C22.856 5.54188 23.185 6.13542 23.1327 6.88407C23.0265 8.40408 21.3289 9.05892 20.2887 7.98112C19.4195 7.08071 19.7169 5.591 20.8605 5.11628C21.2027 4.97423 21.8557 5.01045 22.1938 5.19013ZM15.2151 7.14749C15.9033 7.26312 17.1017 7.72513 17.7409 8.12114C18.4537 8.56282 19.4842 9.60272 19.9863 10.3872C22.6932 14.6159 20.6193 20.3421 15.8793 21.7276C14.9573 21.9972 13.1004 22.0197 12.2358 21.7719C10.9264 21.3966 9.81759 20.7348 8.90627 19.7847C7.58243 18.4043 6.90517 16.8201 6.80515 14.8698C6.72065 13.2228 7.10588 11.7781 8.00117 10.3841C9.05753 8.73932 10.7366 7.56532 12.5767 7.18495C13.265 7.04264 14.4883 7.02532 15.2151 7.14749ZM12.8418 9.84353C10.8528 10.3978 9.48241 12.1332 9.35988 14.2532C9.22729 16.547 10.7567 18.6669 12.9266 19.1968C15.1962 19.751 17.5454 18.4394 18.3558 16.1653C18.6372 15.3757 18.7037 14.2036 18.512 13.414C18.0804 11.6371 16.7882 10.2846 15.0955 9.83796C14.4652 9.67163 13.4497 9.67419 12.8418 9.84353Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+        <a
+          class="header__social_item"
+          href="https://instagram.com"
+          target="_blank"
+        >
+          <svg
+            width="29"
+            height="29"
+            viewBox="0 0 29 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.031 0.0447207C7.12513 0.668117 2.16304 4.79844 0.53268 10.448C0.101439 11.9422 -0.00136485 12.7226 1.36148e-05 14.4915C0.00139208 16.2611 0.106373 17.0576 0.53268 18.535C2.02584 23.7089 6.33956 27.6597 11.6493 28.7162C15.7395 29.53 19.8955 28.5789 23.287 26.0528C24.1062 25.4426 25.4659 24.0864 26.0742 23.2727C27.6025 21.2285 28.5476 18.9528 28.9092 16.4466C29.0295 15.6122 29.0305 13.3805 28.9108 12.5363C28.1848 7.41599 24.8513 3.08755 20.1053 1.10295C19.1377 0.698313 18.004 0.370431 16.9269 0.183535C15.9727 0.0180006 13.9625 -0.053615 13.031 0.0447207ZM19.3392 4.72588L19.6112 4.77099V6.35457V7.93816L18.4323 7.93859C17.0945 7.93902 16.7762 8.00166 16.448 8.32918C16.1123 8.66423 16.0571 8.96909 16.0567 10.4907L16.0563 11.8484H17.8039H19.5515L19.5084 12.12C19.4399 12.5527 19.1034 15.1952 19.1034 15.3008C19.1034 15.3772 18.795 15.3966 17.5798 15.3966H16.0563V19.8862V24.3757H14.2062H12.3562V19.8862V15.3966H10.8689H9.3816V13.6225V11.8484H10.8601H12.3385L12.3753 10.0562C12.4071 8.50934 12.4334 8.19138 12.5674 7.7333C13.0715 6.01004 14.2577 4.95629 16.0113 4.6741C16.4042 4.61096 18.8778 4.64941 19.3392 4.72588Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+    <section
+      class="section_first"
+      style="
+        background-image: url('./assets/images/first-section/first-background.webp');
+      "
+    >
+      <div class="container section_first__container">
+        <div class="section_first__content">
+          <div class="section_first__content_top">
+            <div class="content_top_wrapper">
+              <div class="content_top_wrapper_item">Miami</div>
+              <div class="content_top_wrapper_item">Florida 2023</div>
+              <div class="content_top_wrapper_item">july 11</div>
+            </div>
+          </div>
+          <div class="section_first__content_middle">
+            <h1 class="section_first_main_title">RISE</h1>
+            <span class="section_first_subscription"
+              >AMAZON SELLERS CONFERENCE</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="section_first__bottom">
+        <div class="section_first__content_bottom">
+          <button class="get_ticket_big_btn">
+            GET TICKET
+            <img src="./assets/images/first-section/arrow.svg" alt="arrow" />
+          </button>
+        </div>
+        <div class="running_string__container">
+          <div class="running_string__wrapper">
+            <div class="running_string__inner">
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+            </div>
+            <div class="running_string__inner_clone">
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+              <div class="running_string__item">where people rise</div>
+              <div class="running_string__item">knowledge</div>
+              <div class="running_string__item">insights</div>
+              <div class="running_string__item">networking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_why">
+      <img
+        class="section_why__plant"
+        src="./assets/images/why-section/plant.webp"
+        alt="plant"
+      />
+      <img
+        class="section_why__ellipse_left"
+        src="./assets/images/why-section/ellipse-left.webp"
+        alt="ellipse"
+      />
+      <img
+        class="section_why__ellipse_right"
+        src="./assets/images/why-section/ellipse-right.webp"
+        alt="ellipse"
+      />
+      <div class="container section_why_container">
+        <h3 class="section_why_title">Why RISE</h3>
+        <div class="section_why_subscription">
+          <span>RISE presents a rare occasion to connect, </span>learn, and
+          thrive in the company of successful sellers.
+        </div>
+        <div class="section_why_text">
+          <p>
+            <span>Here's why you shouldn't miss this extraordinary event:</span>
+          </p>
+          <p>
+            <span>Tap into Unparalleled Expertise: </span>Connect with $100M+
+            Amazon sellers who have achieved remarkable success. Our speakers
+            and participants are industry gurus, armed with breakthrough
+            knowledge and strategies that have propelled them to 7, 8, and even
+            9-figure revenues. Learn from their triumphs and gain a competitive
+            edge.
+          </p>
+          <p>
+            <span> Join the RISE Community: </span>
+            RISE is more than just a conference; it's a close-knit Amazon
+            family. Immerse yourself in a vibrant community of like-minded
+            sellers, entrepreneurs, and professionals. Network with top
+            performers, forge valuable partnerships, and build lifelong
+            connections. Together, we rise.
+          </p>
+          <p>
+            <span>Stay Ahead of the Curve: </span>
+            In today's fast-paced world, businesses face constant disruption. At
+            RISE, we bring you the latest insights, trends, and tactics that
+            will keep you ahead of the game. Don't wait for opportunities to
+            pass you by – seize them with confidence, armed with insider secrets
+            that only a select few possess.
+          </p>
+          <p>
+            <span>Unleash Explosive Growth: </span>
+            Imagine accelerating your Amazon business in record time. Our
+            step-by-step BLUEPRINT guides you through the proven strategies and
+            shortcuts to scale your business effortlessly. With two full days
+            packed with networking opportunities and participants from different
+            states and countries, RISE Conf is your gateway to rapid growth.
+          </p>
+          <p>
+            <span>A Rare Opportunity: </span>
+            Where else can you find over 50 Amazon millionaires, each with an
+            average revenue of $3,000,000+, gathering under one roof? RISE
+            presents a rare occasion to connect, learn, and thrive in the
+            company of successful sellers. Meet potential business partners,
+            investors, and mentors who can propel your journey to new heights.
+          </p>
+          <p>
+            <span>Don't Miss Your Chance: </span>
+            Whether you're a seasoned professional or just beginning your
+            e-commerce journey, secure your ticket to our highly anticipated
+            event on November 4-6. Our carefully curated lineup of experienced
+            speakers and participants guarantees an unparalleled learning
+            experience. This is your game-changer, your moment to shine.
+          </p>
+        </div>
+        <div class="section_why_ready_text">
+          <span>Ready to Rise? </span>
+          Reserve your spot today!
+        </div>
+        <div class="section_why_carousel_container">
+          <button class="why_carousel_btn_prev">
+            <svg
+              width="77"
+              height="24"
+              viewBox="0 0 77 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51471C13.1924 2.92893 13.1924 1.97918 12.6066 1.39339C12.0208 0.807606 11.0711 0.807606 10.4853 1.39339L0.939339 10.9393ZM77 10.5L2 10.5L2 13.5L77 13.5L77 10.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button class="why_carousel_btn_next">
+            <svg
+              width="77"
+              height="24"
+              viewBox="0 0 77 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M76.0607 13.0607C76.6464 12.4749 76.6464 11.5251 76.0607 10.9393L66.5147 1.3934C65.9289 0.807611 64.9792 0.807611 64.3934 1.3934C63.8076 1.97919 63.8076 2.92893 64.3934 3.51472L72.8787 12L64.3934 20.4853C63.8076 21.0711 63.8076 22.0208 64.3934 22.6066C64.9792 23.1924 65.9289 23.1924 66.5147 22.6066L76.0607 13.0607ZM0 13.5H75V10.5H0V13.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="owl-carousel owl-theme why-carousel" id="why-carousel">
+            <img src="./assets/images/why-section/1.webp" alt="" />
+            <img src="./assets/images/why-section/2.webp" alt="" />
+            <img src="./assets/images/why-section/3.webp" alt="" />
+          </div>
+        </div>
+        <div class="section_why_event">
+          <div class="section_why_event_item">
+            <div class="section_why_event_item_inner">
+              This is where champions are made.
+            </div>
+          </div>
+          <div class="section_why_event_item">
+            Reserve your spot today!
+            <span>GET TICKET</span>
+            <img
+              class="section_why_event_item_arrow"
+              src="./assets/images/why-section/arrow.svg"
+              alt="arrow"
+            />
+          </div>
+          <div class="section_why_event_item">11 july 2023</div>
+        </div>
+      </div>
+    </section>
+    <section class="section_how">
+      <img
+        class="section_how_palm"
+        src="./assets/images/how-section/palm.webp"
+        alt="palm"
+      />
+      <img
+        class="section_how_ellipse_pink"
+        src="./assets/images/how-section/ellipse-pink.webp"
+        alt="ellipse"
+      />
+      <img
+        class="section_how_ellipse_blue"
+        src="./assets/images/how-section/ellipse-blue.webp"
+        alt="ellipse"
+      />
+      <div class="container how_section_container">
+        <h1 class="how_section_title">
+          DISCOVER WHAT OUR RECENT EVENT ATTENDEES HAVE TO SAY
+        </h1>
+        <div class="how_carousel_container">
+          <div
+            class="how_carousel_wrapper"
+          >
+					<img class="how_carousel_bg" src="./assets/images/how-section/iPhone.webp" alt="bg" />
+            <img
+              class="how_carousel_logo"
+              src="./assets/images/first-section/logo.svg"
+              alt="logo"
+            />
+            <button class="how_carousel_btn_prev">
+              <svg
+                width="77"
+                height="24"
+                viewBox="0 0 77 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51471C13.1924 2.92893 13.1924 1.97918 12.6066 1.39339C12.0208 0.807606 11.0711 0.807606 10.4853 1.39339L0.939339 10.9393ZM77 10.5L2 10.5L2 13.5L77 13.5L77 10.5Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <button class="how_carousel_btn_next">
+              <svg
+                width="77"
+                height="24"
+                viewBox="0 0 77 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M76.0607 13.0607C76.6464 12.4749 76.6464 11.5251 76.0607 10.9393L66.5147 1.3934C65.9289 0.807611 64.9792 0.807611 64.3934 1.3934C63.8076 1.97919 63.8076 2.92893 64.3934 3.51472L72.8787 12L64.3934 20.4853C63.8076 21.0711 63.8076 22.0208 64.3934 22.6066C64.9792 23.1924 65.9289 23.1924 66.5147 22.6066L76.0607 13.0607ZM0 13.5H75V10.5H0V13.5Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+            <div class="owl-carousel owl-theme how_carousel" id="how-carousel">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+              <img class="how_carousel_item" src="./assets/images/how-section/1.webp">
+						</img>
+            </div>
+          </div>
+        </div>
+      </div>
+			<div class="how_image_wrapper">
+				<img class="how_image_wrapper_bg" src="./assets/images/how-section/image-bg.webp" alt="bg">
+				<div class="container">
+					<h1 class="how_section_title">
+						DIVE INTO THE IMMERSIVE EXPERIENCE OF PAST RISE CONFERENCE
+					</h1>
+					<div class="how_images">
+						<img src="./assets/images/how-section/i1.webp" alt="image1">
+						<img src="./assets/images/how-section/i2.webp" alt="image1">
+					</div>
+				</div>
+			</div>
+    </section>
+		<section class="section_speakers">
+			<img class="section_speakers_palm" src="./assets/images/speakers-section/palm.webp" alt="palm">
+			<img class="section_speakers_bg" src="./assets/images/speakers-section/bg.webp" alt="background">
+			<h1 class="section_speakers_title">
+				RISE SPEAKERS 2023
+			</h1>
+			<div class="container">
+				<div class="speakers_undertitle">
+					RISE is not just an event; it's an immersive experience that will leave an indelible mark on your entrepreneurial journey. Join us as we bring together the brightest minds in the industry, all in one place, to inspire, empower, and elevate each other.
+				</div>	
+				<div class="speakers_cases_container">
+					<div class="speakers_case">
+						<div class="speakers_case_title">Learn from the Best in the Business:</div>
+						<div class="speakers_case_content">Get ready to be captivated by their stories, as these remarkable individuals share their personal journeys, strategies, and hard-earned wisdom. They will reveal the tried-and-tested methods that propelled them to 7, 8, and 9-figure revenues, giving you the inside track to achieving phenomenal growth.</div>
+					</div>
+					<div class="speakers_case">
+						<div class="speakers_case_title">Uncover Breakthrough Strategies:</div>
+						<div class="speakers_case_content">During the conference, you will have exclusive access to powerful sessions where our esteemed speakers delve into the intricacies of their success. Discover the game-changing tactics they employed, uncover the hidden gems of Amazon selling, and gain insights that will revolutionize your approach to business.</div>
+					</div>
+					<div class="speakers_case">
+						<div class="speakers_case_title">Forge Connections and Network:</div>
+						<div class="speakers_case_content">It's not just about learning from these industry leaders; it's about building connections that can shape your future. Our speakers are eager to share their knowledge, engage in meaningful discussions, and connect with like-minded entrepreneurs. Take advantage of this unique opportunity to network, collaborate, and form valuable partnerships that can propel your business forward.</div>
+					</div>
+				</div>
+				<div class="section_speakers_carousel_container">
+          <button class="speakers_carousel_btn_prev">
+            <svg
+              width="77"
+              height="24"
+              viewBox="0 0 77 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.939339 10.9393C0.353554 11.5251 0.353554 12.4749 0.939339 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51471C13.1924 2.92893 13.1924 1.97918 12.6066 1.39339C12.0208 0.807606 11.0711 0.807606 10.4853 1.39339L0.939339 10.9393ZM77 10.5L2 10.5L2 13.5L77 13.5L77 10.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <button class="speakers_carousel_btn_next">
+            <svg
+              width="77"
+              height="24"
+              viewBox="0 0 77 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M76.0607 13.0607C76.6464 12.4749 76.6464 11.5251 76.0607 10.9393L66.5147 1.3934C65.9289 0.807611 64.9792 0.807611 64.3934 1.3934C63.8076 1.97919 63.8076 2.92893 64.3934 3.51472L72.8787 12L64.3934 20.4853C63.8076 21.0711 63.8076 22.0208 64.3934 22.6066C64.9792 23.1924 65.9289 23.1924 66.5147 22.6066L76.0607 13.0607ZM0 13.5H75V10.5H0V13.5Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="owl-carousel owl-theme speakers-carousel" id="speakers-carousel">
+            <div class="speakers_carousel_item">
+							<div class="speakers_carousel_item_img_container">
+								<img src="./assets/images/speakers-section/dmitry.webp" alt="speaker" class="speakers_carousel_item_img">
+							</div>
+							<div class="speakers_carousel_item_name">Dima Kubrak</div>
+							<ul class="speakers_carousel_item_list">
+								<li>8-figure Amazon seller</li>
+								<li>Founder of Sellerise and ASAP Warehouse</li>
+							</ul>
+							<div class="speakers_carousel_item_line"></div>
+						</div>
+						<div class="speakers_carousel_item">
+							<div class="speakers_carousel_item_img_container">
+								<img src="./assets/images/speakers-section/dmitry.webp" alt="speaker" class="speakers_carousel_item_img">
+							</div>
+							<div class="speakers_carousel_item_name">Dima Kubrak</div>
+							<ul class="speakers_carousel_item_list">
+								<li>8-figure Amazon seller</li>
+								<li>Founder of Sellerise and ASAP Warehouse</li>
+							</ul>
+							<div class="speakers_carousel_item_line"></div>
+						</div>
+						<div class="speakers_carousel_item">
+							<div class="speakers_carousel_item_img_container">
+								<img src="./assets/images/speakers-section/dmitry.webp" alt="speaker" class="speakers_carousel_item_img">
+							</div>
+							<div class="speakers_carousel_item_name">Dima Kubrak</div>
+							<ul class="speakers_carousel_item_list">
+								<li>8-figure Amazon seller</li>
+								<li>Founder of Sellerise and ASAP Warehouse</li>
+							</ul>
+							<div class="speakers_carousel_item_line"></div>
+						</div>
+          </div>
+        </div>
+				<div class="section_why_event speakers_event">
+					<div class="section_why_event_item">
+						Secure Your Seat Today
+					</div>
+					<div class="section_why_event_item">
+						Reserve your spot today!
+						<span>GET TICKET</span>
+						<img
+							class="section_why_event_item_arrow"
+							src="./assets/images/why-section/arrow.svg"
+							alt="arrow"
+						/>
+					</div>
+					<div class="section_why_event_item">Don't miss out on this extraordinary opportunity to learn from the best in the business. Reserve your spot now to gain access to the transformative knowledge, insights, and connections that our exceptional speakers will provide. Get ready to ignite your Amazon selling journey and reach new heights of success.</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_program">
+			<img src="./assets/images/program-section/bg.webp" alt="bg" class="section_program_bg">
+			<img src="./assets/images/speakers-section/blick.webp" alt="blue ellipse" class="section_program_ellipse_pink">
+			<div class="container">
+				<h1 class="section_program_title">
+					PROGRAM TO RISE
+				</h1>
+				<div class="section_program_undertitle">
+					Our program goes above and beyond mere learning from the best. Prepare for a dynamic blend of insightful sessions and dedicated networking time, creating the perfect environment to forge invaluable connections and exchange experiences with fellow Amazon sellers. Experience the powerful synergy of knowledge and meaningful connections, all meticulously woven into one exceptional program.
+				</div>
+				<div class="section_program_program">
+					<div class="program_item">
+						<h3 class="program_item_date">
+							10.17.2023
+						</h3>
+							<table class="program_item_body">
+								<tr>
+									<td>9:30 am</td>
+									<td>-</td>
+									<td>10:00 am</td>
+									<td>
+										Dima Kubrak <br>
+										Welcome Speech
+									</td>
+								</tr>
+								<tr>
+									<td>10:00 am</td>
+									<td>-</td>
+									<td>11:00 pm</td>
+									<td>
+										Presentations <br>from speakers
+									</td>
+								</tr>
+								<tr>
+									<td>11:00 am</td>
+									<td>-</td>
+									<td>12:00 pm</td>
+									<td>
+										Lunch
+									</td>
+								</tr>
+							</table>
+					</div>
+					<div class="program_item">
+						<h3 class="program_item_date">
+							10.18.2023
+						</h3>
+							<table class="program_item_body">
+								<tr>
+									<td>9:30 am</td>
+									<td>-</td>
+									<td>10:00 am</td>
+									<td>
+										Dima Kubrak <br>
+										Welcome Speech
+									</td>
+								</tr>
+								<tr>
+									<td>10:00 am</td>
+									<td>-</td>
+									<td>11:00 pm</td>
+									<td>
+										Presentations <br>from speakers
+									</td>
+								</tr>
+								<tr>
+									<td>11:00 am</td>
+									<td>-</td>
+									<td>12:00 pm</td>
+									<td>
+										Lunch
+									</td>
+								</tr>
+								<tr>
+									<td>12:00 am</td>
+									<td>-</td>
+									<td>13:00 pm</td>
+									<td>
+										Networking
+									</td>
+								</tr>
+								<tr>
+									<td>13:00 am</td>
+									<td>-</td>
+									<td>16:00 pm</td>
+									<td>
+										Presentations <br>from speakers
+									</td>
+								</tr>
+								<tr>
+									<td>16:30 am</td>
+									<td>-</td>
+									<td>19:00 pm</td>
+									<td>
+										Cocktail
+									</td>
+								</tr>
+							</table>
+					</div>
+					<div class="program_item">
+						<h3 class="program_item_date">
+							10.19.2023
+						</h3>
+							<table class="program_item_body">
+								<tr>
+									<td>9:30 am</td>
+									<td>-</td>
+									<td>10:00 am</td>
+									<td>
+										Dima Kubrak <br>
+										Welcome Speech
+									</td>
+								</tr>
+								<tr>
+									<td>10:00 am</td>
+									<td>-</td>
+									<td>11:00 pm</td>
+									<td>
+										Presentations <br>from speakers
+									</td>
+								</tr>
+								<tr>
+									<td>11:00 am</td>
+									<td>-</td>
+									<td>12:00 pm</td>
+									<td>
+										Lunch
+									</td>
+								</tr>
+							</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_tickets">
+			<img class="section_tickets_palm" src="./assets/images/tickets-section/palm.webp" alt="palm">
+			<div class="container">
+				<div class="tickets_container">
+					<div class="tickets_item">
+						<div class="tickets_item_title">
+							STANDART
+						</div>
+						<div class="tickets_item_services">
+							<p>Admission to all days of the conference</p>
+							<p>Lunch during conference</p>
+							<p>RISE Merchandise</p>
+							<p>VIP Dinner</p>
+							<p>Mastermind seccion</p>
+						</div>
+						<div class="tickets_item_bottom">
+							<div class="tickets_item_bottom_price">
+								price
+								<span>$3499</span>
+							</div>
+							<div class="tickets_item_bottom_buy">
+								BUY TICKET
+								<img
+								class="tickets_item_arrow"
+								src="./assets/images/why-section/arrow.svg"
+								alt="arrow"
+							/>
+							</div>
+						</div>
+					</div>
+					<div class="tickets_item">
+						<div class="tickets_item_title">
+							STANDART
+						</div>
+						<div class="tickets_item_services">
+							<p>Admission to all days of the conference</p>
+							<p>Lunch during conference</p>
+							<p>RISE Merchandise</p>
+							<p>VIP Dinner</p>
+							<p>Mastermind seccion</p>
+						</div>
+						<div class="tickets_item_bottom">
+							<div class="tickets_item_bottom_price">
+								price
+								<span>$3499</span>
+							</div>
+							<div class="tickets_item_bottom_buy">
+								BUY TICKET
+								<img
+								class="tickets_item_arrow"
+								src="./assets/images/why-section/arrow.svg"
+								alt="arrow"
+							/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_where">
+			<img src="./assets/images/where-section/palm.webp" alt="" class="section_where_palm">
+			<div class="section_where_content" style="background-image: url('./assets/images/where-section/bg.webp');">
+				<div class="container">
+					<h1 class="section_where_title">
+						WHERE TO RISE
+					</h1>
+					<div class="section_where_left_main">
+						<div class="section_where_left">
+							<div class="section_where_left_top">
+								<img  class="section_where_edition" src="./assets/images/where-section/edition.png" alt="edition">
+								<div class="section_where_left_subscription">
+									Collins Avenue, Miami beach, Florida
+								</div>
+							</div>
+							<div class="section_where_left_bottom">
+								<img src="./assets/images/where-section/1.webp" alt="1">
+								<img src="./assets/images/where-section/2.webp" alt="2">
+								<img src="./assets/images/where-section/3.webp" alt="3">
+							</div>
+						</div>
+						<div class="section_where_right">
+							<div class="section_where_right_map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.3956773138!2d-80.31186041308143!3d25.782538873705935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL%2C%20USA!5e0!3m2!1sen!2sru!4v1687609332395!5m2!1sen!2sru" width="405" height="741" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_sponsors">
+			<div class="container">
+				<h1 class="section_sponsors_title">SPONSORS</h1>
+				<div class="sponsors_container">
+					<div class="sponsor_item">
+						<div class="sponsor_item_name">Sponsor #1</div>
+					</div>
+					<div class="sponsor_item">
+						<div class="sponsor_item_name">Sponsor #2</div>
+					</div>
+					<div class="sponsor_item">
+						<div class="sponsor_item_name">Sponsor #3</div>
+					</div>
+					<div class="sponsor_item">
+						<div class="sponsor_item_name">Sponsor #4</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section_questions" style="background-image: url('./assets/images/question-section/bg.webp');">
+			<img class="section_questions_palm" src="./assets/images/question-section/palm.webp" alt="palm">
+			<img class="section_questions_ellipse_blue" src="./assets/images/question-section/blik.webp" alt="ellipse">
+			<h1 class="section_questions_title">
+				Have questions? Contact Us
+			</h1>
+			<div class="section_questions_center">
+				<div class="section_questions_email">rise@sellerise.com</div>
+				<div class="section_questions_social">
+					<a href="https://instagram.com">
+						<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.03817 0.0806423C7.14809 0.148043 6.18092 0.287527 5.20121 0.633807C2.76815 1.49376 1.06787 3.40908 0.431871 6.00636C0.0333389 7.63414 0 8.28783 0 14.4741C0 20.6645 0.0374317 21.4036 0.433491 23.0314C1.09336 25.7433 3.00698 27.7813 5.58141 28.5142C7.18842 28.9716 7.76942 29.0059 13.8131 28.9993C20.5386 28.992 21.4796 28.9171 23.1278 28.2576C24.1686 27.8411 24.838 27.3891 25.6224 26.5731C26.7224 25.4288 27.3594 24.1065 27.7133 22.2327C27.9749 20.8479 28.0831 14.6058 27.9291 9.7922C27.8734 8.054 27.8149 7.32938 27.6729 6.61889C27.3059 4.78192 26.72 3.59344 25.6228 2.46026C24.5301 1.33176 23.3135 0.6846 21.6172 0.329398C20.1798 0.0283469 13.9545 -0.0947061 9.03817 0.0806423ZM22.1938 5.19013C22.856 5.54188 23.185 6.13542 23.1327 6.88407C23.0265 8.40408 21.3289 9.05892 20.2887 7.98112C19.4195 7.08071 19.7169 5.591 20.8605 5.11628C21.2027 4.97423 21.8557 5.01045 22.1938 5.19013ZM15.2151 7.14749C15.9033 7.26312 17.1017 7.72513 17.7409 8.12114C18.4537 8.56282 19.4842 9.60272 19.9863 10.3872C22.6932 14.6159 20.6193 20.3421 15.8793 21.7276C14.9573 21.9972 13.1004 22.0197 12.2358 21.7719C10.9264 21.3966 9.81759 20.7348 8.90627 19.7847C7.58243 18.4043 6.90517 16.8201 6.80515 14.8698C6.72065 13.2228 7.10588 11.7781 8.00117 10.3841C9.05753 8.73932 10.7366 7.56532 12.5767 7.18495C13.265 7.04264 14.4883 7.02532 15.2151 7.14749ZM12.8418 9.84353C10.8528 10.3978 9.48241 12.1332 9.35988 14.2532C9.22729 16.547 10.7567 18.6669 12.9266 19.1968C15.1962 19.751 17.5454 18.4394 18.3558 16.1653C18.6372 15.3757 18.7037 14.2036 18.512 13.414C18.0804 11.6371 16.7882 10.2846 15.0955 9.83796C14.4652 9.67163 13.4497 9.67419 12.8418 9.84353Z" fill="white"/>
+							</svg>							
+					</a>
+					<a href="https://facebook.com">
+						<svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.031 0.0447207C7.12513 0.668117 2.16304 4.79844 0.53268 10.448C0.101439 11.9422 -0.00136485 12.7226 1.36148e-05 14.4915C0.00139208 16.2611 0.106373 17.0576 0.53268 18.535C2.02584 23.7089 6.33956 27.6597 11.6493 28.7162C15.7395 29.53 19.8955 28.5789 23.287 26.0528C24.1062 25.4426 25.4659 24.0864 26.0742 23.2727C27.6025 21.2285 28.5476 18.9528 28.9092 16.4466C29.0295 15.6122 29.0305 13.3805 28.9108 12.5363C28.1848 7.41599 24.8513 3.08755 20.1053 1.10295C19.1377 0.698313 18.004 0.370431 16.9269 0.183535C15.9727 0.0180006 13.9625 -0.053615 13.031 0.0447207ZM19.3392 4.72588L19.6112 4.77099V6.35457V7.93816L18.4323 7.93859C17.0945 7.93902 16.7762 8.00166 16.448 8.32918C16.1123 8.66423 16.0571 8.96909 16.0567 10.4907L16.0563 11.8484H17.8039H19.5515L19.5084 12.12C19.4399 12.5527 19.1034 15.1952 19.1034 15.3008C19.1034 15.3772 18.795 15.3966 17.5798 15.3966H16.0563V19.8862V24.3757H14.2062H12.3562V19.8862V15.3966H10.8689H9.3816V13.6225V11.8484H10.8601H12.3385L12.3753 10.0562C12.4071 8.50934 12.4334 8.19138 12.5674 7.7333C13.0715 6.01004 14.2577 4.95629 16.0113 4.6741C16.4042 4.61096 18.8778 4.64941 19.3392 4.72588Z" fill="white"/>
+							</svg>							
+					</a>
+				</div>
+			</div>
+		</section>
+  </body>
+</html>

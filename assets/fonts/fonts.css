@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Heavy'), local('SF-Pro-Display-Heavy'),
+    url('SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display HeavyItalic'), local('SF-Pro-Display-HeavyItalic'),
+    url('SF-Pro-Display-HeavyItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Black'), local('SF-Pro-Display-Black'),
+    url('SF-Pro-Display-Black.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display BlackItalic'), local('SF-Pro-Display-BlackItalic'),
+    url('SF-Pro-Display-BlackItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Bold'), local('SF-Pro-Display-Bold'),
+    url('SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display BoldItalic'), local('SF-Pro-Display-BoldItalic'),
+    url('SF-Pro-Display-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Semibold Medium'), local('SF-Pro-Display-Semibold'),
+    url('SF-Pro-Display-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display SemiboldItalic'),
+    local('SF-Pro-Display-SemiboldItalic'),
+    url('SF-Pro-Display-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Medium'), local('SF-Pro-Display-Medium'),
+    url('SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display MediumItalic'),
+    local('SF-Pro-Display-MediumItalic'),
+    url('SF-Pro-Display-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Regular'), local('SF-Pro-Display-Regular'),
+    url('SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display RegularItalic'),
+    local('SF-Pro-Display-RegularItalic'),
+    url('SF-Pro-Display-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Light'), local('SF-Pro-Display-Light'),
+    url('SF-Pro-Display-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display LightItalic'), local('SF-Pro-Display-LightItalic'),
+    url('SF-Pro-Display-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Ultralight'), local('SF-Pro-Display-Ultralight'),
+    url('SF-Pro-Display-Ultralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display UltralightItalic'),
+    local('SF-Pro-Display-UltralightItalic'),
+    url('SF-Pro-Display-UltralightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display Thin'), local('SF-Pro-Display-Thin'),
+    url('SF-Pro-Display-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF-Pro-Display ThinItalic'), local('SF-Pro-Display-ThinItalic'),
+    url('SF-Pro-Display-ThinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
