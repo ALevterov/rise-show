@@ -318,16 +318,23 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `* {
+___CSS_LOADER_EXPORT___.push([module.id, `:root {
+  --container-margin: 120px;
+  --title-size: 50px;
+}
+
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "SF Pro Display";
   color: #fff;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #0f011f;
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -356,10 +363,21 @@ li {
 }
 
 .container {
-  width: calc(100vw - 240px);
-  margin: 0 120px;
+  width: calc(100vw - var(--container-margin) * 2);
+  margin: 0 var(--container-margin);
 }
 
+@media screen and (max-width: 1440px) {
+  :root {
+    --container-margin: 90px;
+    --title-size: 38px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  :root {
+    --title-size: 25.4px;
+  }
+}
 .section_first {
   width: 100%;
   background-size: cover;
@@ -374,16 +392,16 @@ li {
 
 .section_first_content_container {
   width: 100%;
-  padding: 0 120px;
+  padding: 0 var(--container-margin);
 }
 
 .header {
-  width: calc(100vw - 240px);
-  margin: 0 120px;
+  width: calc(100vw - var(--container-margin) * 2);
+  margin: 0 var(--container-margin);
   position: fixed;
   z-index: 99;
   top: 66px;
-  width: calc(100vw - 240px);
+  width: calc(100vw - var(--container-margin) * 2);
   border: 1px solid #fff;
   height: 128px;
   display: flex;
@@ -408,6 +426,8 @@ li {
   flex-grow: 1;
   padding: 53px 0;
   padding-left: 4.69vw;
+  display: flex;
+  align-items: center;
 }
 
 .header__nav_list {
@@ -512,7 +532,7 @@ li {
   font-style: normal;
   font-weight: 800;
   font-size: 201px;
-  line-height: 240px;
+  line-height: 120%;
 }
 
 .section_first_subscription {
@@ -520,7 +540,7 @@ li {
   font-style: normal;
   font-weight: 300;
   font-size: 43px;
-  line-height: 51px;
+  line-height: 120%;
   max-width: 264px;
 }
 
@@ -564,7 +584,7 @@ li {
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 120%;
   color: #fde82b;
   position: relative;
   white-space: nowrap;
@@ -613,6 +633,12 @@ li {
   background-color: #fde82b;
   color: #0f0121;
 }
+.get_ticket_btn:hover path {
+  stroke: #0f0121;
+}
+.get_ticket_btn path {
+  transition: 0.3s ease-in-out stroke;
+}
 
 .get_ticket_big_btn {
   font-family: "SF Pro Display";
@@ -624,12 +650,18 @@ li {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   font-size: 49.4621px;
-  line-height: 59px;
+  line-height: 112%;
   padding: 18.8427px 32.9747px;
 }
 .get_ticket_big_btn:hover {
   background-color: #fde82b;
   color: #0f0121;
+}
+.get_ticket_big_btn:hover path {
+  stroke: #0f0121;
+}
+.get_ticket_big_btn path {
+  transition: 0.3s ease-in-out stroke;
 }
 
 .section_first__bottom {
@@ -637,8 +669,192 @@ li {
   padding-bottom: 122px;
 }
 
+@media screen and (max-width: 1440px) {
+  .header {
+    height: 96px;
+    top: 50px;
+  }
+  .header__logo {
+    padding: 19px;
+  }
+  .header__logo .header__logo_img {
+    width: 75px;
+    height: 59px;
+  }
+  .header__nav {
+    padding: 39px 0;
+    padding-left: 4vw;
+  }
+  .header__nav_link {
+    font-size: 16px;
+  }
+  .get_ticket_btn {
+    padding: 5.996px 10.493px;
+    font-size: 16px;
+  }
+  .header__social {
+    gap: 31px;
+    padding-left: 0;
+  }
+  .header__social svg {
+    width: 21px;
+    height: 21px;
+  }
+  .section_first__content {
+    padding-top: 146px;
+  }
+  .content_top_wrapper_item {
+    font-size: 53.129px;
+    padding: 16.698px 23.529px;
+  }
+  .section_first__content_middle {
+    margin-top: 50px;
+  }
+  .section_first_main_title {
+    font-size: 152.557px;
+  }
+  .section_first_subscription {
+    font-size: 32.637px;
+    max-width: 201px;
+  }
+  .section_first__content_bottom {
+    margin-top: 48px;
+  }
+  .get_ticket_big_btn {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    background-color: transparent;
+    color: #fde82b;
+    border: 1.77px solid #fde82b;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 14.301px 25.028px;
+    font-size: 37.541px;
+  }
+  .get_ticket_big_btn:hover {
+    background-color: #fde82b;
+    color: #0f0121;
+  }
+  .get_ticket_big_btn:hover path {
+    stroke: #0f0121;
+  }
+  .get_ticket_big_btn path {
+    transition: 0.3s ease-in-out stroke;
+  }
+  .get_ticket_big_btn svg {
+    width: 27px;
+    height: 28px;
+    margin-left: 10px;
+  }
+  .running_string__container {
+    margin-top: 86px;
+  }
+  .running_string__container .running_string__item {
+    font-size: 18.975px;
+  }
+  .running_string__container .running_string__item::after {
+    height: 1px;
+    top: calc(50% + 1px);
+  }
+  .section_first__bottom {
+    padding-bottom: 92px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 64px;
+    top: 35px;
+  }
+  .header__logo {
+    padding: 12.5px;
+  }
+  .header__logo .header__logo_img {
+    width: 50px;
+    height: 40px;
+  }
+  .header__nav {
+    padding: 25px 0;
+    padding-left: 4vw;
+  }
+  .header__nav_link {
+    font-size: 10.536px;
+  }
+  .get_ticket_btn {
+    padding: 4.014px 7.024px;
+    font-size: 10.536px;
+  }
+  .header__social {
+    gap: 21px;
+    padding-left: 0;
+  }
+  .header__social svg {
+    width: 14.5px;
+    height: 14.5px;
+  }
+  .section_first__content {
+    padding-top: 99px;
+  }
+  .content_top_wrapper_item {
+    font-size: 35.566px;
+    padding: 11px 15.5px;
+  }
+  .section_first__content_middle {
+    margin-top: 34px;
+  }
+  .section_first_main_title {
+    font-size: 102.124px;
+  }
+  .section_first_subscription {
+    font-size: 21.848px;
+    max-width: 135px;
+  }
+  .section_first__content_bottom {
+    margin-top: 32px;
+  }
+  .get_ticket_big_btn {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 300;
+    background-color: transparent;
+    color: #fde82b;
+    border: 1.197px solid #fde82b;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 9.574px 16.754px;
+    font-size: 25.131px;
+  }
+  .get_ticket_big_btn:hover {
+    background-color: #fde82b;
+    color: #0f0121;
+  }
+  .get_ticket_big_btn:hover path {
+    stroke: #0f0121;
+  }
+  .get_ticket_big_btn path {
+    transition: 0.3s ease-in-out stroke;
+  }
+  .get_ticket_big_btn svg {
+    width: 18px;
+    height: 19px;
+    margin-left: 7px;
+  }
+  .running_string__container {
+    margin-top: 57px;
+  }
+  .running_string__container .running_string__item {
+    font-size: 12.702px;
+  }
+  .running_string__container .running_string__item::after {
+    height: 1px;
+    top: calc(50% + 1px);
+  }
+  .section_first__bottom {
+    padding-bottom: 62px;
+  }
+}
 .section_why {
-  padding-top: 405px;
+  padding-top: 305px;
   position: relative;
   padding-bottom: 170px;
   position: relative;
@@ -653,7 +869,7 @@ li {
   left: 50%;
 }
 .section_why::before {
-  height: 304px;
+  height: 204px;
 }
 
 .section_why__ellipse_left,
@@ -692,13 +908,11 @@ li {
 }
 
 .section_why_title {
-  font-family: "SF Pro Display";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 48px;
   color: #fde82b;
+  font-size: var(--title-size);
+  font-family: SF Pro Display;
   text-align: center;
+  font-weight: 400;
 }
 
 .section_why_subscription {
@@ -706,7 +920,7 @@ li {
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
-  line-height: 60px;
+  line-height: 120%;
   color: #ffffff;
   margin-top: 93px;
   max-width: 68vw;
@@ -728,7 +942,7 @@ li {
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
-  line-height: 35px;
+  line-height: 140%;
   color: #ffffff;
 }
 .section_why_text p span {
@@ -742,7 +956,7 @@ li {
   font-style: normal;
   font-weight: 200;
   font-size: 50px;
-  line-height: 60px;
+  line-height: 120%;
   color: #ffffff;
 }
 
@@ -773,7 +987,7 @@ li {
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 120%;
   color: #0f011f;
   padding: 54px 66px;
   position: relative;
@@ -784,6 +998,7 @@ li {
   cursor: pointer;
   border: none;
   transition: background-color 0.3s ease-in-out;
+  white-space: nowrap;
 }
 .section_why_event_item:nth-child(2):hover {
   background-color: #04bee0;
@@ -793,12 +1008,13 @@ li {
   font-style: normal;
   font-weight: 500;
   font-size: 80px;
-  line-height: 95px;
+  line-height: 120%;
   text-transform: uppercase;
   color: #ffffff;
   padding: 36px 36px;
   white-space: nowrap;
   border-left: none;
+  width: 36.4vw;
 }
 .section_why_event_item .section_why_event_item_arrow {
   position: absolute;
@@ -816,7 +1032,7 @@ li {
   font-style: normal;
   font-weight: 300;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 120%;
 }
 
 .section_why_carousel_container {
@@ -843,8 +1059,122 @@ li {
   right: 0;
 }
 
+@media screen and (max-width: 1440px) {
+  .section_why {
+    padding-top: 246px;
+    padding-bottom: 129px;
+  }
+  .section_why::before {
+    height: 154px;
+  }
+  .section_why_subscription {
+    font-size: 37.95px;
+    margin-top: 62px;
+  }
+  .section_why_text {
+    margin-top: 63px;
+    gap: 27px;
+  }
+  .section_why_text p {
+    font-size: 19px;
+  }
+  .section_why_ready_text {
+    font-size: 38px;
+    margin-top: 61px;
+  }
+  .section_why_carousel_container {
+    padding: 0 93px;
+    margin-top: 62px;
+  }
+  .why_carousel_btn_prev,
+  .why_carousel_btn_prev svg,
+  .why_carousel_btn_next,
+  .why_carousel_btn_next svg {
+    width: 57px;
+  }
+  .section_why_event {
+    margin-top: 175px;
+  }
+  .section_why_event_item .section_why_event_item_arrow {
+    width: 26.767px;
+    height: 27.758px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .section_why_event_item .section_why_event_item_inner {
+    font-size: 18.811px;
+  }
+  .section_why_event_item:first-child {
+    padding: 40px 50px;
+  }
+  .section_why_event_item:nth-child(2) {
+    padding: 40px 50px;
+    font-size: 18.811px;
+  }
+  .section_why_event_item:nth-child(3) {
+    padding: 27px 60px;
+    font-size: 60.195px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_why {
+    padding-top: 186px;
+    padding-bottom: 70px;
+  }
+  .section_why::before {
+    height: 124px;
+  }
+  .section_why_subscription {
+    font-size: 25.404px;
+    margin-top: 41px;
+  }
+  .section_why_text {
+    margin-top: 43px;
+    gap: 19px;
+  }
+  .section_why_text p {
+    font-size: 12.702px;
+  }
+  .section_why_ready_text {
+    font-size: 25.404px;
+    margin-top: 40px;
+  }
+  .section_why_carousel_container {
+    padding: 0 62px;
+    margin-top: 42px;
+  }
+  .why_carousel_btn_prev,
+  .why_carousel_btn_prev svg,
+  .why_carousel_btn_next,
+  .why_carousel_btn_next svg {
+    width: 38px;
+  }
+  .section_why_event {
+    margin-top: 116px;
+  }
+  .section_why_event_item .section_why_event_item_arrow {
+    width: 18px;
+    height: 19px;
+    bottom: 10px;
+    right: 10px;
+  }
+  .section_why_event_item .section_why_event_item_inner {
+    font-size: 12.592px;
+  }
+  .section_why_event_item:first-child {
+    padding: 27px 35px;
+  }
+  .section_why_event_item:nth-child(2) {
+    padding: 40px 33px;
+    font-size: 12.592px;
+  }
+  .section_why_event_item:nth-child(3) {
+    padding: 19px 40px;
+    font-size: 40.296px;
+  }
+}
 .section_how {
-  padding-top: 588px;
+  padding-top: 444px;
   position: relative;
 }
 .section_how::before {
@@ -857,7 +1187,7 @@ li {
   left: 50%;
 }
 .section_how::before {
-  height: 418px;
+  height: 274px;
 }
 
 .section_how_palm {
@@ -886,8 +1216,6 @@ li {
   border-radius: 923px;
   background: rgba(255, 39, 174, 0.09);
   filter: blur(172.4501037598px);
-  width: 923px;
-  height: 923px;
   left: 129px;
   top: 60%;
   transform: translateY(-50%);
@@ -905,7 +1233,7 @@ li {
 
 .how_section_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -998,7 +1326,7 @@ li {
   position: relative;
   top: -100px;
   padding-top: 232px;
-  padding-bottom: 102px;
+  padding-bottom: 82px;
   overflow: hidden;
 }
 .how_image_wrapper .container {
@@ -1008,6 +1336,7 @@ li {
 .how_image_wrapper .how_image_wrapper_bg {
   position: absolute;
   top: -22%;
+  width: 100%;
 }
 .how_image_wrapper .how_images {
   margin-top: 114px;
@@ -1018,10 +1347,143 @@ li {
   width: calc(50% - 10px);
 }
 
+@media screen and (max-width: 1440px) {
+  .how_image_wrapper {
+    padding-bottom: 47px;
+  }
+  .section_how {
+    padding-top: 324px;
+  }
+  .section_how::before {
+    height: 204px;
+  }
+  .section_how_palm {
+    top: -4%;
+  }
+  .how_carousel_container {
+    margin-top: 97px;
+  }
+  .how_carousel_wrapper,
+  .how_carousel_bg {
+    width: 385px;
+    height: 770px;
+  }
+  .how_carousel_wrapper {
+    padding-top: 70px;
+  }
+  .how_carousel_logo {
+    width: 97px;
+    height: 78px;
+  }
+  .how_carousel {
+    margin-top: 82px;
+  }
+  .how_carousel,
+  .how_carousel_item {
+    max-width: 288px;
+    max-height: 352px;
+  }
+  .how_carousel {
+    right: 0;
+  }
+  .how_carousel .owl-dots {
+    margin-top: 81px;
+  }
+  .how_carousel_btn_prev,
+  .how_carousel_btn_prev svg,
+  .how_carousel_btn_next,
+  .how_carousel_btn_next svg {
+    width: 57px;
+  }
+  .how_carousel_btn_prev {
+    left: -50%;
+  }
+  .how_carousel_btn_next {
+    right: -70%;
+  }
+  .how_image_wrapper {
+    padding-top: 180px;
+  }
+  .how_image_wrapper .how_images {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .how_image_wrapper {
+    padding-bottom: 0;
+    padding-top: 150px;
+  }
+  .how_image_wrapper .how_image_wrapper_bg {
+    top: -15%;
+  }
+  .section_how {
+    padding-top: 230px;
+  }
+  .section_how::before {
+    height: 154px;
+  }
+  .section_how_palm {
+    top: -4%;
+  }
+  .how_carousel_container {
+    margin-top: 61px;
+  }
+  .how_carousel_wrapper,
+  .how_carousel_bg {
+    width: 253px;
+    height: 515px;
+  }
+  .how_carousel_wrapper {
+    padding-top: 68px;
+  }
+  .how_carousel_logo {
+    width: 66px;
+    height: 52px;
+  }
+  .how_carousel {
+    margin-top: 55px;
+  }
+  .how_carousel,
+  .how_carousel_item {
+    max-width: 193px;
+    max-height: 236px;
+  }
+  .how_carousel {
+    right: 0;
+  }
+  .how_carousel .owl-dots {
+    margin-top: 53px;
+    gap: 5px;
+  }
+  .how_carousel .owl-dots .owl-dot {
+    width: 16px;
+    height: 3px;
+    border-radius: 24.003px;
+  }
+  .how_carousel .owl-dots .owl-dot.active {
+    width: 43px;
+  }
+  .how_carousel_btn_prev,
+  .how_carousel_btn_prev svg,
+  .how_carousel_btn_next,
+  .how_carousel_btn_next svg {
+    width: 38px;
+  }
+  .how_carousel_btn_prev {
+    left: -50%;
+  }
+  .how_carousel_btn_next {
+    right: -70%;
+  }
+  .how_image_wrapper .how_images {
+    margin-top: 60px;
+    gap: 10px;
+  }
+}
 .section_speakers {
   position: relative;
   position: relative;
-  padding-top: 474px;
+  padding-top: 374px;
   padding-bottom: 170px;
 }
 .section_speakers::before {
@@ -1034,7 +1496,7 @@ li {
   left: 50%;
 }
 .section_speakers::before {
-  height: 304px;
+  height: 204px;
 }
 .section_speakers .container {
   position: relative;
@@ -1051,14 +1513,14 @@ li {
 .section_speakers_palm {
   position: absolute;
   right: 0;
-  top: -50%;
+  top: -20%;
   width: 25.365vw;
   z-index: 1;
 }
 
 .section_speakers_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -1112,11 +1574,11 @@ li {
 }
 
 .speakers_carousel_btn_prev {
-  left: -140px;
+  left: -7.29vw;
 }
 
 .speakers_carousel_btn_next {
-  right: -140px;
+  right: -7.29vw;
 }
 
 .speakers_carousel_item {
@@ -1142,6 +1604,7 @@ li {
   font-size: 20px;
   font-family: SF Pro Display;
   font-weight: 300;
+  list-style: inside;
 }
 .speakers_carousel_item .speakers_carousel_item_line {
   width: 100%;
@@ -1155,7 +1618,8 @@ li {
   font-family: SF Pro Display;
   font-weight: 600;
   padding: 58px 32px;
-  white-space: nowrap;
+  white-space: normal;
+  max-width: 25.52vw;
 }
 .section_why_event.speakers_event .section_why_event_item:nth-child(3) {
   padding: 33px;
@@ -1163,15 +1627,130 @@ li {
   font-size: 18px;
   font-family: SF Pro Display;
   font-weight: 300;
-  line-height: 25px;
+  line-height: 133%;
   white-space: normal;
   text-transform: none;
-  max-width: 37vw;
+  max-width: 36.4vw;
 }
 
+@media screen and (max-width: 1700px) {
+  .section_why_event.speakers_event .section_why_event_item:first-child {
+    font-size: 33px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .section_speakers {
+    padding-top: 294px;
+    padding-bottom: 130px;
+  }
+  .section_speakers::before {
+    height: 154px;
+  }
+  .speakers_undertitle {
+    margin-top: 30px;
+    font-size: 18.707px;
+  }
+  .speakers_cases_container {
+    gap: 16px;
+    margin-top: 43px;
+  }
+  .speakers_cases_container .speakers_case_title,
+  .speakers_cases_container .speakers_case_content {
+    font-size: 15px;
+  }
+  .speakers_cases_container .speakers_case_content {
+    margin-top: 15px;
+  }
+  .section_speakers_carousel_container {
+    margin-top: 80px;
+  }
+  .speakers_carousel_item {
+    gap: 31px;
+  }
+  .speakers_carousel_item .speakers_carousel_item_list li {
+    font-size: 15px;
+  }
+  .speakers_carousel_item_name {
+    font-size: 23px;
+  }
+  .speakers_carousel_btn_prev,
+  .speakers_carousel_btn_prev svg,
+  .speakers_carousel_btn_next,
+  .speakers_carousel_btn_next svg {
+    width: 57px;
+  }
+  .section_why_event.speakers_event {
+    margin-top: 105px;
+  }
+  .section_why_event.speakers_event .section_why_event_item:first-child {
+    padding: 44px 24px;
+    font-size: 31px;
+  }
+  .section_why_event.speakers_event .section_why_event_item:nth-child(3) {
+    padding: 25px 16px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_speakers {
+    padding-top: 224px;
+    padding-bottom: 87px;
+  }
+  .section_speakers::before {
+    height: 124px;
+  }
+  .speakers_undertitle {
+    margin-top: 21px;
+    font-size: 12.523px;
+  }
+  .speakers_cases_container {
+    gap: 10px;
+    margin-top: 29px;
+  }
+  .speakers_cases_container .speakers_case_title,
+  .speakers_cases_container .speakers_case_content {
+    font-size: 10px;
+  }
+  .speakers_cases_container .speakers_case_content {
+    margin-top: 11px;
+  }
+  .section_speakers_carousel_container {
+    margin-top: 63px;
+  }
+  .speakers_carousel_item {
+    gap: 21px;
+  }
+  .speakers_carousel_item .speakers_carousel_item_list li {
+    font-size: 10px;
+  }
+  .speakers_carousel_item .speakers_carousel_item_name {
+    font-size: 15.242px;
+  }
+  .speakers_carousel_btn_prev,
+  .speakers_carousel_btn_prev svg,
+  .speakers_carousel_btn_next,
+  .speakers_carousel_btn_next svg {
+    width: 38px;
+  }
+  .section_why_event.speakers_event {
+    margin-top: 71px;
+  }
+  .section_why_event.speakers_event .section_why_event_item:first-child {
+    padding: 30px 16px;
+    font-size: 20.537px;
+  }
+  .section_why_event.speakers_event .section_why_event_item:nth-child(2) {
+    padding: 27px 33px;
+    font-size: 12.523px;
+  }
+  .section_why_event.speakers_event .section_why_event_item:nth-child(3) {
+    padding: 16px 12px;
+    font-size: 9.145px;
+  }
+}
 .section_program {
   position: relative;
-  padding-top: 474px;
+  padding-top: 374px;
   padding-bottom: 474px;
   overflow: hidden;
   z-index: 2;
@@ -1185,8 +1764,8 @@ li {
   top: 0;
   left: 50%;
 }
-.section_program:before {
-  height: 304px;
+.section_program::before {
+  height: 204px;
 }
 .section_program .container {
   position: relative;
@@ -1197,7 +1776,7 @@ li {
   position: absolute;
   z-index: 1;
   width: 100%;
-  top: 35%;
+  top: 33%;
 }
 
 .section_program_ellipse_pink {
@@ -1215,7 +1794,7 @@ li {
 
 .section_program_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -1247,12 +1826,25 @@ li {
   width: 100%;
   border-collapse: collapse;
 }
+.section_program_program .program_item_body tr {
+  transition: 0.3s ease-in-out background-color;
+}
+.section_program_program .program_item_body tr:hover {
+  background-color: #40354d;
+  color: #04bee0;
+}
+.section_program_program .program_item_body tr:hover td {
+  background-color: #40354d;
+  color: #04bee0;
+  border-bottom: 1px solid #04bee0;
+}
 .section_program_program .program_item_body tr td {
+  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out border;
   padding: 62px 0 50px 0;
   border-bottom: 1px solid #fff;
+  color: #fff;
 }
 .section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {
-  color: #fff;
   font-size: 50px;
   font-family: SF Pro Display;
 }
@@ -1263,22 +1855,133 @@ li {
   width: 21.875vw;
 }
 .section_program_program .program_item_body tr td:nth-child(2) {
-  color: #fff;
   font-size: 60px;
   font-family: SF Pro Display;
   width: 5.4166vw;
 }
 .section_program_program .program_item_body tr td:nth-child(4) {
-  color: #fff;
   font-size: 25px;
   font-family: SF Pro Display;
   font-weight: 200;
 }
 
+@media screen and (min-width: 1600px) {
+  .section_program_bg {
+    top: 19%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .section_program {
+    padding-top: 284px;
+    padding-bottom: 284px;
+  }
+  .section_program::before {
+    height: 154px;
+  }
+  .section_program_bg {
+    top: 20%;
+  }
+  .section_program_undertitle {
+    font-size: 19px;
+    margin-top: 29px;
+  }
+  .section_program_program {
+    margin-top: 67px;
+  }
+  .section_program_program {
+    gap: 68px;
+  }
+  .section_program_program .program_item_date {
+    font-size: 41.745px;
+    margin-bottom: 30px;
+  }
+  .section_program_program .program_item_body {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .section_program_program .program_item_body tr {
+    transition: 0.3s ease-in-out background-color;
+  }
+  .section_program_program .program_item_body tr:hover {
+    background-color: #40354d;
+    color: #04bee0;
+  }
+  .section_program_program .program_item_body tr:hover td {
+    background-color: #40354d;
+    color: #04bee0;
+    border-bottom: 1px solid #04bee0;
+  }
+  .section_program_program .program_item_body tr td {
+    padding: 47px 0 40px 0;
+  }
+  .section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {
+    font-size: 38px;
+  }
+  .section_program_program .program_item_body tr td:nth-child(2) {
+    font-size: 45.539px;
+  }
+  .section_program_program .program_item_body tr td:nth-child(4) {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_program {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+  .section_program::before {
+    height: 124px;
+  }
+  .section_program_bg {
+    top: 13%;
+  }
+  .section_program_undertitle {
+    font-size: 12.702px;
+    margin-top: 20px;
+  }
+  .section_program_program {
+    margin-top: 46px;
+  }
+  .section_program_program {
+    gap: 46px;
+  }
+  .section_program_program .program_item_date {
+    font-size: 27.945px;
+    margin-bottom: 26px;
+  }
+  .section_program_program .program_item_body {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .section_program_program .program_item_body tr {
+    transition: 0.3s ease-in-out background-color;
+  }
+  .section_program_program .program_item_body tr:hover {
+    background-color: #40354d;
+    color: #04bee0;
+  }
+  .section_program_program .program_item_body tr:hover td {
+    background-color: #40354d;
+    color: #04bee0;
+    border-bottom: 1px solid #04bee0;
+  }
+  .section_program_program .program_item_body tr td {
+    padding: 32px 0 27px 0;
+  }
+  .section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {
+    font-size: 25.404px;
+  }
+  .section_program_program .program_item_body tr td:nth-child(2) {
+    font-size: 30.485px;
+  }
+  .section_program_program .program_item_body tr td:nth-child(4) {
+    font-size: 12.702px;
+  }
+}
 .section_tickets {
   position: relative;
   position: relative;
-  padding-top: 151px;
+  padding-top: 90px;
   padding-bottom: 170px;
 }
 .section_tickets::before {
@@ -1291,7 +1994,7 @@ li {
   left: 50%;
 }
 .section_tickets::before {
-  height: 304px;
+  height: 204px;
   top: -304px;
 }
 .section_tickets .container {
@@ -1303,7 +2006,7 @@ li {
   position: absolute;
   left: 0;
   width: 23vw;
-  top: -95%;
+  top: -105%;
   z-index: 1;
 }
 
@@ -1339,11 +2042,11 @@ li {
   font-size: 22px;
   font-family: SF Pro Display;
   font-weight: 300;
-  line-height: 35px;
+  line-height: 160%;
 }
 
 .tickets_item_bottom {
-  gap: 118px;
+  gap: 6.146vw;
   margin-top: 47px;
   display: flex;
   justify-content: space-between;
@@ -1392,10 +2095,119 @@ li {
   bottom: 20px;
 }
 
+@media screen and (max-width: 1600px) {
+  .section_tickets_palm {
+    top: -85%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .section_tickets {
+    padding-top: 140px;
+    padding-bottom: 130px;
+  }
+  .section_tickets::before {
+    height: 154px;
+    top: -154px;
+  }
+  .section_tickets .section_tickets_palm {
+    top: -80%;
+  }
+  .tickets_container {
+    gap: 15px;
+  }
+  .tickets_item {
+    padding-top: 25.67px;
+    padding-left: 25.67px;
+  }
+  .tickets_item_title {
+    font-size: 50.214px;
+  }
+  .tickets_item_services {
+    margin-top: 31px;
+    gap: 8px;
+  }
+  .tickets_item_services p {
+    font-size: 16.488px;
+    line-height: 157%;
+  }
+  .tickets_item_bottom {
+    margin-top: 40.5px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_buy {
+    padding-left: 46.41px;
+    font-size: 24.374px;
+    height: 101px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {
+    width: 26.66px;
+    height: 35.55px;
+    bottom: 16px;
+    right: 16px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_price {
+    font-size: 24.374px;
+    gap: 6px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_price span {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_tickets {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .section_tickets::before {
+    height: 124px;
+    top: -124px;
+  }
+  .section_tickets .section_tickets_palm {
+    top: -90%;
+  }
+  .tickets_container {
+    gap: 9px;
+  }
+  .tickets_item {
+    padding-top: 17px;
+    padding-left: 17px;
+  }
+  .tickets_item_title {
+    font-size: 33.614px;
+  }
+  .tickets_item_services {
+    margin-top: 21px;
+    gap: 6px;
+  }
+  .tickets_item_services p {
+    font-size: 11.038px;
+    line-height: 157%;
+  }
+  .tickets_item_bottom {
+    margin-top: 26px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_buy {
+    padding-left: 31px;
+    font-size: 16.317px;
+    height: 68px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {
+    width: 18px;
+    height: 24px;
+    bottom: 10px;
+    right: 10px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_price {
+    font-size: 16.317px;
+    gap: 4px;
+  }
+  .tickets_item_bottom .tickets_item_bottom_price span {
+    font-size: 27px;
+  }
+}
 .section_where {
   position: relative;
   position: relative;
-  padding-top: 512px;
+  padding-top: 310px;
 }
 .section_where::before {
   display: block;
@@ -1411,18 +2223,19 @@ li {
   z-index: 2;
 }
 .section_where::before {
-  height: 304px;
+  height: 204px;
 }
 
 .section_where_palm {
   position: absolute;
   right: 0;
-  top: -25%;
+  top: -10%;
   width: 15.88vw;
 }
 
 .section_where_content {
   padding-bottom: 74px;
+  padding-top: 50px;
 }
 
 .section_where_left_main {
@@ -1432,7 +2245,7 @@ li {
 
 .section_where_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -1456,7 +2269,7 @@ li {
   font-size: 33px;
   font-family: SF Pro Display;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 90%;
 }
 
 .section_where_left_bottom {
@@ -1472,6 +2285,74 @@ li {
   height: 741px;
 }
 
+@media screen and (max-width: 1440px) {
+  .section_where {
+    padding-top: 247px;
+  }
+  .section_where::before {
+    height: 154px;
+  }
+  .section_where_content {
+    padding-top: 37px;
+  }
+  .section_where_edition {
+    width: 194px;
+    height: 35px;
+  }
+  .section_where_left_subscription {
+    font-size: 25.047px;
+    margin-top: 59px;
+  }
+  .section_where_right_map,
+  .section_where_right_map iframe {
+    width: 307px;
+    height: 562px;
+  }
+  .section_where_left_bottom {
+    gap: 16px;
+  }
+  .section_where_left_bottom img {
+    width: 200px;
+    height: 146px;
+  }
+  .section_where_content {
+    padding-bottom: 56px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_where {
+    padding-top: 187px;
+  }
+  .section_where::before {
+    height: 124px;
+  }
+  .section_where_content {
+    padding-top: 25px;
+  }
+  .section_where_edition {
+    width: 130px;
+    height: 23px;
+  }
+  .section_where_left_subscription {
+    font-size: 16.767px;
+    margin-top: 40px;
+  }
+  .section_where_right_map,
+  .section_where_right_map iframe {
+    width: 206px;
+    height: 376px;
+  }
+  .section_where_left_bottom {
+    gap: 11px;
+  }
+  .section_where_left_bottom img {
+    width: 134px;
+    height: 98px;
+  }
+  .section_where_content {
+    padding-bottom: 37px;
+  }
+}
 .section_sponsors {
   padding: 170px 0;
 }
@@ -1485,7 +2366,7 @@ li {
 
 .section_sponsors_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -1508,11 +2389,39 @@ li {
   font-weight: 300;
 }
 
+@media screen and (max-width: 1440px) {
+  .section_sponsors {
+    padding: 130px 0;
+  }
+  .sponsors_container {
+    gap: 51px;
+  }
+  .sponsor_item {
+    height: 240px;
+  }
+  .sponsor_item .sponsor_item_name {
+    font-size: 15.18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_sponsors {
+    padding: 90px 0;
+  }
+  .sponsors_container {
+    gap: 34px;
+  }
+  .sponsor_item {
+    height: 161px;
+  }
+  .sponsor_item .sponsor_item_name {
+    font-size: 10.162px;
+  }
+}
 .section_questions {
   position: relative;
   position: relative;
-  padding-top: 374px;
-  padding-bottom: 534px;
+  padding-top: 344px;
+  padding-bottom: 253px;
 }
 .section_questions::before {
   display: block;
@@ -1524,13 +2433,14 @@ li {
   left: 50%;
 }
 .section_questions::before {
-  height: 304px;
+  height: 204px;
 }
 
 .section_questions_palm {
   position: absolute;
   right: 0;
   bottom: 0;
+  width: 22.6vw;
 }
 
 .section_questions_ellipse_blue {
@@ -1545,7 +2455,7 @@ li {
 
 .section_questions_title {
   color: #fde82b;
-  font-size: 50px;
+  font-size: var(--title-size);
   font-family: SF Pro Display;
   text-align: center;
   font-weight: 400;
@@ -1580,7 +2490,64 @@ li {
 }
 .section_questions_social a:hover path {
   fill: #fde82b;
-}`, "",{"version":3,"sources":["webpack://./src/scss/base.scss","webpack://./src/scss/main.scss","webpack://./src/scss/mixins.scss","webpack://./src/scss/first-section.scss","webpack://./src/scss/why-section.scss","webpack://./src/scss/how-section.scss","webpack://./src/scss/speakers-section.scss","webpack://./src/scss/program-section.scss","webpack://./src/scss/tickets-section.scss","webpack://./src/scss/where-section.scss","webpack://./src/scss/sponsors-section.scss","webpack://./src/scss/question-section.scss"],"names":[],"mappings":"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","sourcesContent":["$container-margin: 120px;\r\n$accent-color: #fde82b;\r\n$blue: #04bee0;\r\n* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-family: 'SF Pro Display';\r\n  color: #fff;\r\n}\r\nbody {\r\n  background-color: #0f011f;\r\n}\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbutton {\r\n  outline: none;\r\n  cursor: pointer;\r\n}\r\na {\r\n  color: #fff;\r\n  outline: none;\r\n  text-decoration: none;\r\n}\r\nli {\r\n  list-style: none;\r\n}\r\n.container {\r\n  @include container();\r\n}\r\n","* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"SF Pro Display\";\n  color: #fff;\n}\n\nbody {\n  background-color: #0f011f;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  padding: 0;\n  margin: 0;\n}\n\nbutton {\n  outline: none;\n  cursor: pointer;\n}\n\na {\n  color: #fff;\n  outline: none;\n  text-decoration: none;\n}\n\nli {\n  list-style: none;\n}\n\n.container {\n  width: calc(100vw - 240px);\n  margin: 0 120px;\n}\n\n.section_first {\n  width: 100%;\n  background-size: cover;\n  position: relative;\n  overflow: hidden;\n}\n\n.section_first__container {\n  display: flex;\n  flex-direction: column;\n}\n\n.section_first_content_container {\n  width: 100%;\n  padding: 0 120px;\n}\n\n.header {\n  width: calc(100vw - 240px);\n  margin: 0 120px;\n  position: fixed;\n  z-index: 99;\n  top: 66px;\n  width: calc(100vw - 240px);\n  border: 1px solid #fff;\n  height: 128px;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;\n}\n.header.blured {\n  background-color: rgba(63, 63, 63, 0.25);\n  backdrop-filter: blur(18.5px);\n}\n\n.header__logo {\n  padding: 25px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-right: 1px solid #fff;\n}\n\n.header__nav {\n  flex-grow: 1;\n  padding: 53px 0;\n  padding-left: 4.69vw;\n}\n\n.header__nav_list {\n  display: flex;\n  justify-content: space-between;\n  flex-wrap: nowrap;\n  width: 100%;\n}\n\n.header__nav_link {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 21px;\n  color: #ffffff;\n  transition: color 0.3s ease-in-out;\n}\n.header__nav_link:hover {\n  color: #fde82b;\n}\n\n.header__nav_link {\n  white-space: nowrap;\n}\n\n.header__get_ticket {\n  display: flex;\n  align-items: center;\n  padding: 0 6.82vw;\n}\n\n.header__social {\n  display: flex;\n  gap: 42px;\n  padding: 0 2.6vw;\n  align-items: center;\n}\n\n.header__social_item path {\n  transition: fill 0.2s ease-in-out;\n}\n.header__social_item:hover path {\n  fill: #fde82b;\n}\n\n.section_first__content {\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding-top: 193px;\n}\n\n.section_first__content_top {\n  display: flex;\n  justify-content: flex-end;\n}\n.section_first__content_top .container {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.content_top_wrapper {\n  display: flex;\n  border: 1px solid #fff;\n  border-top: none;\n}\n.content_top_wrapper.border-top {\n  border-top: 1px solid #fff;\n}\n\n.content_top_wrapper_item {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 800;\n  font-size: 70px;\n  line-height: 84px;\n  /* identical to box height */\n  text-transform: uppercase;\n  color: #ffffff;\n  padding: 21px 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-right: 1px solid #fff;\n}\n.content_top_wrapper_item:last-child {\n  border-right: none;\n}\n\n.section_first__content_middle {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 64px;\n  gap: 14px;\n}\n\n.section_first_main_title {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 800;\n  font-size: 201px;\n  line-height: 240px;\n}\n\n.section_first_subscription {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 43px;\n  line-height: 51px;\n  max-width: 264px;\n}\n\n.section_first__content_bottom {\n  margin-top: 64px;\n  display: flex;\n  justify-content: center;\n}\n\n.running_string__container {\n  margin-top: 113px;\n  overflow: hidden;\n  max-width: 100%;\n}\n\n.running_string__wrapper {\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n}\n\n.running_string__inner,\n.running_string__inner_clone {\n  transform: translate(100%, 0);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\n.running_string__inner {\n  animation: marquee 32s infinite linear forwards;\n  position: absolute;\n}\n\n.running_string__inner_clone {\n  animation: 32s marquee 16s infinite linear forwards;\n}\n\n.running_string__item {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 30px;\n  color: #fde82b;\n  position: relative;\n  white-space: nowrap;\n  padding: 0 28px;\n}\n.running_string__item::after {\n  position: absolute;\n  display: block;\n  content: \"\";\n  width: 10px;\n  height: 2px;\n  background-color: #fde82b;\n  right: 0;\n  top: calc(50% + 2px);\n  transform: translateY(-50%) translateX(50%);\n}\n.running_string__item:last-child::after {\n  display: none;\n}\n\n@keyframes marquee {\n  0% {\n    transform: translateX(-100%);\n  }\n  50% {\n    transform: translateX(0);\n  }\n  100% {\n    transform: translateX(100%);\n  }\n}\n.get_ticket_btn {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  background-color: transparent;\n  color: #fde82b;\n  border: 1px solid #fde82b;\n  cursor: pointer;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  font-size: 21px;\n  line-height: 25px;\n  padding: 8px 14px;\n}\n.get_ticket_btn:hover {\n  background-color: #fde82b;\n  color: #0f0121;\n}\n\n.get_ticket_big_btn {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  background-color: transparent;\n  color: #fde82b;\n  border: 2.3553px solid #fde82b;\n  cursor: pointer;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  font-size: 49.4621px;\n  line-height: 59px;\n  padding: 18.8427px 32.9747px;\n}\n.get_ticket_big_btn:hover {\n  background-color: #fde82b;\n  color: #0f0121;\n}\n\n.section_first__bottom {\n  background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);\n  padding-bottom: 122px;\n}\n\n.section_why {\n  padding-top: 405px;\n  position: relative;\n  padding-bottom: 170px;\n  position: relative;\n}\n.section_why::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_why::before {\n  height: 304px;\n}\n\n.section_why__ellipse_left,\n.section_why__ellipse_right,\n.section_why__plant {\n  position: absolute;\n}\n\n.section_why__ellipse_left {\n  background: rgba(0, 170, 201, 0.12);\n  transform: translateX(-50%) translateY(-50%);\n  filter: blur(264px);\n  top: 15%;\n}\n\n.section_why__ellipse_left,\n.section_why__ellipse_right {\n  z-index: 1;\n  width: 73.59vw;\n  height: 73.59vw;\n}\n\n.section_why__ellipse_right {\n  right: 0;\n}\n\n.section_why__plant {\n  right: 0;\n  top: 5%;\n  height: 81.98vw;\n}\n\n.section_why_container {\n  position: relative;\n  z-index: 10;\n}\n\n.section_why_title {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 40px;\n  line-height: 48px;\n  color: #fde82b;\n  text-align: center;\n}\n\n.section_why_subscription {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 200;\n  font-size: 50px;\n  line-height: 60px;\n  color: #ffffff;\n  margin-top: 93px;\n  max-width: 68vw;\n}\n\n.section_why_subscription > span {\n  font-weight: 600;\n}\n\n.section_why_text {\n  display: flex;\n  flex-direction: column;\n  gap: 40px;\n  max-width: 72.7vw;\n  margin-top: 93px;\n}\n.section_why_text p {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 35px;\n  color: #ffffff;\n}\n.section_why_text p span {\n  font-weight: 600;\n  color: #04bee0;\n}\n\n.section_why_ready_text {\n  margin-top: 93px;\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 200;\n  font-size: 50px;\n  line-height: 60px;\n  color: #ffffff;\n}\n\n.section_why_ready_text span {\n  font-weight: 600;\n  text-align: right;\n}\n\n.section_why_event {\n  display: flex;\n  margin-top: 229px;\n}\n\n.section_why_event_item {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-grow: 1;\n  border: 1px solid #fff;\n}\n.section_why_event_item:first-child {\n  padding: 54px 70px;\n  text-align-last: left;\n  border-right: none;\n}\n.section_why_event_item:nth-child(2) {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 30px;\n  color: #0f011f;\n  padding: 54px 66px;\n  position: relative;\n  background-color: #fde82b;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  cursor: pointer;\n  border: none;\n  transition: background-color 0.3s ease-in-out;\n}\n.section_why_event_item:nth-child(2):hover {\n  background-color: #04bee0;\n}\n.section_why_event_item:nth-child(3) {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 80px;\n  line-height: 95px;\n  text-transform: uppercase;\n  color: #ffffff;\n  padding: 36px 36px;\n  white-space: nowrap;\n  border-left: none;\n}\n.section_why_event_item .section_why_event_item_arrow {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n  cursor: pointer;\n}\n.section_why_event_item span {\n  font-weight: 600;\n  color: #0f011f;\n}\n.section_why_event_item .section_why_event_item_inner {\n  max-width: 251px;\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 30px;\n}\n\n.section_why_carousel_container {\n  position: relative;\n  padding: 0 115px;\n  margin-top: 81px;\n}\n\n.why_carousel_btn_next,\n.why_carousel_btn_prev {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  background-color: transparent;\n  border: none;\n  outline: none;\n}\n\n.why_carousel_btn_prev {\n  left: 0;\n}\n\n.why_carousel_btn_next {\n  right: 0;\n}\n\n.section_how {\n  padding-top: 588px;\n  position: relative;\n}\n.section_how::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_how::before {\n  height: 418px;\n}\n\n.section_how_palm {\n  position: absolute;\n  left: 0;\n  width: 25.05vw;\n  top: -8%;\n  z-index: 1;\n}\n\n.how_section_container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_how_ellipse_pink,\n.section_how_ellipse_blue {\n  position: absolute;\n  border-radius: 50%;\n  z-index: 1;\n}\n\n.section_how_ellipse_pink {\n  width: 48.07vw;\n  height: 48.07vw;\n  border-radius: 923px;\n  background: rgba(255, 39, 174, 0.09);\n  filter: blur(172.4501037598px);\n  width: 923px;\n  height: 923px;\n  left: 129px;\n  top: 60%;\n  transform: translateY(-50%);\n}\n\n.section_how_ellipse_blue {\n  width: 64.53vw;\n  height: 64.53vw;\n  top: 25%;\n  border-radius: 1239px;\n  background: rgba(0, 170, 201, 0.12);\n  filter: blur(231.490447998px);\n  right: 0;\n}\n\n.how_section_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.how_carousel_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 119px;\n}\n\n.how_carousel_wrapper {\n  position: relative;\n  width: 497px;\n  height: 1014px;\n  margin: 0 auto;\n  background-size: contain;\n  background-position: center center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 127px;\n}\n\n.how_carousel_bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n}\n\n.how_carousel_logo {\n  width: 130px;\n  height: 103px;\n  position: relative;\n  z-index: 1;\n}\n\n.how_carousel {\n  margin: 107px 0;\n  max-width: 379px;\n  position: relative;\n  right: -4px;\n}\n.how_carousel .owl-dots {\n  width: 100%;\n  display: flex;\n  gap: 11px;\n  margin-top: 107px;\n  justify-content: center;\n}\n.how_carousel .owl-dots .owl-dot {\n  width: 32.019px;\n  height: 6px;\n  flex-shrink: 0;\n  border-radius: 47.242px;\n  background: #030303;\n}\n.how_carousel .owl-dots .owl-dot.active {\n  background-color: #fde82b;\n  width: 83.732px;\n}\n\n.how_carousel_btn_prev,\n.how_carousel_btn_next {\n  position: absolute;\n  top: 50%;\n  transform: translateX(-50%);\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.how_carousel_btn_prev {\n  left: -60%;\n}\n\n.how_carousel_btn_next {\n  right: -76%;\n}\n\n.how_carousel_item {\n  max-width: 379px;\n  max-height: 464px;\n}\n\n.how_image_wrapper {\n  position: relative;\n  top: -100px;\n  padding-top: 232px;\n  padding-bottom: 102px;\n  overflow: hidden;\n}\n.how_image_wrapper .container {\n  position: relative;\n  z-index: 1;\n}\n.how_image_wrapper .how_image_wrapper_bg {\n  position: absolute;\n  top: -22%;\n}\n.how_image_wrapper .how_images {\n  margin-top: 114px;\n  display: flex;\n  gap: 20px;\n}\n.how_image_wrapper .how_images img {\n  width: calc(50% - 10px);\n}\n\n.section_speakers {\n  position: relative;\n  position: relative;\n  padding-top: 474px;\n  padding-bottom: 170px;\n}\n.section_speakers::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_speakers::before {\n  height: 304px;\n}\n.section_speakers .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_speakers_bg {\n  position: absolute;\n  width: 100%;\n  top: 28%;\n  z-index: 1;\n}\n\n.section_speakers_palm {\n  position: absolute;\n  right: 0;\n  top: -50%;\n  width: 25.365vw;\n  z-index: 1;\n}\n\n.section_speakers_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.speakers_undertitle {\n  color: #fff;\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 37px;\n}\n\n.speakers_cases_container {\n  display: flex;\n  gap: 20px;\n  margin-top: 58px;\n}\n.speakers_cases_container .speakers_case {\n  width: 33.3%;\n}\n.speakers_cases_container .speakers_case_title,\n.speakers_cases_container .speakers_case_content {\n  color: #fff;\n  font-size: 20px;\n  font-family: SF Pro Display;\n}\n.speakers_cases_container .speakers_case_title {\n  font-weight: 600;\n}\n.speakers_cases_container .speakers_case_content {\n  font-weight: 300;\n  margin-top: 20px;\n}\n\n.section_speakers_carousel_container {\n  max-width: 80%;\n  margin: 0 auto;\n  position: relative;\n  margin-top: 104px;\n}\n\n.speakers_carousel_btn_prev,\n.speakers_carousel_btn_next {\n  background-color: transparent;\n  outline: none;\n  border: none;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.speakers_carousel_btn_prev {\n  left: -140px;\n}\n\n.speakers_carousel_btn_next {\n  right: -140px;\n}\n\n.speakers_carousel_item {\n  display: flex;\n  flex-direction: column;\n  gap: 40px;\n}\n.speakers_carousel_item .speakers_carousel_item_img_container {\n  border-radius: 100% 100% 100% 0;\n  width: 100%;\n  background: #000;\n  overflow: hidden;\n  padding-top: 20px;\n}\n.speakers_carousel_item .speakers_carousel_item_name {\n  color: #fff;\n  font-size: 30px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n}\n.speakers_carousel_item .speakers_carousel_item_list li {\n  color: #fff;\n  font-size: 20px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n}\n.speakers_carousel_item .speakers_carousel_item_line {\n  width: 100%;\n  height: 1px;\n  background-color: #fff;\n}\n\n.section_why_event.speakers_event .section_why_event_item:first-child {\n  color: #fff;\n  font-size: 41px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n  padding: 58px 32px;\n  white-space: nowrap;\n}\n.section_why_event.speakers_event .section_why_event_item:nth-child(3) {\n  padding: 33px;\n  color: #fff;\n  font-size: 18px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 25px;\n  white-space: normal;\n  text-transform: none;\n  max-width: 37vw;\n}\n\n.section_program {\n  position: relative;\n  padding-top: 474px;\n  padding-bottom: 474px;\n  overflow: hidden;\n  z-index: 2;\n}\n.section_program::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_program:before {\n  height: 304px;\n}\n.section_program .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_program_bg {\n  position: absolute;\n  z-index: 1;\n  width: 100%;\n  top: 35%;\n}\n\n.section_program_ellipse_pink {\n  position: absolute;\n  right: 0;\n  border-radius: 1413px;\n  background: rgba(255, 39, 174, 0.09);\n  filter: blur(264px);\n  width: 73.59vw;\n  height: 73.59vw;\n  transform: translateX(50%);\n  top: 30%;\n  z-index: 1;\n}\n\n.section_program_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.section_program_undertitle {\n  color: #fff;\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 37px;\n}\n\n.section_program_program {\n  margin-top: 90px;\n  display: flex;\n  flex-direction: column;\n  gap: 90px;\n}\n.section_program_program .program_item_date {\n  color: #04bee0;\n  font-size: 55px;\n  font-family: SF Pro Display;\n  font-weight: 500;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.section_program_program .program_item_body {\n  width: 100%;\n  border-collapse: collapse;\n}\n.section_program_program .program_item_body tr td {\n  padding: 62px 0 50px 0;\n  border-bottom: 1px solid #fff;\n}\n.section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {\n  color: #fff;\n  font-size: 50px;\n  font-family: SF Pro Display;\n}\n.section_program_program .program_item_body tr td:nth-child(1) {\n  width: 14.1146vw;\n}\n.section_program_program .program_item_body tr td:nth-child(3) {\n  width: 21.875vw;\n}\n.section_program_program .program_item_body tr td:nth-child(2) {\n  color: #fff;\n  font-size: 60px;\n  font-family: SF Pro Display;\n  width: 5.4166vw;\n}\n.section_program_program .program_item_body tr td:nth-child(4) {\n  color: #fff;\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 200;\n}\n\n.section_tickets {\n  position: relative;\n  position: relative;\n  padding-top: 151px;\n  padding-bottom: 170px;\n}\n.section_tickets::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_tickets::before {\n  height: 304px;\n  top: -304px;\n}\n.section_tickets .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_tickets_palm {\n  position: absolute;\n  left: 0;\n  width: 23vw;\n  top: -95%;\n  z-index: 1;\n}\n\n.tickets_container {\n  display: flex;\n  gap: 20px;\n}\n\n.tickets_item {\n  padding-left: 34px;\n  padding-top: 34px;\n  display: flex;\n  flex-direction: column;\n  width: calc(50% - 10px);\n  border: 1px solid #fff;\n}\n\n.tickets_item_title {\n  color: #fff;\n  font-size: 67px;\n  font-family: SF Pro Display;\n  font-weight: 500;\n}\n\n.tickets_item_services {\n  margin-top: 40px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.tickets_item_services p {\n  color: #fff;\n  font-size: 22px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 35px;\n}\n\n.tickets_item_bottom {\n  gap: 118px;\n  margin-top: 47px;\n  display: flex;\n  justify-content: space-between;\n}\n.tickets_item_bottom .tickets_item_bottom_price {\n  align-self: flex-start;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  color: #fff;\n  font-size: 32.522px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  text-transform: uppercase;\n}\n.tickets_item_bottom .tickets_item_bottom_price span {\n  font-weight: 700;\n  font-size: 56px;\n}\n.tickets_item_bottom .tickets_item_bottom_buy {\n  height: 136px;\n  position: relative;\n  right: -1px;\n  bottom: -1px;\n  flex-grow: 1;\n  color: #000;\n  padding-left: 62px;\n  font-size: 32.522px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n  position: relative;\n  background-color: #fde82b;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  border: none;\n  transition: background-color 0.3s ease-in-out;\n}\n.tickets_item_bottom .tickets_item_bottom_buy:hover {\n  background-color: #04bee0;\n}\n.tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {\n  position: absolute;\n  right: 20px;\n  bottom: 20px;\n}\n\n.section_where {\n  position: relative;\n  position: relative;\n  padding-top: 512px;\n}\n.section_where::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_where .container {\n  position: relative;\n  z-index: 2;\n}\n.section_where::before {\n  height: 304px;\n}\n\n.section_where_palm {\n  position: absolute;\n  right: 0;\n  top: -25%;\n  width: 15.88vw;\n}\n\n.section_where_content {\n  padding-bottom: 74px;\n}\n\n.section_where_left_main {\n  display: flex;\n  justify-content: space-between;\n}\n\n.section_where_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n  margin-bottom: 63px;\n}\n\n.section_where_edition {\n  width: 255px;\n  height: 46px;\n}\n\n.section_where_left {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.section_where_left_subscription {\n  margin-top: 78px;\n  color: #fff;\n  font-size: 33px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 30px;\n}\n\n.section_where_left_bottom {\n  display: flex;\n  gap: 20px;\n}\n.section_where_left_bottom img {\n  cursor: pointer;\n}\n\n.section_where_right_map {\n  width: 405px;\n  height: 741px;\n}\n\n.section_sponsors {\n  padding: 170px 0;\n}\n\n.sponsors_container {\n  gap: 68px;\n  margin-top: 38px;\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n}\n\n.section_sponsors_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.sponsor_item {\n  border: 1px solid #fff;\n  position: relative;\n  height: 322px;\n}\n.sponsor_item .sponsor_item_name {\n  position: absolute;\n  bottom: 34px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: #fff;\n  text-align: center;\n  font-size: 20px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n}\n\n.section_questions {\n  position: relative;\n  position: relative;\n  padding-top: 374px;\n  padding-bottom: 534px;\n}\n.section_questions::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_questions::before {\n  height: 304px;\n}\n\n.section_questions_palm {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n}\n\n.section_questions_ellipse_blue {\n  position: absolute;\n  border-radius: 1380px;\n  background: rgba(0, 170, 201, 0.12);\n  filter: blur(264px);\n  width: 71.875vw;\n  height: 71.875vw;\n  top: -50%;\n}\n\n.section_questions_title {\n  color: #fde82b;\n  font-size: 50px;\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.section_questions_center {\n  position: relative;\n  z-index: 9;\n  flex-direction: column;\n  display: flex;\n  align-items: center;\n}\n\n.section_questions_email {\n  color: #fff;\n  text-align: center;\n  font-size: 40px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 59px;\n}\n\n.section_questions_social {\n  display: flex;\n  justify-content: center;\n  gap: 72px;\n  margin-top: 65px;\n}\n.section_questions_social svg {\n  width: 49px;\n  height: 49px;\n}\n.section_questions_social a:hover path {\n  fill: #fde82b;\n}","@mixin container {\r\n  width: calc(100vw - $container-margin * 2);\r\n  margin: 0 $container-margin;\r\n}\r\n@mixin with-devider {\r\n  position: relative;\r\n  &::before {\r\n    display: block;\r\n    content: '';\r\n    width: 1px;\r\n    background-color: #fff;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 50%;\r\n  }\r\n}\r\n@mixin section-title {\r\n  color: $accent-color;\r\n  font-size: 50px;\r\n  font-family: SF Pro Display;\r\n  text-align: center;\r\n  font-weight: 400;\r\n}\r\n",".section_first {\r\n  width: 100%;\r\n  background-size: cover;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n.section_first__container {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.section_first_content_container {\r\n  width: 100%;\r\n  padding: 0 $container-margin;\r\n}\r\n.header {\r\n  @include container();\r\n  position: fixed;\r\n  z-index: 99;\r\n  // left: 50%;\r\n  top: 66px;\r\n  width: calc(100vw - $container-margin * 2);\r\n  border: 1px solid #fff;\r\n  height: 128px;\r\n  display: flex;\r\n  flex-wrap: nowrap;\r\n  justify-content: space-between;\r\n  transition: background-color 0.3s ease-in-out,\r\n    backdrop-filter 0.3s ease-in-out;\r\n  &.blured {\r\n    background-color: rgba(63, 63, 63, 0.25);\r\n    backdrop-filter: blur(18.5px);\r\n  }\r\n}\r\n.header__logo {\r\n  padding: 25px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  border-right: 1px solid #fff;\r\n}\r\n.header__nav {\r\n  flex-grow: 1;\r\n  padding: 53px 0;\r\n  padding-left: 4.69vw;\r\n}\r\n.header__nav_list {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  flex-wrap: nowrap;\r\n  width: 100%;\r\n}\r\n.header__nav_link {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 18px;\r\n  line-height: 21px;\r\n\r\n  color: #ffffff;\r\n  transition: color 0.3s ease-in-out;\r\n  &:hover {\r\n    color: $accent-color;\r\n  }\r\n}\r\n.header__nav_link {\r\n  white-space: nowrap;\r\n}\r\n.header__get_ticket {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 0 6.82vw;\r\n}\r\n.header__social {\r\n  display: flex;\r\n  gap: 42px;\r\n  padding: 0 2.6vw;\r\n  // padding-right: 50px;\r\n  align-items: center;\r\n}\r\n.header__social_item {\r\n  path {\r\n    transition: fill 0.2s ease-in-out;\r\n  }\r\n  &:hover path {\r\n    fill: $accent-color;\r\n  }\r\n}\r\n.section_first__content {\r\n  flex-grow: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  padding-top: 193px;\r\n}\r\n.section_first__content_top {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  .container {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n.content_top_wrapper {\r\n  display: flex;\r\n  border: 1px solid #fff;\r\n  border-top: none;\r\n  // border-top: none;\r\n  &.border-top {\r\n    border-top: 1px solid #fff;\r\n  }\r\n}\r\n.content_top_wrapper_item {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 800;\r\n  font-size: 70px;\r\n  line-height: 84px;\r\n\r\n  /* identical to box height */\r\n  text-transform: uppercase;\r\n\r\n  color: #ffffff;\r\n  padding: 21px 30px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-right: 1px solid #fff;\r\n  &:last-child {\r\n    border-right: none;\r\n  }\r\n}\r\n.section_first__content_middle {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 64px;\r\n  gap: 14px;\r\n}\r\n.section_first_main_title {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 800;\r\n  font-size: 201px;\r\n  line-height: 240px;\r\n}\r\n.section_first_subscription {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 43px;\r\n  line-height: 51px;\r\n  max-width: 264px;\r\n}\r\n.section_first__content_bottom {\r\n  margin-top: 64px;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n.running_string__container {\r\n  margin-top: 113px;\r\n  overflow: hidden;\r\n  max-width: 100%;\r\n}\r\n.running_string__wrapper {\r\n  // padding: 37px 0;\r\n  display: flex;\r\n  align-items: center;\r\n  overflow: hidden;\r\n}\r\n\r\n.running_string__inner,\r\n.running_string__inner_clone {\r\n  transform: translate(100%, 0);\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\n\r\n.running_string__inner {\r\n  animation: marquee 32s infinite linear forwards;\r\n  position: absolute;\r\n}\r\n.running_string__inner_clone {\r\n  animation: 32s marquee 16s infinite linear forwards;\r\n}\r\n.running_string__item {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 25px;\r\n  line-height: 30px;\r\n  color: $accent-color;\r\n  position: relative;\r\n  white-space: nowrap;\r\n  padding: 0 28px;\r\n  &::after {\r\n    position: absolute;\r\n    display: block;\r\n    content: '';\r\n    width: 10px;\r\n    height: 2px;\r\n    background-color: $accent-color;\r\n    right: 0;\r\n    top: calc(50% + 2px);\r\n    transform: translateY(-50%) translateX(50%);\r\n  }\r\n  &:last-child::after {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@keyframes marquee {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n  50% {\r\n    transform: translateX(0);\r\n  }\r\n  100% {\r\n    transform: translateX(100%);\r\n  }\r\n}\r\n@mixin get_ticket_btns($border) {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  background-color: transparent;\r\n  color: $accent-color;\r\n  border: $border solid $accent-color;\r\n  cursor: pointer;\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  &:hover {\r\n    background-color: $accent-color;\r\n    color: #0f0121;\r\n  }\r\n}\r\n.get_ticket_btn {\r\n  @include get_ticket_btns(1px);\r\n  font-size: 21px;\r\n  line-height: 25px;\r\n  padding: 8px 14px;\r\n}\r\n.get_ticket_big_btn {\r\n  @include get_ticket_btns(2.3553px);\r\n  font-size: 49.4621px;\r\n  line-height: 59px;\r\n  padding: 18.8427px 32.9747px;\r\n}\r\n.section_first__bottom {\r\n  background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);\r\n  padding-bottom: 122px;\r\n}\r\n",".section_why {\r\n  padding-top: 405px;\r\n  position: relative;\r\n  padding-bottom: 170px;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 304px;\r\n  }\r\n}\r\n.section_why__ellipse_left,\r\n.section_why__ellipse_right,\r\n.section_why__plant {\r\n  position: absolute;\r\n}\r\n.section_why__ellipse_left {\r\n  background: rgba(0, 170, 201, 0.12);\r\n  transform: translateX(-50%) translateY(-50%);\r\n  filter: blur(264px);\r\n  top: 15%;\r\n}\r\n.section_why__ellipse_left,\r\n.section_why__ellipse_right {\r\n  z-index: 1;\r\n  width: 73.59vw;\r\n  height: 73.59vw;\r\n  // display: none;\r\n}\r\n.section_why__ellipse_right {\r\n  right: 0;\r\n}\r\n.section_why__plant {\r\n  right: 0;\r\n  top: 5%;\r\n  height: 81.98vw;\r\n}\r\n.section_why_container {\r\n  position: relative;\r\n  z-index: 10;\r\n}\r\n.section_why_title {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 40px;\r\n  line-height: 48px;\r\n  color: $accent-color;\r\n  // margin-top: 264px;\r\n  text-align: center;\r\n}\r\n.section_why_subscription {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  font-size: 50px;\r\n  line-height: 60px;\r\n\r\n  color: #ffffff;\r\n  margin-top: 93px;\r\n  max-width: 68vw;\r\n}\r\n.section_why_subscription > span {\r\n  font-weight: 600;\r\n}\r\n.section_why_text {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 40px;\r\n  max-width: 72.7vw;\r\n  margin-top: 93px;\r\n  p {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 35px;\r\n\r\n    color: #ffffff;\r\n\r\n    span {\r\n      font-weight: 600;\r\n      color: $blue;\r\n    }\r\n  }\r\n}\r\n.section_why_ready_text {\r\n  margin-top: 93px;\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  font-size: 50px;\r\n  line-height: 60px;\r\n\r\n  color: #ffffff;\r\n}\r\n.section_why_ready_text span {\r\n  font-weight: 600;\r\n  text-align: right;\r\n}\r\n.section_why_event {\r\n  display: flex;\r\n  margin-top: 229px;\r\n}\r\n\r\n.section_why_event_item {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-grow: 1;\r\n  border: 1px solid #fff;\r\n  &:first-child {\r\n    padding: 54px 70px;\r\n    text-align-last: left;\r\n    border-right: none;\r\n  }\r\n  &:nth-child(2) {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 30px;\r\n\r\n    color: #0f011f;\r\n    padding: 54px 66px;\r\n    position: relative;\r\n    background-color: $accent-color;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: flex-start;\r\n    cursor: pointer;\r\n    border: none;\r\n    transition: background-color 0.3s ease-in-out;\r\n  }\r\n  &:nth-child(2):hover {\r\n    background-color: $blue;\r\n  }\r\n  &:nth-child(3) {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 500;\r\n    font-size: 80px;\r\n    line-height: 95px;\r\n    text-transform: uppercase;\r\n    color: #ffffff;\r\n    padding: 36px 36px;\r\n    white-space: nowrap;\r\n    border-left: none;\r\n  }\r\n\r\n  .section_why_event_item_arrow {\r\n    position: absolute;\r\n    bottom: 20px;\r\n    right: 20px;\r\n    cursor: pointer;\r\n  }\r\n  span {\r\n    font-weight: 600;\r\n    color: #0f011f;\r\n  }\r\n  .section_why_event_item_inner {\r\n    max-width: 251px;\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 30px;\r\n  }\r\n}\r\n.section_why_carousel_container {\r\n  position: relative;\r\n  padding: 0 115px;\r\n  margin-top: 81px;\r\n}\r\n.why_carousel_btn_next,\r\n.why_carousel_btn_prev {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  background-color: transparent;\r\n  border: none;\r\n  outline: none;\r\n}\r\n.why_carousel_btn_prev {\r\n  left: 0;\r\n}\r\n.why_carousel_btn_next {\r\n  right: 0;\r\n}\r\n",".section_how {\r\n  padding-top: 588px;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 418px;\r\n  }\r\n}\r\n.section_how_palm {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 25.05vw;\r\n  top: -8%;\r\n  z-index: 1;\r\n}\r\n.how_section_container {\r\n  position: relative;\r\n  z-index: 2;\r\n}\r\n.section_how_ellipse_pink,\r\n.section_how_ellipse_blue {\r\n  position: absolute;\r\n  border-radius: 50%;\r\n  z-index: 1;\r\n}\r\n.section_how_ellipse_pink {\r\n  width: 48.07vw;\r\n  height: 48.07vw;\r\n  border-radius: 923px;\r\n  background: rgba(255, 39, 174, 0.09);\r\n  filter: blur(172.45010375976562px);\r\n  width: 923px;\r\n  height: 923px;\r\n  left: 129px;\r\n  top: 60%;\r\n  transform: translateY(-50%);\r\n}\r\n.section_how_ellipse_blue {\r\n  width: 64.53vw;\r\n  height: 64.53vw;\r\n  top: 25%;\r\n  border-radius: 1239px;\r\n  background: rgba(0, 170, 201, 0.12);\r\n  filter: blur(231.49044799804688px);\r\n  right: 0;\r\n}\r\n.how_section_title {\r\n  @include section-title();\r\n}\r\n.how_carousel_container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 119px;\r\n}\r\n.how_carousel_wrapper {\r\n  position: relative;\r\n  width: 497px;\r\n  height: 1014px;\r\n  margin: 0 auto;\r\n  background-size: contain;\r\n  background-position: center center;\r\n  // padding: 134px 56px 85px 56px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding-top: 127px;\r\n}\r\n.how_carousel_bg {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  z-index: 0;\r\n}\r\n.how_carousel_logo {\r\n  width: 130px;\r\n  height: 103px;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n.how_carousel {\r\n  margin: 107px 0;\r\n  max-width: 379px;\r\n  position: relative;\r\n  right: -4px;\r\n\r\n  .owl-dots {\r\n    width: 100%;\r\n    display: flex;\r\n    gap: 11px;\r\n    margin-top: 107px;\r\n    justify-content: center;\r\n    .owl-dot {\r\n      width: 32.019px;\r\n      height: 6px;\r\n      flex-shrink: 0;\r\n      border-radius: 47.242px;\r\n      background: #030303;\r\n      &.active {\r\n        background-color: $accent-color;\r\n        width: 83.732px;\r\n      }\r\n    }\r\n  }\r\n}\r\n.how_carousel_btn_prev,\r\n.how_carousel_btn_next {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateX(-50%);\r\n  outline: none;\r\n  border: none;\r\n  background-color: transparent;\r\n}\r\n.how_carousel_btn_prev {\r\n  left: -60%;\r\n}\r\n.how_carousel_btn_next {\r\n  right: -76%;\r\n}\r\n.how_carousel_item {\r\n  max-width: 379px;\r\n  max-height: 464px;\r\n}\r\n.how_image_wrapper {\r\n  position: relative;\r\n  top: -100px;\r\n  padding-top: 232px;\r\n  padding-bottom: 102px;\r\n  overflow: hidden;\r\n\r\n  .container {\r\n    position: relative;\r\n    z-index: 1;\r\n  }\r\n  .how_image_wrapper_bg {\r\n    position: absolute;\r\n    top: -22%;\r\n  }\r\n  .how_images {\r\n    margin-top: 114px;\r\n    display: flex;\r\n    gap: 20px;\r\n\r\n    img {\r\n      width: calc(50% - 10px);\r\n    }\r\n  }\r\n}\r\n",".section_speakers {\r\n  position: relative;\r\n  @include with-devider();\r\n  padding-top: 474px;\r\n  padding-bottom: 170px;\r\n  &::before {\r\n    height: 304px;\r\n  }\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n}\r\n.section_speakers_bg {\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 28%;\r\n  z-index: 1;\r\n}\r\n.section_speakers_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  top: -50%;\r\n  width: 25.365vw;\r\n  z-index: 1;\r\n}\r\n.section_speakers_title {\r\n  @include section-title();\r\n}\r\n.speakers_undertitle {\r\n  color: #fff;\r\n  font-size: 25px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n\r\n  margin-top: 37px;\r\n}\r\n.speakers_cases_container {\r\n  display: flex;\r\n  gap: 20px;\r\n  margin-top: 58px;\r\n\r\n  .speakers_case {\r\n    width: 33.3%;\r\n  }\r\n  .speakers_case_title,\r\n  .speakers_case_content {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    font-family: SF Pro Display;\r\n  }\r\n  .speakers_case_title {\r\n    font-weight: 600;\r\n  }\r\n  .speakers_case_content {\r\n    font-weight: 300;\r\n    margin-top: 20px;\r\n  }\r\n}\r\n.section_speakers_carousel_container {\r\n  max-width: 80%;\r\n  margin: 0 auto;\r\n  position: relative;\r\n  margin-top: 104px;\r\n}\r\n.speakers_carousel_btn_prev,\r\n.speakers_carousel_btn_next {\r\n  background-color: transparent;\r\n  outline: none;\r\n  border: none;\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n}\r\n.speakers_carousel_btn_prev {\r\n  left: -140px;\r\n}\r\n.speakers_carousel_btn_next {\r\n  right: -140px;\r\n}\r\n.speakers_carousel_item {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 40px;\r\n\r\n  .speakers_carousel_item_img_container {\r\n    border-radius: 100% 100% 100% 0;\r\n    width: 100%;\r\n    background: #000;\r\n    overflow: hidden;\r\n    padding-top: 20px;\r\n    // height: auto;\r\n  }\r\n  .speakers_carousel_item_name {\r\n    color: #fff;\r\n    font-size: 30px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 600;\r\n  }\r\n  .speakers_carousel_item_list {\r\n    li {\r\n      color: #fff;\r\n      font-size: 20px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 300;\r\n    }\r\n  }\r\n  .speakers_carousel_item_line {\r\n    width: 100%;\r\n    height: 1px;\r\n    background-color: #fff;\r\n  }\r\n}\r\n.section_why_event.speakers_event {\r\n  .section_why_event_item {\r\n    &:first-child {\r\n      color: #fff;\r\n      font-size: 41px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 600;\r\n      padding: 58px 32px;\r\n      white-space: nowrap;\r\n    }\r\n    &:nth-child(3) {\r\n      padding: 33px;\r\n      color: #fff;\r\n      font-size: 18px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 300;\r\n      line-height: 25px;\r\n      white-space: normal;\r\n      text-transform: none;\r\n      max-width: 37vw;\r\n    }\r\n  }\r\n}\r\n",".section_program {\r\n  @include with-devider();\r\n  &:before {\r\n    height: 304px;\r\n  }\r\n  padding-top: 474px;\r\n  padding-bottom: 474px;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  overflow: hidden;\r\n  z-index: 2;\r\n}\r\n.section_program_bg {\r\n  position: absolute;\r\n  z-index: 1;\r\n  width: 100%;\r\n  top: 35%;\r\n}\r\n.section_program_ellipse_pink {\r\n  position: absolute;\r\n  right: 0;\r\n  border-radius: 1413px;\r\n  background: rgba(255, 39, 174, 0.09);\r\n  filter: blur(264px);\r\n  width: 73.59vw;\r\n  height: 73.59vw;\r\n  transform: translateX(50%);\r\n  top: 30%;\r\n  z-index: 1;\r\n}\r\n.section_program_title {\r\n  @include section-title();\r\n}\r\n.section_program_undertitle {\r\n  color: #fff;\r\n  font-size: 25px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  margin-top: 37px;\r\n}\r\n.section_program_program {\r\n  margin-top: 90px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 90px;\r\n\r\n  .program_item_date {\r\n    color: #04bee0;\r\n    font-size: 55px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 500;\r\n    margin-bottom: 38px;\r\n    text-align: center;\r\n  }\r\n\r\n  .program_item_body {\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    tr {\r\n      // display: block;\r\n      td {\r\n        padding: 62px 0 50px 0;\r\n        border-bottom: 1px solid #fff;\r\n        &:nth-child(1),\r\n        &:nth-child(3) {\r\n          color: #fff;\r\n          font-size: 50px;\r\n          font-family: SF Pro Display;\r\n        }\r\n        &:nth-child(1) {\r\n          width: 14.1146vw;\r\n        }\r\n        &:nth-child(3) {\r\n          width: 21.875vw;\r\n        }\r\n        &:nth-child(2) {\r\n          color: #fff;\r\n          font-size: 60px;\r\n          font-family: SF Pro Display;\r\n          width: 5.4166vw;\r\n        }\r\n        &:nth-child(4) {\r\n          color: #fff;\r\n          font-size: 25px;\r\n          font-family: SF Pro Display;\r\n          font-weight: 200;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n",".section_tickets {\r\n  @include with-devider();\r\n  position: relative;\r\n  &::before {\r\n    height: 304px;\r\n    top: -304px;\r\n  }\r\n  padding-top: 151px;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  padding-bottom: 170px;\r\n}\r\n.section_tickets_palm {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 23vw;\r\n  top: -95%;\r\n  z-index: 1;\r\n}\r\n.tickets_container {\r\n  display: flex;\r\n  gap: 20px;\r\n}\r\n.tickets_item {\r\n  padding-left: 34px;\r\n  padding-top: 34px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: calc(50% - 10px);\r\n  border: 1px solid #fff;\r\n}\r\n.tickets_item_title {\r\n  color: #fff;\r\n  font-size: 67px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 500;\r\n}\r\n.tickets_item_services {\r\n  margin-top: 40px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 10px;\r\n  p {\r\n    color: #fff;\r\n    font-size: 22px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n    line-height: 35px;\r\n  }\r\n}\r\n.tickets_item_bottom {\r\n  gap: 118px;\r\n  margin-top: 47px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  .tickets_item_bottom_price {\r\n    align-self: flex-start;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 10px;\r\n    color: #fff;\r\n    font-size: 32.522px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n    text-transform: uppercase;\r\n    span {\r\n      font-weight: 700;\r\n      font-size: 56px;\r\n    }\r\n  }\r\n  .tickets_item_bottom_buy {\r\n    height: 136px;\r\n    position: relative;\r\n    right: -1px;\r\n    bottom: -1px;\r\n    flex-grow: 1;\r\n    color: #000;\r\n    padding-left: 62px;\r\n    font-size: 32.522px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 600;\r\n    position: relative;\r\n    background-color: $accent-color;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border: none;\r\n    transition: background-color 0.3s ease-in-out;\r\n\r\n    &:hover {\r\n      background-color: $blue;\r\n    }\r\n    .tickets_item_arrow {\r\n      position: absolute;\r\n      right: 20px;\r\n      bottom: 20px;\r\n    }\r\n  }\r\n}\r\n",".section_where {\r\n  @include with-devider();\r\n  position: relative;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  padding-top: 512px;\r\n  &::before {\r\n    height: 304px;\r\n  }\r\n}\r\n.section_where_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  top: -25%;\r\n  width: 15.88vw;\r\n}\r\n.section_where_content {\r\n  padding-bottom: 74px;\r\n}\r\n.section_where_left_main {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n.section_where_title {\r\n  @include section-title();\r\n  margin-bottom: 63px;\r\n}\r\n.section_where_edition {\r\n  width: 255px;\r\n  height: 46px;\r\n}\r\n.section_where_left {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.section_where_left_subscription {\r\n  margin-top: 78px;\r\n\r\n  color: #fff;\r\n  font-size: 33px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  line-height: 30px;\r\n}\r\n.section_where_left_bottom {\r\n  display: flex;\r\n  gap: 20px;\r\n\r\n  img {\r\n    cursor: pointer;\r\n  }\r\n}\r\n.section_where_right_map {\r\n  width: 405px;\r\n  height: 741px;\r\n}\r\n",".section_sponsors {\r\n  padding: 170px 0;\r\n}\r\n.sponsors_container {\r\n  gap: 68px;\r\n  margin-top: 38px;\r\n  display: grid;\r\n  grid-template-columns: repeat(4, 1fr);\r\n}\r\n.section_sponsors_title {\r\n  @include section-title();\r\n}\r\n.sponsor_item {\r\n  border: 1px solid #fff;\r\n  position: relative;\r\n  // width: 369px;\r\n  height: 322px;\r\n\r\n  .sponsor_item_name {\r\n    position: absolute;\r\n    bottom: 34px;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n    color: #fff;\r\n    text-align: center;\r\n    font-size: 20px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n  }\r\n}\r\n",".section_questions {\r\n  position: relative;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 304px;\r\n  }\r\n  padding-top: 374px;\r\n  padding-bottom: 534px;\r\n  // overflow: hidden;\r\n}\r\n.section_questions_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 0;\r\n}\r\n.section_questions_ellipse_blue {\r\n  position: absolute;\r\n  border-radius: 1380px;\r\n  background: rgba(0, 170, 201, 0.12);\r\n  filter: blur(264px);\r\n  width: 71.875vw;\r\n  height: 71.875vw;\r\n  top: -50%;\r\n}\r\n.section_questions_title {\r\n  @include section-title();\r\n}\r\n.section_questions_center {\r\n  position: relative;\r\n  z-index: 9;\r\n  flex-direction: column;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.section_questions_email {\r\n  color: #fff;\r\n  text-align: center;\r\n  font-size: 40px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  margin-top: 59px;\r\n}\r\n.section_questions_social {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 72px;\r\n  margin-top: 65px;\r\n\r\n  svg {\r\n    width: 49px;\r\n    height: 49px;\r\n  }\r\n  a:hover path {\r\n    fill: $accent-color;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
+}
+
+.section_questions_logo {
+  width: 256px;
+  height: 202px;
+  margin-top: 79px;
+}
+
+@media screen and (max-width: 1440px) {
+  .section_questions {
+    padding-top: 264px;
+    padding-bottom: 100px;
+  }
+  .section_questions::before {
+    height: 154px;
+  }
+  .section_questions_email {
+    font-size: 30.36px;
+    margin-top: 45px;
+  }
+  .section_questions_social {
+    margin-top: 50px;
+  }
+  .section_questions_social svg {
+    width: 37px;
+    height: 37px;
+  }
+  .section_questions_logo {
+    width: 194px;
+    height: 153px;
+    margin-top: 61px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section_questions {
+    padding-top: 204px;
+    padding-bottom: 66px;
+  }
+  .section_questions::before {
+    height: 124px;
+  }
+  .section_questions_email {
+    font-size: 20.323px;
+    margin-top: 30px;
+  }
+  .section_questions_social {
+    margin-top: 34px;
+  }
+  .section_questions_social svg {
+    width: 25px;
+    height: 25px;
+  }
+  .section_questions_logo {
+    width: 130px;
+    height: 102px;
+    margin-top: 41px;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/scss/base.scss","webpack://./src/scss/main.scss","webpack://./src/scss/mixins.scss","webpack://./src/scss/first-section.scss","webpack://./src/scss/why-section.scss","webpack://./src/scss/how-section.scss","webpack://./src/scss/speakers-section.scss","webpack://./src/scss/program-section.scss","webpack://./src/scss/tickets-section.scss","webpack://./src/scss/where-section.scss","webpack://./src/scss/sponsors-section.scss","webpack://./src/scss/question-section.scss"],"names":[],"mappings":"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","sourcesContent":[":root {\r\n  --container-margin: 120px;\r\n  --title-size: 50px;\r\n}\r\n$container-margin: var(--container-margin);\r\n$accent-color: #fde82b;\r\n$blue: #04bee0;\r\n* {\r\n  box-sizing: border-box;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-family: 'SF Pro Display';\r\n  color: #fff;\r\n  scroll-behavior: smooth;\r\n}\r\nbody {\r\n  background-color: #0f011f;\r\n  scroll-behavior: smooth;\r\n}\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\nbutton {\r\n  outline: none;\r\n  cursor: pointer;\r\n}\r\na {\r\n  color: #fff;\r\n  outline: none;\r\n  text-decoration: none;\r\n}\r\nli {\r\n  list-style: none;\r\n}\r\n.container {\r\n  @include container();\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  :root {\r\n    --container-margin: 90px;\r\n    --title-size: 38px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  :root {\r\n    --title-size: 25.4px;\r\n  }\r\n}\r\n",":root {\n  --container-margin: 120px;\n  --title-size: 50px;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  font-family: \"SF Pro Display\";\n  color: #fff;\n  scroll-behavior: smooth;\n}\n\nbody {\n  background-color: #0f011f;\n  scroll-behavior: smooth;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  padding: 0;\n  margin: 0;\n}\n\nbutton {\n  outline: none;\n  cursor: pointer;\n}\n\na {\n  color: #fff;\n  outline: none;\n  text-decoration: none;\n}\n\nli {\n  list-style: none;\n}\n\n.container {\n  width: calc(100vw - var(--container-margin) * 2);\n  margin: 0 var(--container-margin);\n}\n\n@media screen and (max-width: 1440px) {\n  :root {\n    --container-margin: 90px;\n    --title-size: 38px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  :root {\n    --title-size: 25.4px;\n  }\n}\n.section_first {\n  width: 100%;\n  background-size: cover;\n  position: relative;\n  overflow: hidden;\n}\n\n.section_first__container {\n  display: flex;\n  flex-direction: column;\n}\n\n.section_first_content_container {\n  width: 100%;\n  padding: 0 var(--container-margin);\n}\n\n.header {\n  width: calc(100vw - var(--container-margin) * 2);\n  margin: 0 var(--container-margin);\n  position: fixed;\n  z-index: 99;\n  top: 66px;\n  width: calc(100vw - var(--container-margin) * 2);\n  border: 1px solid #fff;\n  height: 128px;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;\n}\n.header.blured {\n  background-color: rgba(63, 63, 63, 0.25);\n  backdrop-filter: blur(18.5px);\n}\n\n.header__logo {\n  padding: 25px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-right: 1px solid #fff;\n}\n\n.header__nav {\n  flex-grow: 1;\n  padding: 53px 0;\n  padding-left: 4.69vw;\n  display: flex;\n  align-items: center;\n}\n\n.header__nav_list {\n  display: flex;\n  justify-content: space-between;\n  flex-wrap: nowrap;\n  width: 100%;\n}\n\n.header__nav_link {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 18px;\n  line-height: 21px;\n  color: #ffffff;\n  transition: color 0.3s ease-in-out;\n}\n.header__nav_link:hover {\n  color: #fde82b;\n}\n\n.header__nav_link {\n  white-space: nowrap;\n}\n\n.header__get_ticket {\n  display: flex;\n  align-items: center;\n  padding: 0 6.82vw;\n}\n\n.header__social {\n  display: flex;\n  gap: 42px;\n  padding: 0 2.6vw;\n  align-items: center;\n}\n\n.header__social_item path {\n  transition: fill 0.2s ease-in-out;\n}\n.header__social_item:hover path {\n  fill: #fde82b;\n}\n\n.section_first__content {\n  flex-grow: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  padding-top: 193px;\n}\n\n.section_first__content_top {\n  display: flex;\n  justify-content: flex-end;\n}\n.section_first__content_top .container {\n  display: flex;\n  justify-content: flex-end;\n}\n\n.content_top_wrapper {\n  display: flex;\n  border: 1px solid #fff;\n  border-top: none;\n}\n.content_top_wrapper.border-top {\n  border-top: 1px solid #fff;\n}\n\n.content_top_wrapper_item {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 800;\n  font-size: 70px;\n  line-height: 84px;\n  /* identical to box height */\n  text-transform: uppercase;\n  color: #ffffff;\n  padding: 21px 30px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-right: 1px solid #fff;\n}\n.content_top_wrapper_item:last-child {\n  border-right: none;\n}\n\n.section_first__content_middle {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 64px;\n  gap: 14px;\n}\n\n.section_first_main_title {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 800;\n  font-size: 201px;\n  line-height: 120%;\n}\n\n.section_first_subscription {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 43px;\n  line-height: 120%;\n  max-width: 264px;\n}\n\n.section_first__content_bottom {\n  margin-top: 64px;\n  display: flex;\n  justify-content: center;\n}\n\n.running_string__container {\n  margin-top: 113px;\n  overflow: hidden;\n  max-width: 100%;\n}\n\n.running_string__wrapper {\n  display: flex;\n  align-items: center;\n  overflow: hidden;\n}\n\n.running_string__inner,\n.running_string__inner_clone {\n  transform: translate(100%, 0);\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\n.running_string__inner {\n  animation: marquee 32s infinite linear forwards;\n  position: absolute;\n}\n\n.running_string__inner_clone {\n  animation: 32s marquee 16s infinite linear forwards;\n}\n\n.running_string__item {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 120%;\n  color: #fde82b;\n  position: relative;\n  white-space: nowrap;\n  padding: 0 28px;\n}\n.running_string__item::after {\n  position: absolute;\n  display: block;\n  content: \"\";\n  width: 10px;\n  height: 2px;\n  background-color: #fde82b;\n  right: 0;\n  top: calc(50% + 2px);\n  transform: translateY(-50%) translateX(50%);\n}\n.running_string__item:last-child::after {\n  display: none;\n}\n\n@keyframes marquee {\n  0% {\n    transform: translateX(-100%);\n  }\n  50% {\n    transform: translateX(0);\n  }\n  100% {\n    transform: translateX(100%);\n  }\n}\n.get_ticket_btn {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  background-color: transparent;\n  color: #fde82b;\n  border: 1px solid #fde82b;\n  cursor: pointer;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  font-size: 21px;\n  line-height: 25px;\n  padding: 8px 14px;\n}\n.get_ticket_btn:hover {\n  background-color: #fde82b;\n  color: #0f0121;\n}\n.get_ticket_btn:hover path {\n  stroke: #0f0121;\n}\n.get_ticket_btn path {\n  transition: 0.3s ease-in-out stroke;\n}\n\n.get_ticket_big_btn {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  background-color: transparent;\n  color: #fde82b;\n  border: 2.3553px solid #fde82b;\n  cursor: pointer;\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n  font-size: 49.4621px;\n  line-height: 112%;\n  padding: 18.8427px 32.9747px;\n}\n.get_ticket_big_btn:hover {\n  background-color: #fde82b;\n  color: #0f0121;\n}\n.get_ticket_big_btn:hover path {\n  stroke: #0f0121;\n}\n.get_ticket_big_btn path {\n  transition: 0.3s ease-in-out stroke;\n}\n\n.section_first__bottom {\n  background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);\n  padding-bottom: 122px;\n}\n\n@media screen and (max-width: 1440px) {\n  .header {\n    height: 96px;\n    top: 50px;\n  }\n  .header__logo {\n    padding: 19px;\n  }\n  .header__logo .header__logo_img {\n    width: 75px;\n    height: 59px;\n  }\n  .header__nav {\n    padding: 39px 0;\n    padding-left: 4vw;\n  }\n  .header__nav_link {\n    font-size: 16px;\n  }\n  .get_ticket_btn {\n    padding: 5.996px 10.493px;\n    font-size: 16px;\n  }\n  .header__social {\n    gap: 31px;\n    padding-left: 0;\n  }\n  .header__social svg {\n    width: 21px;\n    height: 21px;\n  }\n  .section_first__content {\n    padding-top: 146px;\n  }\n  .content_top_wrapper_item {\n    font-size: 53.129px;\n    padding: 16.698px 23.529px;\n  }\n  .section_first__content_middle {\n    margin-top: 50px;\n  }\n  .section_first_main_title {\n    font-size: 152.557px;\n  }\n  .section_first_subscription {\n    font-size: 32.637px;\n    max-width: 201px;\n  }\n  .section_first__content_bottom {\n    margin-top: 48px;\n  }\n  .get_ticket_big_btn {\n    font-family: \"SF Pro Display\";\n    font-style: normal;\n    font-weight: 300;\n    background-color: transparent;\n    color: #fde82b;\n    border: 1.77px solid #fde82b;\n    cursor: pointer;\n    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n    padding: 14.301px 25.028px;\n    font-size: 37.541px;\n  }\n  .get_ticket_big_btn:hover {\n    background-color: #fde82b;\n    color: #0f0121;\n  }\n  .get_ticket_big_btn:hover path {\n    stroke: #0f0121;\n  }\n  .get_ticket_big_btn path {\n    transition: 0.3s ease-in-out stroke;\n  }\n  .get_ticket_big_btn svg {\n    width: 27px;\n    height: 28px;\n    margin-left: 10px;\n  }\n  .running_string__container {\n    margin-top: 86px;\n  }\n  .running_string__container .running_string__item {\n    font-size: 18.975px;\n  }\n  .running_string__container .running_string__item::after {\n    height: 1px;\n    top: calc(50% + 1px);\n  }\n  .section_first__bottom {\n    padding-bottom: 92px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .header {\n    height: 64px;\n    top: 35px;\n  }\n  .header__logo {\n    padding: 12.5px;\n  }\n  .header__logo .header__logo_img {\n    width: 50px;\n    height: 40px;\n  }\n  .header__nav {\n    padding: 25px 0;\n    padding-left: 4vw;\n  }\n  .header__nav_link {\n    font-size: 10.536px;\n  }\n  .get_ticket_btn {\n    padding: 4.014px 7.024px;\n    font-size: 10.536px;\n  }\n  .header__social {\n    gap: 21px;\n    padding-left: 0;\n  }\n  .header__social svg {\n    width: 14.5px;\n    height: 14.5px;\n  }\n  .section_first__content {\n    padding-top: 99px;\n  }\n  .content_top_wrapper_item {\n    font-size: 35.566px;\n    padding: 11px 15.5px;\n  }\n  .section_first__content_middle {\n    margin-top: 34px;\n  }\n  .section_first_main_title {\n    font-size: 102.124px;\n  }\n  .section_first_subscription {\n    font-size: 21.848px;\n    max-width: 135px;\n  }\n  .section_first__content_bottom {\n    margin-top: 32px;\n  }\n  .get_ticket_big_btn {\n    font-family: \"SF Pro Display\";\n    font-style: normal;\n    font-weight: 300;\n    background-color: transparent;\n    color: #fde82b;\n    border: 1.197px solid #fde82b;\n    cursor: pointer;\n    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\n    padding: 9.574px 16.754px;\n    font-size: 25.131px;\n  }\n  .get_ticket_big_btn:hover {\n    background-color: #fde82b;\n    color: #0f0121;\n  }\n  .get_ticket_big_btn:hover path {\n    stroke: #0f0121;\n  }\n  .get_ticket_big_btn path {\n    transition: 0.3s ease-in-out stroke;\n  }\n  .get_ticket_big_btn svg {\n    width: 18px;\n    height: 19px;\n    margin-left: 7px;\n  }\n  .running_string__container {\n    margin-top: 57px;\n  }\n  .running_string__container .running_string__item {\n    font-size: 12.702px;\n  }\n  .running_string__container .running_string__item::after {\n    height: 1px;\n    top: calc(50% + 1px);\n  }\n  .section_first__bottom {\n    padding-bottom: 62px;\n  }\n}\n.section_why {\n  padding-top: 305px;\n  position: relative;\n  padding-bottom: 170px;\n  position: relative;\n}\n.section_why::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_why::before {\n  height: 204px;\n}\n\n.section_why__ellipse_left,\n.section_why__ellipse_right,\n.section_why__plant {\n  position: absolute;\n}\n\n.section_why__ellipse_left {\n  background: rgba(0, 170, 201, 0.12);\n  transform: translateX(-50%) translateY(-50%);\n  filter: blur(264px);\n  top: 15%;\n}\n\n.section_why__ellipse_left,\n.section_why__ellipse_right {\n  z-index: 1;\n  width: 73.59vw;\n  height: 73.59vw;\n}\n\n.section_why__ellipse_right {\n  right: 0;\n}\n\n.section_why__plant {\n  right: 0;\n  top: 5%;\n  height: 81.98vw;\n}\n\n.section_why_container {\n  position: relative;\n  z-index: 10;\n}\n\n.section_why_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.section_why_subscription {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 200;\n  font-size: 50px;\n  line-height: 120%;\n  color: #ffffff;\n  margin-top: 93px;\n  max-width: 68vw;\n}\n\n.section_why_subscription > span {\n  font-weight: 600;\n}\n\n.section_why_text {\n  display: flex;\n  flex-direction: column;\n  gap: 40px;\n  max-width: 72.7vw;\n  margin-top: 93px;\n}\n.section_why_text p {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 140%;\n  color: #ffffff;\n}\n.section_why_text p span {\n  font-weight: 600;\n  color: #04bee0;\n}\n\n.section_why_ready_text {\n  margin-top: 93px;\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 200;\n  font-size: 50px;\n  line-height: 120%;\n  color: #ffffff;\n}\n\n.section_why_ready_text span {\n  font-weight: 600;\n  text-align: right;\n}\n\n.section_why_event {\n  display: flex;\n  margin-top: 229px;\n}\n\n.section_why_event_item {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-grow: 1;\n  border: 1px solid #fff;\n}\n.section_why_event_item:first-child {\n  padding: 54px 70px;\n  text-align-last: left;\n  border-right: none;\n}\n.section_why_event_item:nth-child(2) {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 120%;\n  color: #0f011f;\n  padding: 54px 66px;\n  position: relative;\n  background-color: #fde82b;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  cursor: pointer;\n  border: none;\n  transition: background-color 0.3s ease-in-out;\n  white-space: nowrap;\n}\n.section_why_event_item:nth-child(2):hover {\n  background-color: #04bee0;\n}\n.section_why_event_item:nth-child(3) {\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 500;\n  font-size: 80px;\n  line-height: 120%;\n  text-transform: uppercase;\n  color: #ffffff;\n  padding: 36px 36px;\n  white-space: nowrap;\n  border-left: none;\n  width: 36.4vw;\n}\n.section_why_event_item .section_why_event_item_arrow {\n  position: absolute;\n  bottom: 20px;\n  right: 20px;\n  cursor: pointer;\n}\n.section_why_event_item span {\n  font-weight: 600;\n  color: #0f011f;\n}\n.section_why_event_item .section_why_event_item_inner {\n  max-width: 251px;\n  font-family: \"SF Pro Display\";\n  font-style: normal;\n  font-weight: 300;\n  font-size: 25px;\n  line-height: 120%;\n}\n\n.section_why_carousel_container {\n  position: relative;\n  padding: 0 115px;\n  margin-top: 81px;\n}\n\n.why_carousel_btn_next,\n.why_carousel_btn_prev {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  background-color: transparent;\n  border: none;\n  outline: none;\n}\n\n.why_carousel_btn_prev {\n  left: 0;\n}\n\n.why_carousel_btn_next {\n  right: 0;\n}\n\n@media screen and (max-width: 1440px) {\n  .section_why {\n    padding-top: 246px;\n    padding-bottom: 129px;\n  }\n  .section_why::before {\n    height: 154px;\n  }\n  .section_why_subscription {\n    font-size: 37.95px;\n    margin-top: 62px;\n  }\n  .section_why_text {\n    margin-top: 63px;\n    gap: 27px;\n  }\n  .section_why_text p {\n    font-size: 19px;\n  }\n  .section_why_ready_text {\n    font-size: 38px;\n    margin-top: 61px;\n  }\n  .section_why_carousel_container {\n    padding: 0 93px;\n    margin-top: 62px;\n  }\n  .why_carousel_btn_prev,\n  .why_carousel_btn_prev svg,\n  .why_carousel_btn_next,\n  .why_carousel_btn_next svg {\n    width: 57px;\n  }\n  .section_why_event {\n    margin-top: 175px;\n  }\n  .section_why_event_item .section_why_event_item_arrow {\n    width: 26.767px;\n    height: 27.758px;\n    bottom: 16px;\n    right: 16px;\n  }\n  .section_why_event_item .section_why_event_item_inner {\n    font-size: 18.811px;\n  }\n  .section_why_event_item:first-child {\n    padding: 40px 50px;\n  }\n  .section_why_event_item:nth-child(2) {\n    padding: 40px 50px;\n    font-size: 18.811px;\n  }\n  .section_why_event_item:nth-child(3) {\n    padding: 27px 60px;\n    font-size: 60.195px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_why {\n    padding-top: 186px;\n    padding-bottom: 70px;\n  }\n  .section_why::before {\n    height: 124px;\n  }\n  .section_why_subscription {\n    font-size: 25.404px;\n    margin-top: 41px;\n  }\n  .section_why_text {\n    margin-top: 43px;\n    gap: 19px;\n  }\n  .section_why_text p {\n    font-size: 12.702px;\n  }\n  .section_why_ready_text {\n    font-size: 25.404px;\n    margin-top: 40px;\n  }\n  .section_why_carousel_container {\n    padding: 0 62px;\n    margin-top: 42px;\n  }\n  .why_carousel_btn_prev,\n  .why_carousel_btn_prev svg,\n  .why_carousel_btn_next,\n  .why_carousel_btn_next svg {\n    width: 38px;\n  }\n  .section_why_event {\n    margin-top: 116px;\n  }\n  .section_why_event_item .section_why_event_item_arrow {\n    width: 18px;\n    height: 19px;\n    bottom: 10px;\n    right: 10px;\n  }\n  .section_why_event_item .section_why_event_item_inner {\n    font-size: 12.592px;\n  }\n  .section_why_event_item:first-child {\n    padding: 27px 35px;\n  }\n  .section_why_event_item:nth-child(2) {\n    padding: 40px 33px;\n    font-size: 12.592px;\n  }\n  .section_why_event_item:nth-child(3) {\n    padding: 19px 40px;\n    font-size: 40.296px;\n  }\n}\n.section_how {\n  padding-top: 444px;\n  position: relative;\n}\n.section_how::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_how::before {\n  height: 274px;\n}\n\n.section_how_palm {\n  position: absolute;\n  left: 0;\n  width: 25.05vw;\n  top: -8%;\n  z-index: 1;\n}\n\n.how_section_container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_how_ellipse_pink,\n.section_how_ellipse_blue {\n  position: absolute;\n  border-radius: 50%;\n  z-index: 1;\n}\n\n.section_how_ellipse_pink {\n  width: 48.07vw;\n  height: 48.07vw;\n  border-radius: 923px;\n  background: rgba(255, 39, 174, 0.09);\n  filter: blur(172.4501037598px);\n  left: 129px;\n  top: 60%;\n  transform: translateY(-50%);\n}\n\n.section_how_ellipse_blue {\n  width: 64.53vw;\n  height: 64.53vw;\n  top: 25%;\n  border-radius: 1239px;\n  background: rgba(0, 170, 201, 0.12);\n  filter: blur(231.490447998px);\n  right: 0;\n}\n\n.how_section_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.how_carousel_container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 119px;\n}\n\n.how_carousel_wrapper {\n  position: relative;\n  width: 497px;\n  height: 1014px;\n  margin: 0 auto;\n  background-size: contain;\n  background-position: center center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding-top: 127px;\n}\n\n.how_carousel_bg {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 0;\n}\n\n.how_carousel_logo {\n  width: 130px;\n  height: 103px;\n  position: relative;\n  z-index: 1;\n}\n\n.how_carousel {\n  margin: 107px 0;\n  max-width: 379px;\n  position: relative;\n  right: -4px;\n}\n.how_carousel .owl-dots {\n  width: 100%;\n  display: flex;\n  gap: 11px;\n  margin-top: 107px;\n  justify-content: center;\n}\n.how_carousel .owl-dots .owl-dot {\n  width: 32.019px;\n  height: 6px;\n  flex-shrink: 0;\n  border-radius: 47.242px;\n  background: #030303;\n}\n.how_carousel .owl-dots .owl-dot.active {\n  background-color: #fde82b;\n  width: 83.732px;\n}\n\n.how_carousel_btn_prev,\n.how_carousel_btn_next {\n  position: absolute;\n  top: 50%;\n  transform: translateX(-50%);\n  outline: none;\n  border: none;\n  background-color: transparent;\n}\n\n.how_carousel_btn_prev {\n  left: -60%;\n}\n\n.how_carousel_btn_next {\n  right: -76%;\n}\n\n.how_carousel_item {\n  max-width: 379px;\n  max-height: 464px;\n}\n\n.how_image_wrapper {\n  position: relative;\n  top: -100px;\n  padding-top: 232px;\n  padding-bottom: 82px;\n  overflow: hidden;\n}\n.how_image_wrapper .container {\n  position: relative;\n  z-index: 1;\n}\n.how_image_wrapper .how_image_wrapper_bg {\n  position: absolute;\n  top: -22%;\n  width: 100%;\n}\n.how_image_wrapper .how_images {\n  margin-top: 114px;\n  display: flex;\n  gap: 20px;\n}\n.how_image_wrapper .how_images img {\n  width: calc(50% - 10px);\n}\n\n@media screen and (max-width: 1440px) {\n  .how_image_wrapper {\n    padding-bottom: 47px;\n  }\n  .section_how {\n    padding-top: 324px;\n  }\n  .section_how::before {\n    height: 204px;\n  }\n  .section_how_palm {\n    top: -4%;\n  }\n  .how_carousel_container {\n    margin-top: 97px;\n  }\n  .how_carousel_wrapper,\n  .how_carousel_bg {\n    width: 385px;\n    height: 770px;\n  }\n  .how_carousel_wrapper {\n    padding-top: 70px;\n  }\n  .how_carousel_logo {\n    width: 97px;\n    height: 78px;\n  }\n  .how_carousel {\n    margin-top: 82px;\n  }\n  .how_carousel,\n  .how_carousel_item {\n    max-width: 288px;\n    max-height: 352px;\n  }\n  .how_carousel {\n    right: 0;\n  }\n  .how_carousel .owl-dots {\n    margin-top: 81px;\n  }\n  .how_carousel_btn_prev,\n  .how_carousel_btn_prev svg,\n  .how_carousel_btn_next,\n  .how_carousel_btn_next svg {\n    width: 57px;\n  }\n  .how_carousel_btn_prev {\n    left: -50%;\n  }\n  .how_carousel_btn_next {\n    right: -70%;\n  }\n  .how_image_wrapper {\n    padding-top: 180px;\n  }\n  .how_image_wrapper .how_images {\n    margin-top: 90px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .how_image_wrapper {\n    padding-bottom: 0;\n    padding-top: 150px;\n  }\n  .how_image_wrapper .how_image_wrapper_bg {\n    top: -15%;\n  }\n  .section_how {\n    padding-top: 230px;\n  }\n  .section_how::before {\n    height: 154px;\n  }\n  .section_how_palm {\n    top: -4%;\n  }\n  .how_carousel_container {\n    margin-top: 61px;\n  }\n  .how_carousel_wrapper,\n  .how_carousel_bg {\n    width: 253px;\n    height: 515px;\n  }\n  .how_carousel_wrapper {\n    padding-top: 68px;\n  }\n  .how_carousel_logo {\n    width: 66px;\n    height: 52px;\n  }\n  .how_carousel {\n    margin-top: 55px;\n  }\n  .how_carousel,\n  .how_carousel_item {\n    max-width: 193px;\n    max-height: 236px;\n  }\n  .how_carousel {\n    right: 0;\n  }\n  .how_carousel .owl-dots {\n    margin-top: 53px;\n    gap: 5px;\n  }\n  .how_carousel .owl-dots .owl-dot {\n    width: 16px;\n    height: 3px;\n    border-radius: 24.003px;\n  }\n  .how_carousel .owl-dots .owl-dot.active {\n    width: 43px;\n  }\n  .how_carousel_btn_prev,\n  .how_carousel_btn_prev svg,\n  .how_carousel_btn_next,\n  .how_carousel_btn_next svg {\n    width: 38px;\n  }\n  .how_carousel_btn_prev {\n    left: -50%;\n  }\n  .how_carousel_btn_next {\n    right: -70%;\n  }\n  .how_image_wrapper .how_images {\n    margin-top: 60px;\n    gap: 10px;\n  }\n}\n.section_speakers {\n  position: relative;\n  position: relative;\n  padding-top: 374px;\n  padding-bottom: 170px;\n}\n.section_speakers::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_speakers::before {\n  height: 204px;\n}\n.section_speakers .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_speakers_bg {\n  position: absolute;\n  width: 100%;\n  top: 28%;\n  z-index: 1;\n}\n\n.section_speakers_palm {\n  position: absolute;\n  right: 0;\n  top: -20%;\n  width: 25.365vw;\n  z-index: 1;\n}\n\n.section_speakers_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.speakers_undertitle {\n  color: #fff;\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 37px;\n}\n\n.speakers_cases_container {\n  display: flex;\n  gap: 20px;\n  margin-top: 58px;\n}\n.speakers_cases_container .speakers_case {\n  width: 33.3%;\n}\n.speakers_cases_container .speakers_case_title,\n.speakers_cases_container .speakers_case_content {\n  color: #fff;\n  font-size: 20px;\n  font-family: SF Pro Display;\n}\n.speakers_cases_container .speakers_case_title {\n  font-weight: 600;\n}\n.speakers_cases_container .speakers_case_content {\n  font-weight: 300;\n  margin-top: 20px;\n}\n\n.section_speakers_carousel_container {\n  max-width: 80%;\n  margin: 0 auto;\n  position: relative;\n  margin-top: 104px;\n}\n\n.speakers_carousel_btn_prev,\n.speakers_carousel_btn_next {\n  background-color: transparent;\n  outline: none;\n  border: none;\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.speakers_carousel_btn_prev {\n  left: -7.29vw;\n}\n\n.speakers_carousel_btn_next {\n  right: -7.29vw;\n}\n\n.speakers_carousel_item {\n  display: flex;\n  flex-direction: column;\n  gap: 40px;\n}\n.speakers_carousel_item .speakers_carousel_item_img_container {\n  border-radius: 100% 100% 100% 0;\n  width: 100%;\n  background: #000;\n  overflow: hidden;\n  padding-top: 20px;\n}\n.speakers_carousel_item .speakers_carousel_item_name {\n  color: #fff;\n  font-size: 30px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n}\n.speakers_carousel_item .speakers_carousel_item_list li {\n  color: #fff;\n  font-size: 20px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  list-style: inside;\n}\n.speakers_carousel_item .speakers_carousel_item_line {\n  width: 100%;\n  height: 1px;\n  background-color: #fff;\n}\n\n.section_why_event.speakers_event .section_why_event_item:first-child {\n  color: #fff;\n  font-size: 41px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n  padding: 58px 32px;\n  white-space: normal;\n  max-width: 25.52vw;\n}\n.section_why_event.speakers_event .section_why_event_item:nth-child(3) {\n  padding: 33px;\n  color: #fff;\n  font-size: 18px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 133%;\n  white-space: normal;\n  text-transform: none;\n  max-width: 36.4vw;\n}\n\n@media screen and (max-width: 1700px) {\n  .section_why_event.speakers_event .section_why_event_item:first-child {\n    font-size: 33px;\n  }\n}\n@media screen and (max-width: 1440px) {\n  .section_speakers {\n    padding-top: 294px;\n    padding-bottom: 130px;\n  }\n  .section_speakers::before {\n    height: 154px;\n  }\n  .speakers_undertitle {\n    margin-top: 30px;\n    font-size: 18.707px;\n  }\n  .speakers_cases_container {\n    gap: 16px;\n    margin-top: 43px;\n  }\n  .speakers_cases_container .speakers_case_title,\n  .speakers_cases_container .speakers_case_content {\n    font-size: 15px;\n  }\n  .speakers_cases_container .speakers_case_content {\n    margin-top: 15px;\n  }\n  .section_speakers_carousel_container {\n    margin-top: 80px;\n  }\n  .speakers_carousel_item {\n    gap: 31px;\n  }\n  .speakers_carousel_item .speakers_carousel_item_list li {\n    font-size: 15px;\n  }\n  .speakers_carousel_item_name {\n    font-size: 23px;\n  }\n  .speakers_carousel_btn_prev,\n  .speakers_carousel_btn_prev svg,\n  .speakers_carousel_btn_next,\n  .speakers_carousel_btn_next svg {\n    width: 57px;\n  }\n  .section_why_event.speakers_event {\n    margin-top: 105px;\n  }\n  .section_why_event.speakers_event .section_why_event_item:first-child {\n    padding: 44px 24px;\n    font-size: 31px;\n  }\n  .section_why_event.speakers_event .section_why_event_item:nth-child(3) {\n    padding: 25px 16px;\n    font-size: 14px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_speakers {\n    padding-top: 224px;\n    padding-bottom: 87px;\n  }\n  .section_speakers::before {\n    height: 124px;\n  }\n  .speakers_undertitle {\n    margin-top: 21px;\n    font-size: 12.523px;\n  }\n  .speakers_cases_container {\n    gap: 10px;\n    margin-top: 29px;\n  }\n  .speakers_cases_container .speakers_case_title,\n  .speakers_cases_container .speakers_case_content {\n    font-size: 10px;\n  }\n  .speakers_cases_container .speakers_case_content {\n    margin-top: 11px;\n  }\n  .section_speakers_carousel_container {\n    margin-top: 63px;\n  }\n  .speakers_carousel_item {\n    gap: 21px;\n  }\n  .speakers_carousel_item .speakers_carousel_item_list li {\n    font-size: 10px;\n  }\n  .speakers_carousel_item .speakers_carousel_item_name {\n    font-size: 15.242px;\n  }\n  .speakers_carousel_btn_prev,\n  .speakers_carousel_btn_prev svg,\n  .speakers_carousel_btn_next,\n  .speakers_carousel_btn_next svg {\n    width: 38px;\n  }\n  .section_why_event.speakers_event {\n    margin-top: 71px;\n  }\n  .section_why_event.speakers_event .section_why_event_item:first-child {\n    padding: 30px 16px;\n    font-size: 20.537px;\n  }\n  .section_why_event.speakers_event .section_why_event_item:nth-child(2) {\n    padding: 27px 33px;\n    font-size: 12.523px;\n  }\n  .section_why_event.speakers_event .section_why_event_item:nth-child(3) {\n    padding: 16px 12px;\n    font-size: 9.145px;\n  }\n}\n.section_program {\n  position: relative;\n  padding-top: 374px;\n  padding-bottom: 474px;\n  overflow: hidden;\n  z-index: 2;\n}\n.section_program::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_program::before {\n  height: 204px;\n}\n.section_program .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_program_bg {\n  position: absolute;\n  z-index: 1;\n  width: 100%;\n  top: 33%;\n}\n\n.section_program_ellipse_pink {\n  position: absolute;\n  right: 0;\n  border-radius: 1413px;\n  background: rgba(255, 39, 174, 0.09);\n  filter: blur(264px);\n  width: 73.59vw;\n  height: 73.59vw;\n  transform: translateX(50%);\n  top: 30%;\n  z-index: 1;\n}\n\n.section_program_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.section_program_undertitle {\n  color: #fff;\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 37px;\n}\n\n.section_program_program {\n  margin-top: 90px;\n  display: flex;\n  flex-direction: column;\n  gap: 90px;\n}\n.section_program_program .program_item_date {\n  color: #04bee0;\n  font-size: 55px;\n  font-family: SF Pro Display;\n  font-weight: 500;\n  margin-bottom: 38px;\n  text-align: center;\n}\n.section_program_program .program_item_body {\n  width: 100%;\n  border-collapse: collapse;\n}\n.section_program_program .program_item_body tr {\n  transition: 0.3s ease-in-out background-color;\n}\n.section_program_program .program_item_body tr:hover {\n  background-color: #40354d;\n  color: #04bee0;\n}\n.section_program_program .program_item_body tr:hover td {\n  background-color: #40354d;\n  color: #04bee0;\n  border-bottom: 1px solid #04bee0;\n}\n.section_program_program .program_item_body tr td {\n  transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color, 0.3s ease-in-out border;\n  padding: 62px 0 50px 0;\n  border-bottom: 1px solid #fff;\n  color: #fff;\n}\n.section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {\n  font-size: 50px;\n  font-family: SF Pro Display;\n}\n.section_program_program .program_item_body tr td:nth-child(1) {\n  width: 14.1146vw;\n}\n.section_program_program .program_item_body tr td:nth-child(3) {\n  width: 21.875vw;\n}\n.section_program_program .program_item_body tr td:nth-child(2) {\n  font-size: 60px;\n  font-family: SF Pro Display;\n  width: 5.4166vw;\n}\n.section_program_program .program_item_body tr td:nth-child(4) {\n  font-size: 25px;\n  font-family: SF Pro Display;\n  font-weight: 200;\n}\n\n@media screen and (min-width: 1600px) {\n  .section_program_bg {\n    top: 19%;\n  }\n}\n@media screen and (max-width: 1440px) {\n  .section_program {\n    padding-top: 284px;\n    padding-bottom: 284px;\n  }\n  .section_program::before {\n    height: 154px;\n  }\n  .section_program_bg {\n    top: 20%;\n  }\n  .section_program_undertitle {\n    font-size: 19px;\n    margin-top: 29px;\n  }\n  .section_program_program {\n    margin-top: 67px;\n  }\n  .section_program_program {\n    gap: 68px;\n  }\n  .section_program_program .program_item_date {\n    font-size: 41.745px;\n    margin-bottom: 30px;\n  }\n  .section_program_program .program_item_body {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  .section_program_program .program_item_body tr {\n    transition: 0.3s ease-in-out background-color;\n  }\n  .section_program_program .program_item_body tr:hover {\n    background-color: #40354d;\n    color: #04bee0;\n  }\n  .section_program_program .program_item_body tr:hover td {\n    background-color: #40354d;\n    color: #04bee0;\n    border-bottom: 1px solid #04bee0;\n  }\n  .section_program_program .program_item_body tr td {\n    padding: 47px 0 40px 0;\n  }\n  .section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {\n    font-size: 38px;\n  }\n  .section_program_program .program_item_body tr td:nth-child(2) {\n    font-size: 45.539px;\n  }\n  .section_program_program .program_item_body tr td:nth-child(4) {\n    font-size: 19px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_program {\n    padding-top: 200px;\n    padding-bottom: 200px;\n  }\n  .section_program::before {\n    height: 124px;\n  }\n  .section_program_bg {\n    top: 13%;\n  }\n  .section_program_undertitle {\n    font-size: 12.702px;\n    margin-top: 20px;\n  }\n  .section_program_program {\n    margin-top: 46px;\n  }\n  .section_program_program {\n    gap: 46px;\n  }\n  .section_program_program .program_item_date {\n    font-size: 27.945px;\n    margin-bottom: 26px;\n  }\n  .section_program_program .program_item_body {\n    width: 100%;\n    border-collapse: collapse;\n  }\n  .section_program_program .program_item_body tr {\n    transition: 0.3s ease-in-out background-color;\n  }\n  .section_program_program .program_item_body tr:hover {\n    background-color: #40354d;\n    color: #04bee0;\n  }\n  .section_program_program .program_item_body tr:hover td {\n    background-color: #40354d;\n    color: #04bee0;\n    border-bottom: 1px solid #04bee0;\n  }\n  .section_program_program .program_item_body tr td {\n    padding: 32px 0 27px 0;\n  }\n  .section_program_program .program_item_body tr td:nth-child(1), .section_program_program .program_item_body tr td:nth-child(3) {\n    font-size: 25.404px;\n  }\n  .section_program_program .program_item_body tr td:nth-child(2) {\n    font-size: 30.485px;\n  }\n  .section_program_program .program_item_body tr td:nth-child(4) {\n    font-size: 12.702px;\n  }\n}\n.section_tickets {\n  position: relative;\n  position: relative;\n  padding-top: 90px;\n  padding-bottom: 170px;\n}\n.section_tickets::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_tickets::before {\n  height: 204px;\n  top: -304px;\n}\n.section_tickets .container {\n  position: relative;\n  z-index: 2;\n}\n\n.section_tickets_palm {\n  position: absolute;\n  left: 0;\n  width: 23vw;\n  top: -105%;\n  z-index: 1;\n}\n\n.tickets_container {\n  display: flex;\n  gap: 20px;\n}\n\n.tickets_item {\n  padding-left: 34px;\n  padding-top: 34px;\n  display: flex;\n  flex-direction: column;\n  width: calc(50% - 10px);\n  border: 1px solid #fff;\n}\n\n.tickets_item_title {\n  color: #fff;\n  font-size: 67px;\n  font-family: SF Pro Display;\n  font-weight: 500;\n}\n\n.tickets_item_services {\n  margin-top: 40px;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n}\n.tickets_item_services p {\n  color: #fff;\n  font-size: 22px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 160%;\n}\n\n.tickets_item_bottom {\n  gap: 6.146vw;\n  margin-top: 47px;\n  display: flex;\n  justify-content: space-between;\n}\n.tickets_item_bottom .tickets_item_bottom_price {\n  align-self: flex-start;\n  display: flex;\n  flex-direction: column;\n  gap: 10px;\n  color: #fff;\n  font-size: 32.522px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  text-transform: uppercase;\n}\n.tickets_item_bottom .tickets_item_bottom_price span {\n  font-weight: 700;\n  font-size: 56px;\n}\n.tickets_item_bottom .tickets_item_bottom_buy {\n  height: 136px;\n  position: relative;\n  right: -1px;\n  bottom: -1px;\n  flex-grow: 1;\n  color: #000;\n  padding-left: 62px;\n  font-size: 32.522px;\n  font-family: SF Pro Display;\n  font-weight: 600;\n  position: relative;\n  background-color: #fde82b;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  cursor: pointer;\n  border: none;\n  transition: background-color 0.3s ease-in-out;\n}\n.tickets_item_bottom .tickets_item_bottom_buy:hover {\n  background-color: #04bee0;\n}\n.tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {\n  position: absolute;\n  right: 20px;\n  bottom: 20px;\n}\n\n@media screen and (max-width: 1600px) {\n  .section_tickets_palm {\n    top: -85%;\n  }\n}\n@media screen and (max-width: 1440px) {\n  .section_tickets {\n    padding-top: 140px;\n    padding-bottom: 130px;\n  }\n  .section_tickets::before {\n    height: 154px;\n    top: -154px;\n  }\n  .section_tickets .section_tickets_palm {\n    top: -80%;\n  }\n  .tickets_container {\n    gap: 15px;\n  }\n  .tickets_item {\n    padding-top: 25.67px;\n    padding-left: 25.67px;\n  }\n  .tickets_item_title {\n    font-size: 50.214px;\n  }\n  .tickets_item_services {\n    margin-top: 31px;\n    gap: 8px;\n  }\n  .tickets_item_services p {\n    font-size: 16.488px;\n    line-height: 157%;\n  }\n  .tickets_item_bottom {\n    margin-top: 40.5px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_buy {\n    padding-left: 46.41px;\n    font-size: 24.374px;\n    height: 101px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {\n    width: 26.66px;\n    height: 35.55px;\n    bottom: 16px;\n    right: 16px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_price {\n    font-size: 24.374px;\n    gap: 6px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_price span {\n    font-size: 40px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_tickets {\n    padding-top: 90px;\n    padding-bottom: 90px;\n  }\n  .section_tickets::before {\n    height: 124px;\n    top: -124px;\n  }\n  .section_tickets .section_tickets_palm {\n    top: -90%;\n  }\n  .tickets_container {\n    gap: 9px;\n  }\n  .tickets_item {\n    padding-top: 17px;\n    padding-left: 17px;\n  }\n  .tickets_item_title {\n    font-size: 33.614px;\n  }\n  .tickets_item_services {\n    margin-top: 21px;\n    gap: 6px;\n  }\n  .tickets_item_services p {\n    font-size: 11.038px;\n    line-height: 157%;\n  }\n  .tickets_item_bottom {\n    margin-top: 26px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_buy {\n    padding-left: 31px;\n    font-size: 16.317px;\n    height: 68px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_buy .tickets_item_arrow {\n    width: 18px;\n    height: 24px;\n    bottom: 10px;\n    right: 10px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_price {\n    font-size: 16.317px;\n    gap: 4px;\n  }\n  .tickets_item_bottom .tickets_item_bottom_price span {\n    font-size: 27px;\n  }\n}\n.section_where {\n  position: relative;\n  position: relative;\n  padding-top: 310px;\n}\n.section_where::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_where .container {\n  position: relative;\n  z-index: 2;\n}\n.section_where::before {\n  height: 204px;\n}\n\n.section_where_palm {\n  position: absolute;\n  right: 0;\n  top: -10%;\n  width: 15.88vw;\n}\n\n.section_where_content {\n  padding-bottom: 74px;\n  padding-top: 50px;\n}\n\n.section_where_left_main {\n  display: flex;\n  justify-content: space-between;\n}\n\n.section_where_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n  margin-bottom: 63px;\n}\n\n.section_where_edition {\n  width: 255px;\n  height: 46px;\n}\n\n.section_where_left {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.section_where_left_subscription {\n  margin-top: 78px;\n  color: #fff;\n  font-size: 33px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  line-height: 90%;\n}\n\n.section_where_left_bottom {\n  display: flex;\n  gap: 20px;\n}\n.section_where_left_bottom img {\n  cursor: pointer;\n}\n\n.section_where_right_map {\n  width: 405px;\n  height: 741px;\n}\n\n@media screen and (max-width: 1440px) {\n  .section_where {\n    padding-top: 247px;\n  }\n  .section_where::before {\n    height: 154px;\n  }\n  .section_where_content {\n    padding-top: 37px;\n  }\n  .section_where_edition {\n    width: 194px;\n    height: 35px;\n  }\n  .section_where_left_subscription {\n    font-size: 25.047px;\n    margin-top: 59px;\n  }\n  .section_where_right_map,\n  .section_where_right_map iframe {\n    width: 307px;\n    height: 562px;\n  }\n  .section_where_left_bottom {\n    gap: 16px;\n  }\n  .section_where_left_bottom img {\n    width: 200px;\n    height: 146px;\n  }\n  .section_where_content {\n    padding-bottom: 56px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_where {\n    padding-top: 187px;\n  }\n  .section_where::before {\n    height: 124px;\n  }\n  .section_where_content {\n    padding-top: 25px;\n  }\n  .section_where_edition {\n    width: 130px;\n    height: 23px;\n  }\n  .section_where_left_subscription {\n    font-size: 16.767px;\n    margin-top: 40px;\n  }\n  .section_where_right_map,\n  .section_where_right_map iframe {\n    width: 206px;\n    height: 376px;\n  }\n  .section_where_left_bottom {\n    gap: 11px;\n  }\n  .section_where_left_bottom img {\n    width: 134px;\n    height: 98px;\n  }\n  .section_where_content {\n    padding-bottom: 37px;\n  }\n}\n.section_sponsors {\n  padding: 170px 0;\n}\n\n.sponsors_container {\n  gap: 68px;\n  margin-top: 38px;\n  display: grid;\n  grid-template-columns: repeat(4, 1fr);\n}\n\n.section_sponsors_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.sponsor_item {\n  border: 1px solid #fff;\n  position: relative;\n  height: 322px;\n}\n.sponsor_item .sponsor_item_name {\n  position: absolute;\n  bottom: 34px;\n  left: 50%;\n  transform: translateX(-50%);\n  color: #fff;\n  text-align: center;\n  font-size: 20px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n}\n\n@media screen and (max-width: 1440px) {\n  .section_sponsors {\n    padding: 130px 0;\n  }\n  .sponsors_container {\n    gap: 51px;\n  }\n  .sponsor_item {\n    height: 240px;\n  }\n  .sponsor_item .sponsor_item_name {\n    font-size: 15.18px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_sponsors {\n    padding: 90px 0;\n  }\n  .sponsors_container {\n    gap: 34px;\n  }\n  .sponsor_item {\n    height: 161px;\n  }\n  .sponsor_item .sponsor_item_name {\n    font-size: 10.162px;\n  }\n}\n.section_questions {\n  position: relative;\n  position: relative;\n  padding-top: 344px;\n  padding-bottom: 253px;\n}\n.section_questions::before {\n  display: block;\n  content: \"\";\n  width: 1px;\n  background-color: #fff;\n  position: absolute;\n  top: 0;\n  left: 50%;\n}\n.section_questions::before {\n  height: 204px;\n}\n\n.section_questions_palm {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: 22.6vw;\n}\n\n.section_questions_ellipse_blue {\n  position: absolute;\n  border-radius: 1380px;\n  background: rgba(0, 170, 201, 0.12);\n  filter: blur(264px);\n  width: 71.875vw;\n  height: 71.875vw;\n  top: -50%;\n}\n\n.section_questions_title {\n  color: #fde82b;\n  font-size: var(--title-size);\n  font-family: SF Pro Display;\n  text-align: center;\n  font-weight: 400;\n}\n\n.section_questions_center {\n  position: relative;\n  z-index: 9;\n  flex-direction: column;\n  display: flex;\n  align-items: center;\n}\n\n.section_questions_email {\n  color: #fff;\n  text-align: center;\n  font-size: 40px;\n  font-family: SF Pro Display;\n  font-weight: 300;\n  margin-top: 59px;\n}\n\n.section_questions_social {\n  display: flex;\n  justify-content: center;\n  gap: 72px;\n  margin-top: 65px;\n}\n.section_questions_social svg {\n  width: 49px;\n  height: 49px;\n}\n.section_questions_social a:hover path {\n  fill: #fde82b;\n}\n\n.section_questions_logo {\n  width: 256px;\n  height: 202px;\n  margin-top: 79px;\n}\n\n@media screen and (max-width: 1440px) {\n  .section_questions {\n    padding-top: 264px;\n    padding-bottom: 100px;\n  }\n  .section_questions::before {\n    height: 154px;\n  }\n  .section_questions_email {\n    font-size: 30.36px;\n    margin-top: 45px;\n  }\n  .section_questions_social {\n    margin-top: 50px;\n  }\n  .section_questions_social svg {\n    width: 37px;\n    height: 37px;\n  }\n  .section_questions_logo {\n    width: 194px;\n    height: 153px;\n    margin-top: 61px;\n  }\n}\n@media screen and (max-width: 1024px) {\n  .section_questions {\n    padding-top: 204px;\n    padding-bottom: 66px;\n  }\n  .section_questions::before {\n    height: 124px;\n  }\n  .section_questions_email {\n    font-size: 20.323px;\n    margin-top: 30px;\n  }\n  .section_questions_social {\n    margin-top: 34px;\n  }\n  .section_questions_social svg {\n    width: 25px;\n    height: 25px;\n  }\n  .section_questions_logo {\n    width: 130px;\n    height: 102px;\n    margin-top: 41px;\n  }\n}","@mixin container {\r\n  width: calc(100vw - $container-margin * 2);\r\n  margin: 0 $container-margin;\r\n}\r\n@mixin with-devider {\r\n  position: relative;\r\n  &::before {\r\n    display: block;\r\n    content: '';\r\n    width: 1px;\r\n    background-color: #fff;\r\n    position: absolute;\r\n    top: 0;\r\n    left: 50%;\r\n  }\r\n}\r\n@mixin section-title {\r\n  color: $accent-color;\r\n  font-size: var(--title-size);\r\n  font-family: SF Pro Display;\r\n  text-align: center;\r\n  font-weight: 400;\r\n}\r\n",".section_first {\r\n  width: 100%;\r\n  background-size: cover;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n.section_first__container {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.section_first_content_container {\r\n  width: 100%;\r\n  padding: 0 $container-margin;\r\n}\r\n.header {\r\n  @include container();\r\n  position: fixed;\r\n  z-index: 99;\r\n  // left: 50%;\r\n  top: 66px;\r\n  width: calc(100vw - $container-margin * 2);\r\n  border: 1px solid #fff;\r\n  height: 128px;\r\n  display: flex;\r\n  flex-wrap: nowrap;\r\n  justify-content: space-between;\r\n  transition: background-color 0.3s ease-in-out,\r\n    backdrop-filter 0.3s ease-in-out;\r\n  &.blured {\r\n    background-color: rgba(63, 63, 63, 0.25);\r\n    backdrop-filter: blur(18.5px);\r\n  }\r\n}\r\n.header__logo {\r\n  padding: 25px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  border-right: 1px solid #fff;\r\n}\r\n.header__nav {\r\n  flex-grow: 1;\r\n  padding: 53px 0;\r\n  padding-left: 4.69vw;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.header__nav_list {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  flex-wrap: nowrap;\r\n  width: 100%;\r\n}\r\n.header__nav_link {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 18px;\r\n  line-height: 21px;\r\n\r\n  color: #ffffff;\r\n  transition: color 0.3s ease-in-out;\r\n  &:hover {\r\n    color: $accent-color;\r\n  }\r\n}\r\n.header__nav_link {\r\n  white-space: nowrap;\r\n}\r\n.header__get_ticket {\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 0 6.82vw;\r\n}\r\n.header__social {\r\n  display: flex;\r\n  gap: 42px;\r\n  padding: 0 2.6vw;\r\n  // padding-right: 50px;\r\n  align-items: center;\r\n}\r\n.header__social_item {\r\n  path {\r\n    transition: fill 0.2s ease-in-out;\r\n  }\r\n  &:hover path {\r\n    fill: $accent-color;\r\n  }\r\n}\r\n.section_first__content {\r\n  flex-grow: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  padding-top: 193px;\r\n}\r\n.section_first__content_top {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  .container {\r\n    display: flex;\r\n    justify-content: flex-end;\r\n  }\r\n}\r\n.content_top_wrapper {\r\n  display: flex;\r\n  border: 1px solid #fff;\r\n  border-top: none;\r\n  // border-top: none;\r\n  &.border-top {\r\n    border-top: 1px solid #fff;\r\n  }\r\n}\r\n.content_top_wrapper_item {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 800;\r\n  font-size: 70px;\r\n  line-height: 84px;\r\n\r\n  /* identical to box height */\r\n  text-transform: uppercase;\r\n\r\n  color: #ffffff;\r\n  padding: 21px 30px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border-right: 1px solid #fff;\r\n  &:last-child {\r\n    border-right: none;\r\n  }\r\n}\r\n.section_first__content_middle {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 64px;\r\n  gap: 14px;\r\n}\r\n.section_first_main_title {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 800;\r\n  font-size: 201px;\r\n  line-height: 120%;\r\n}\r\n.section_first_subscription {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 43px;\r\n  line-height: 120%;\r\n  max-width: 264px;\r\n}\r\n.section_first__content_bottom {\r\n  margin-top: 64px;\r\n  display: flex;\r\n  justify-content: center;\r\n}\r\n.running_string__container {\r\n  margin-top: 113px;\r\n  overflow: hidden;\r\n  max-width: 100%;\r\n}\r\n.running_string__wrapper {\r\n  // padding: 37px 0;\r\n  display: flex;\r\n  align-items: center;\r\n  overflow: hidden;\r\n}\r\n\r\n.running_string__inner,\r\n.running_string__inner_clone {\r\n  transform: translate(100%, 0);\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\n\r\n.running_string__inner {\r\n  animation: marquee 32s infinite linear forwards;\r\n  position: absolute;\r\n}\r\n.running_string__inner_clone {\r\n  animation: 32s marquee 16s infinite linear forwards;\r\n}\r\n.running_string__item {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  font-size: 25px;\r\n  line-height: 120%;\r\n  color: $accent-color;\r\n  position: relative;\r\n  white-space: nowrap;\r\n  padding: 0 28px;\r\n  &::after {\r\n    position: absolute;\r\n    display: block;\r\n    content: '';\r\n    width: 10px;\r\n    height: 2px;\r\n    background-color: $accent-color;\r\n    right: 0;\r\n    top: calc(50% + 2px);\r\n    transform: translateY(-50%) translateX(50%);\r\n  }\r\n  &:last-child::after {\r\n    display: none;\r\n  }\r\n}\r\n\r\n@keyframes marquee {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n  50% {\r\n    transform: translateX(0);\r\n  }\r\n  100% {\r\n    transform: translateX(100%);\r\n  }\r\n}\r\n@mixin get_ticket_btns($border) {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 300;\r\n  background-color: transparent;\r\n  color: $accent-color;\r\n  border: $border solid $accent-color;\r\n  cursor: pointer;\r\n  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;\r\n  &:hover {\r\n    background-color: $accent-color;\r\n    color: #0f0121;\r\n    path {\r\n      // fill: #0f0121;\r\n      stroke: #0f0121;\r\n    }\r\n  }\r\n  path {\r\n    transition: 0.3s ease-in-out stroke;\r\n  }\r\n}\r\n.get_ticket_btn {\r\n  @include get_ticket_btns(1px);\r\n  font-size: 21px;\r\n  line-height: 25px;\r\n  padding: 8px 14px;\r\n}\r\n.get_ticket_big_btn {\r\n  @include get_ticket_btns(2.3553px);\r\n  font-size: 49.4621px;\r\n  line-height: 112%;\r\n  padding: 18.8427px 32.9747px;\r\n}\r\n.section_first__bottom {\r\n  background: linear-gradient(180deg, rgba(15, 1, 31, 0) 0%, #0f011f 100%);\r\n  padding-bottom: 122px;\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .header {\r\n    height: 96px;\r\n    top: 50px;\r\n  }\r\n  .header__logo {\r\n    padding: 19px;\r\n    // width: 75px;\r\n    // height: 59px;\r\n    .header__logo_img {\r\n      width: 75px;\r\n      height: 59px;\r\n    }\r\n  }\r\n  .header__nav {\r\n    padding: 39px 0;\r\n    padding-left: 4vw;\r\n  }\r\n  .header__nav_link {\r\n    font-size: 16px;\r\n  }\r\n  .get_ticket_btn {\r\n    padding: 5.996px 10.493px;\r\n    font-size: 16px;\r\n  }\r\n  .header__social {\r\n    gap: 31px;\r\n    padding-left: 0;\r\n    svg {\r\n      width: 21px;\r\n      height: 21px;\r\n    }\r\n  }\r\n  .section_first__content {\r\n    padding-top: 146px;\r\n  }\r\n  .content_top_wrapper_item {\r\n    font-size: 53.129px;\r\n    padding: 16.698px 23.529px;\r\n  }\r\n  .section_first__content_middle {\r\n    margin-top: 50px;\r\n  }\r\n  .section_first_main_title {\r\n    font-size: 152.557px;\r\n  }\r\n  .section_first_subscription {\r\n    font-size: 32.637px;\r\n    max-width: 201px;\r\n  }\r\n  .section_first__content_bottom {\r\n    margin-top: 48px;\r\n  }\r\n  .get_ticket_big_btn {\r\n    @include get_ticket_btns(1.77px);\r\n    padding: 14.301px 25.028px;\r\n    font-size: 37.541px;\r\n\r\n    svg {\r\n      width: 27px;\r\n      height: 28px;\r\n      margin-left: 10px;\r\n    }\r\n  }\r\n  .running_string__container {\r\n    margin-top: 86px;\r\n\r\n    .running_string__item {\r\n      font-size: 18.975px;\r\n\r\n      &::after {\r\n        height: 1px;\r\n        top: calc(50% + 1px);\r\n      }\r\n    }\r\n  }\r\n  .section_first__bottom {\r\n    padding-bottom: 92px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .header {\r\n    height: 64px;\r\n    top: 35px;\r\n  }\r\n  .header__logo {\r\n    padding: 12.5px;\r\n    // width: 75px;\r\n    // height: 59px;\r\n    .header__logo_img {\r\n      width: 50px;\r\n      height: 40px;\r\n    }\r\n  }\r\n  .header__nav {\r\n    padding: 25px 0;\r\n    padding-left: 4vw;\r\n  }\r\n  .header__nav_link {\r\n    font-size: 10.536px;\r\n  }\r\n  .get_ticket_btn {\r\n    padding: 4.014px 7.024px;\r\n    font-size: 10.536px;\r\n  }\r\n  .header__social {\r\n    gap: 21px;\r\n    padding-left: 0;\r\n    svg {\r\n      width: 14.5px;\r\n      height: 14.5px;\r\n    }\r\n  }\r\n  .section_first__content {\r\n    padding-top: 99px;\r\n  }\r\n  .content_top_wrapper_item {\r\n    font-size: 35.566px;\r\n    padding: 11px 15.5px;\r\n  }\r\n  .section_first__content_middle {\r\n    margin-top: 34px;\r\n  }\r\n  .section_first_main_title {\r\n    font-size: 102.124px;\r\n  }\r\n  .section_first_subscription {\r\n    font-size: 21.848px;\r\n    max-width: 135px;\r\n  }\r\n  .section_first__content_bottom {\r\n    margin-top: 32px;\r\n  }\r\n  .get_ticket_big_btn {\r\n    @include get_ticket_btns(1.197px);\r\n    padding: 9.574px 16.754px;\r\n    font-size: 25.131px;\r\n\r\n    svg {\r\n      width: 18px;\r\n      height: 19px;\r\n      margin-left: 7px;\r\n    }\r\n  }\r\n  .running_string__container {\r\n    margin-top: 57px;\r\n\r\n    .running_string__item {\r\n      font-size: 12.702px;\r\n\r\n      &::after {\r\n        height: 1px;\r\n        top: calc(50% + 1px);\r\n      }\r\n    }\r\n  }\r\n  .section_first__bottom {\r\n    padding-bottom: 62px;\r\n  }\r\n}\r\n",".section_why {\r\n  padding-top: 305px;\r\n  position: relative;\r\n  padding-bottom: 170px;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 204px;\r\n  }\r\n}\r\n.section_why__ellipse_left,\r\n.section_why__ellipse_right,\r\n.section_why__plant {\r\n  position: absolute;\r\n}\r\n.section_why__ellipse_left {\r\n  background: rgba(0, 170, 201, 0.12);\r\n  transform: translateX(-50%) translateY(-50%);\r\n  filter: blur(264px);\r\n  top: 15%;\r\n}\r\n.section_why__ellipse_left,\r\n.section_why__ellipse_right {\r\n  z-index: 1;\r\n  width: 73.59vw;\r\n  height: 73.59vw;\r\n  // display: none;\r\n}\r\n.section_why__ellipse_right {\r\n  right: 0;\r\n}\r\n.section_why__plant {\r\n  right: 0;\r\n  top: 5%;\r\n  height: 81.98vw;\r\n}\r\n.section_why_container {\r\n  position: relative;\r\n  z-index: 10;\r\n}\r\n.section_why_title {\r\n  @include section-title();\r\n  // font-family: 'SF Pro Display';\r\n  // font-style: normal;\r\n  // font-weight: 400;\r\n  // font-size: 40px;\r\n  // line-height: 120%;\r\n  // color: $accent-color;\r\n  // // margin-top: 264px;\r\n  // text-align: center;\r\n}\r\n.section_why_subscription {\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  font-size: 50px;\r\n  line-height: 120%;\r\n\r\n  color: #ffffff;\r\n  margin-top: 93px;\r\n  max-width: 68vw;\r\n}\r\n.section_why_subscription > span {\r\n  font-weight: 600;\r\n}\r\n.section_why_text {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 40px;\r\n  max-width: 72.7vw;\r\n  margin-top: 93px;\r\n  p {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 140%;\r\n\r\n    color: #ffffff;\r\n\r\n    span {\r\n      font-weight: 600;\r\n      color: $blue;\r\n    }\r\n  }\r\n}\r\n.section_why_ready_text {\r\n  margin-top: 93px;\r\n  font-family: 'SF Pro Display';\r\n  font-style: normal;\r\n  font-weight: 200;\r\n  font-size: 50px;\r\n  line-height: 120%;\r\n\r\n  color: #ffffff;\r\n}\r\n.section_why_ready_text span {\r\n  font-weight: 600;\r\n  text-align: right;\r\n}\r\n.section_why_event {\r\n  display: flex;\r\n  margin-top: 229px;\r\n}\r\n\r\n.section_why_event_item {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-grow: 1;\r\n  border: 1px solid #fff;\r\n  &:first-child {\r\n    padding: 54px 70px;\r\n    text-align-last: left;\r\n    border-right: none;\r\n  }\r\n  &:nth-child(2) {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 120%;\r\n\r\n    color: #0f011f;\r\n    padding: 54px 66px;\r\n    position: relative;\r\n    background-color: $accent-color;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: flex-start;\r\n    cursor: pointer;\r\n    border: none;\r\n    transition: background-color 0.3s ease-in-out;\r\n    white-space: nowrap;\r\n  }\r\n  &:nth-child(2):hover {\r\n    background-color: $blue;\r\n  }\r\n  &:nth-child(3) {\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 500;\r\n    font-size: 80px;\r\n    line-height: 120%;\r\n    text-transform: uppercase;\r\n    color: #ffffff;\r\n    padding: 36px 36px;\r\n    white-space: nowrap;\r\n    border-left: none;\r\n    width: 36.4vw;\r\n  }\r\n\r\n  .section_why_event_item_arrow {\r\n    position: absolute;\r\n    bottom: 20px;\r\n    right: 20px;\r\n    cursor: pointer;\r\n  }\r\n  span {\r\n    font-weight: 600;\r\n    color: #0f011f;\r\n  }\r\n  .section_why_event_item_inner {\r\n    max-width: 251px;\r\n    font-family: 'SF Pro Display';\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    font-size: 25px;\r\n    line-height: 120%;\r\n  }\r\n}\r\n.section_why_carousel_container {\r\n  position: relative;\r\n  padding: 0 115px;\r\n  margin-top: 81px;\r\n}\r\n.why_carousel_btn_next,\r\n.why_carousel_btn_prev {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  background-color: transparent;\r\n  border: none;\r\n  outline: none;\r\n}\r\n.why_carousel_btn_prev {\r\n  left: 0;\r\n}\r\n.why_carousel_btn_next {\r\n  right: 0;\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .section_why {\r\n    padding-top: 246px;\r\n    padding-bottom: 129px;\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n  }\r\n  .section_why_subscription {\r\n    font-size: 37.95px;\r\n    margin-top: 62px;\r\n  }\r\n  .section_why_text {\r\n    margin-top: 63px;\r\n    gap: 27px;\r\n    p {\r\n      font-size: 19px;\r\n    }\r\n  }\r\n  .section_why_ready_text {\r\n    font-size: 38px;\r\n    margin-top: 61px;\r\n  }\r\n  .section_why_carousel_container {\r\n    padding: 0 93px;\r\n    margin-top: 62px;\r\n  }\r\n  .why_carousel_btn_prev,\r\n  .why_carousel_btn_prev svg,\r\n  .why_carousel_btn_next,\r\n  .why_carousel_btn_next svg {\r\n    width: 57px;\r\n  }\r\n  .section_why_event {\r\n    margin-top: 175px;\r\n  }\r\n  .section_why_event_item {\r\n    .section_why_event_item_arrow {\r\n      width: 26.767px;\r\n      height: 27.758px;\r\n      bottom: 16px;\r\n      right: 16px;\r\n    }\r\n    .section_why_event_item_inner {\r\n      font-size: 18.811px;\r\n    }\r\n\r\n    &:first-child {\r\n      padding: 40px 50px;\r\n    }\r\n    &:nth-child(2) {\r\n      padding: 40px 50px;\r\n      font-size: 18.811px;\r\n    }\r\n    &:nth-child(3) {\r\n      padding: 27px 60px;\r\n      font-size: 60.195px;\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_why {\r\n    padding-top: 186px;\r\n    padding-bottom: 70px;\r\n    &::before {\r\n      height: 124px;\r\n    }\r\n  }\r\n  .section_why_subscription {\r\n    font-size: 25.404px;\r\n    margin-top: 41px;\r\n  }\r\n  .section_why_text {\r\n    margin-top: 43px;\r\n    gap: 19px;\r\n    p {\r\n      font-size: 12.702px;\r\n    }\r\n  }\r\n  .section_why_ready_text {\r\n    font-size: 25.404px;\r\n    margin-top: 40px;\r\n  }\r\n  .section_why_carousel_container {\r\n    padding: 0 62px;\r\n    margin-top: 42px;\r\n  }\r\n  .why_carousel_btn_prev,\r\n  .why_carousel_btn_prev svg,\r\n  .why_carousel_btn_next,\r\n  .why_carousel_btn_next svg {\r\n    width: 38px;\r\n  }\r\n  .section_why_event {\r\n    margin-top: 116px;\r\n  }\r\n  .section_why_event_item {\r\n    .section_why_event_item_arrow {\r\n      width: 18px;\r\n      height: 19px;\r\n      bottom: 10px;\r\n      right: 10px;\r\n    }\r\n    .section_why_event_item_inner {\r\n      font-size: 12.592px;\r\n    }\r\n\r\n    &:first-child {\r\n      padding: 27px 35px;\r\n    }\r\n    &:nth-child(2) {\r\n      padding: 40px 33px;\r\n      font-size: 12.592px;\r\n    }\r\n    &:nth-child(3) {\r\n      padding: 19px 40px;\r\n      font-size: 40.296px;\r\n    }\r\n  }\r\n}\r\n",".section_how {\r\n  padding-top: 444px;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 274px;\r\n  }\r\n}\r\n.section_how_palm {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 25.05vw;\r\n  top: -8%;\r\n  z-index: 1;\r\n}\r\n.how_section_container {\r\n  position: relative;\r\n  z-index: 2;\r\n}\r\n.section_how_ellipse_pink,\r\n.section_how_ellipse_blue {\r\n  position: absolute;\r\n  border-radius: 50%;\r\n  z-index: 1;\r\n}\r\n.section_how_ellipse_pink {\r\n  width: 48.07vw;\r\n  height: 48.07vw;\r\n  border-radius: 923px;\r\n  background: rgba(255, 39, 174, 0.09);\r\n  filter: blur(172.45010375976562px);\r\n  left: 129px;\r\n  top: 60%;\r\n  transform: translateY(-50%);\r\n}\r\n.section_how_ellipse_blue {\r\n  width: 64.53vw;\r\n  height: 64.53vw;\r\n  top: 25%;\r\n  border-radius: 1239px;\r\n  background: rgba(0, 170, 201, 0.12);\r\n  filter: blur(231.49044799804688px);\r\n  right: 0;\r\n}\r\n.how_section_title {\r\n  @include section-title();\r\n}\r\n.how_carousel_container {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-top: 119px;\r\n}\r\n.how_carousel_wrapper {\r\n  position: relative;\r\n  width: 497px;\r\n  height: 1014px;\r\n  margin: 0 auto;\r\n  background-size: contain;\r\n  background-position: center center;\r\n  // padding: 134px 56px 85px 56px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding-top: 127px;\r\n}\r\n.how_carousel_bg {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  z-index: 0;\r\n}\r\n.how_carousel_logo {\r\n  width: 130px;\r\n  height: 103px;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n.how_carousel {\r\n  margin: 107px 0;\r\n  max-width: 379px;\r\n  position: relative;\r\n  right: -4px;\r\n\r\n  .owl-dots {\r\n    width: 100%;\r\n    display: flex;\r\n    gap: 11px;\r\n    margin-top: 107px;\r\n    justify-content: center;\r\n    .owl-dot {\r\n      width: 32.019px;\r\n      height: 6px;\r\n      flex-shrink: 0;\r\n      border-radius: 47.242px;\r\n      background: #030303;\r\n      &.active {\r\n        background-color: $accent-color;\r\n        width: 83.732px;\r\n      }\r\n    }\r\n  }\r\n}\r\n.how_carousel_btn_prev,\r\n.how_carousel_btn_next {\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateX(-50%);\r\n  outline: none;\r\n  border: none;\r\n  background-color: transparent;\r\n}\r\n.how_carousel_btn_prev {\r\n  left: -60%;\r\n}\r\n.how_carousel_btn_next {\r\n  right: -76%;\r\n}\r\n.how_carousel_item {\r\n  max-width: 379px;\r\n  max-height: 464px;\r\n}\r\n.how_image_wrapper {\r\n  position: relative;\r\n  top: -100px;\r\n  padding-top: 232px;\r\n  padding-bottom: 82px;\r\n  overflow: hidden;\r\n\r\n  .container {\r\n    position: relative;\r\n    z-index: 1;\r\n  }\r\n  .how_image_wrapper_bg {\r\n    position: absolute;\r\n    top: -22%;\r\n    width: 100%;\r\n  }\r\n  .how_images {\r\n    margin-top: 114px;\r\n    display: flex;\r\n    gap: 20px;\r\n\r\n    img {\r\n      width: calc(50% - 10px);\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .how_image_wrapper {\r\n    padding-bottom: 47px;\r\n  }\r\n  .section_how {\r\n    padding-top: 324px;\r\n    &::before {\r\n      height: 204px;\r\n    }\r\n  }\r\n  .section_how_palm {\r\n    top: -4%;\r\n  }\r\n  .how_carousel_container {\r\n    margin-top: 97px;\r\n  }\r\n  .how_carousel_wrapper,\r\n  .how_carousel_bg {\r\n    width: 385px;\r\n    height: 770px;\r\n  }\r\n  .how_carousel_wrapper {\r\n    padding-top: 70px;\r\n  }\r\n  .how_carousel_logo {\r\n    width: 97px;\r\n    height: 78px;\r\n  }\r\n  .how_carousel {\r\n    margin-top: 82px;\r\n  }\r\n  .how_carousel,\r\n  .how_carousel_item {\r\n    max-width: 288px;\r\n    max-height: 352px;\r\n  }\r\n  .how_carousel {\r\n    right: 0;\r\n\r\n    .owl-dots {\r\n      margin-top: 81px;\r\n    }\r\n  }\r\n  .how_carousel_btn_prev,\r\n  .how_carousel_btn_prev svg,\r\n  .how_carousel_btn_next,\r\n  .how_carousel_btn_next svg {\r\n    width: 57px;\r\n  }\r\n  .how_carousel_btn_prev {\r\n    left: -50%;\r\n  }\r\n  .how_carousel_btn_next {\r\n    right: -70%;\r\n  }\r\n  .how_image_wrapper {\r\n    padding-top: 180px;\r\n\r\n    .how_images {\r\n      margin-top: 90px;\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .how_image_wrapper {\r\n    padding-bottom: 0;\r\n    padding-top: 150px;\r\n  }\r\n  .how_image_wrapper {\r\n    .how_image_wrapper_bg {\r\n      top: -15%;\r\n    }\r\n  }\r\n  .section_how {\r\n    padding-top: 230px;\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n  }\r\n  .section_how_palm {\r\n    top: -4%;\r\n  }\r\n  .how_carousel_container {\r\n    margin-top: 61px;\r\n  }\r\n  .how_carousel_wrapper,\r\n  .how_carousel_bg {\r\n    width: 253px;\r\n    height: 515px;\r\n  }\r\n  .how_carousel_wrapper {\r\n    padding-top: 68px;\r\n  }\r\n  .how_carousel_logo {\r\n    width: 66px;\r\n    height: 52px;\r\n  }\r\n  .how_carousel {\r\n    margin-top: 55px;\r\n  }\r\n  .how_carousel,\r\n  .how_carousel_item {\r\n    max-width: 193px;\r\n    max-height: 236px;\r\n  }\r\n  .how_carousel {\r\n    right: 0;\r\n\r\n    .owl-dots {\r\n      margin-top: 53px;\r\n      gap: 5px;\r\n      .owl-dot {\r\n        width: 16px;\r\n        height: 3px;\r\n        border-radius: 24.003px;\r\n        &.active {\r\n          width: 43px;\r\n        }\r\n      }\r\n    }\r\n  }\r\n  .how_carousel_btn_prev,\r\n  .how_carousel_btn_prev svg,\r\n  .how_carousel_btn_next,\r\n  .how_carousel_btn_next svg {\r\n    width: 38px;\r\n  }\r\n  .how_carousel_btn_prev {\r\n    left: -50%;\r\n  }\r\n  .how_carousel_btn_next {\r\n    right: -70%;\r\n  }\r\n  .how_image_wrapper {\r\n    .how_images {\r\n      margin-top: 60px;\r\n      gap: 10px;\r\n    }\r\n  }\r\n}\r\n",".section_speakers {\r\n  position: relative;\r\n  @include with-devider();\r\n  padding-top: 374px;\r\n  padding-bottom: 170px;\r\n  &::before {\r\n    height: 204px;\r\n  }\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n}\r\n.section_speakers_bg {\r\n  position: absolute;\r\n  width: 100%;\r\n  top: 28%;\r\n  z-index: 1;\r\n}\r\n.section_speakers_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  top: -20%;\r\n  width: 25.365vw;\r\n  z-index: 1;\r\n}\r\n.section_speakers_title {\r\n  @include section-title();\r\n}\r\n.speakers_undertitle {\r\n  color: #fff;\r\n  font-size: 25px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n\r\n  margin-top: 37px;\r\n}\r\n.speakers_cases_container {\r\n  display: flex;\r\n  gap: 20px;\r\n  margin-top: 58px;\r\n\r\n  .speakers_case {\r\n    width: 33.3%;\r\n  }\r\n  .speakers_case_title,\r\n  .speakers_case_content {\r\n    color: #fff;\r\n    font-size: 20px;\r\n    font-family: SF Pro Display;\r\n  }\r\n  .speakers_case_title {\r\n    font-weight: 600;\r\n  }\r\n  .speakers_case_content {\r\n    font-weight: 300;\r\n    margin-top: 20px;\r\n  }\r\n}\r\n.section_speakers_carousel_container {\r\n  max-width: 80%;\r\n  margin: 0 auto;\r\n  position: relative;\r\n  margin-top: 104px;\r\n}\r\n.speakers_carousel_btn_prev,\r\n.speakers_carousel_btn_next {\r\n  background-color: transparent;\r\n  outline: none;\r\n  border: none;\r\n  position: absolute;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n}\r\n.speakers_carousel_btn_prev {\r\n  left: -7.29vw;\r\n}\r\n.speakers_carousel_btn_next {\r\n  right: -7.29vw;\r\n}\r\n.speakers_carousel_item {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 40px;\r\n\r\n  .speakers_carousel_item_img_container {\r\n    border-radius: 100% 100% 100% 0;\r\n    width: 100%;\r\n    background: #000;\r\n    overflow: hidden;\r\n    padding-top: 20px;\r\n    // height: auto;\r\n  }\r\n  .speakers_carousel_item_name {\r\n    color: #fff;\r\n    font-size: 30px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 600;\r\n  }\r\n  .speakers_carousel_item_list {\r\n    li {\r\n      color: #fff;\r\n      font-size: 20px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 300;\r\n      list-style: inside;\r\n      // padding-left: 20px;\r\n    }\r\n  }\r\n  .speakers_carousel_item_line {\r\n    width: 100%;\r\n    height: 1px;\r\n    background-color: #fff;\r\n  }\r\n}\r\n.section_why_event.speakers_event {\r\n  .section_why_event_item {\r\n    &:first-child {\r\n      color: #fff;\r\n      font-size: 41px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 600;\r\n      padding: 58px 32px;\r\n      white-space: normal;\r\n      max-width: 25.52vw;\r\n    }\r\n    &:nth-child(3) {\r\n      padding: 33px;\r\n      color: #fff;\r\n      font-size: 18px;\r\n      font-family: SF Pro Display;\r\n      font-weight: 300;\r\n      line-height: 133%;\r\n      white-space: normal;\r\n      text-transform: none;\r\n      max-width: 36.4vw;\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1700px) {\r\n  .section_why_event.speakers_event {\r\n    .section_why_event_item {\r\n      &:first-child {\r\n        font-size: 33px;\r\n      }\r\n    }\r\n  }\r\n}\r\n@media screen and (max-width: 1440px) {\r\n  .section_speakers {\r\n    padding-top: 294px;\r\n    padding-bottom: 130px;\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n  }\r\n  .speakers_undertitle {\r\n    margin-top: 30px;\r\n    font-size: 18.707px;\r\n  }\r\n  .speakers_cases_container {\r\n    gap: 16px;\r\n    margin-top: 43px;\r\n    .speakers_case_title,\r\n    .speakers_case_content {\r\n      font-size: 15px;\r\n    }\r\n    .speakers_case_content {\r\n      margin-top: 15px;\r\n    }\r\n  }\r\n  .section_speakers_carousel_container {\r\n    margin-top: 80px;\r\n  }\r\n  .speakers_carousel_item {\r\n    gap: 31px;\r\n\r\n    .speakers_carousel_item_list li {\r\n      font-size: 15px;\r\n    }\r\n  }\r\n  .speakers_carousel_item_name {\r\n    font-size: 23px;\r\n  }\r\n  .speakers_carousel_btn_prev,\r\n  .speakers_carousel_btn_prev svg,\r\n  .speakers_carousel_btn_next,\r\n  .speakers_carousel_btn_next svg {\r\n    width: 57px;\r\n  }\r\n  .section_why_event.speakers_event {\r\n    margin-top: 105px;\r\n\r\n    .section_why_event_item {\r\n      &:first-child {\r\n        padding: 44px 24px;\r\n        font-size: 31px;\r\n      }\r\n      &:nth-child(3) {\r\n        padding: 25px 16px;\r\n        font-size: 14px;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_speakers {\r\n    padding-top: 224px;\r\n    padding-bottom: 87px;\r\n    &::before {\r\n      height: 124px;\r\n    }\r\n  }\r\n  .speakers_undertitle {\r\n    margin-top: 21px;\r\n    font-size: 12.523px;\r\n  }\r\n  .speakers_cases_container {\r\n    gap: 10px;\r\n    margin-top: 29px;\r\n    .speakers_case_title,\r\n    .speakers_case_content {\r\n      font-size: 10px;\r\n    }\r\n    .speakers_case_content {\r\n      margin-top: 11px;\r\n    }\r\n  }\r\n  .section_speakers_carousel_container {\r\n    margin-top: 63px;\r\n  }\r\n  .speakers_carousel_item {\r\n    gap: 21px;\r\n\r\n    .speakers_carousel_item_list li {\r\n      font-size: 10px;\r\n    }\r\n  }\r\n  .speakers_carousel_item {\r\n    .speakers_carousel_item_name {\r\n      font-size: 15.242px;\r\n    }\r\n  }\r\n  .speakers_carousel_btn_prev,\r\n  .speakers_carousel_btn_prev svg,\r\n  .speakers_carousel_btn_next,\r\n  .speakers_carousel_btn_next svg {\r\n    width: 38px;\r\n  }\r\n  .section_why_event.speakers_event {\r\n    margin-top: 71px;\r\n\r\n    .section_why_event_item {\r\n      &:first-child {\r\n        padding: 30px 16px;\r\n        font-size: 20.537px;\r\n      }\r\n      &:nth-child(2) {\r\n        padding: 27px 33px;\r\n        font-size: 12.523px;\r\n      }\r\n      &:nth-child(3) {\r\n        padding: 16px 12px;\r\n        font-size: 9.145px;\r\n      }\r\n    }\r\n  }\r\n}\r\n",".section_program {\r\n  @include with-devider();\r\n  &::before {\r\n    height: 204px;\r\n  }\r\n  padding-top: 374px;\r\n  padding-bottom: 474px;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  overflow: hidden;\r\n  z-index: 2;\r\n}\r\n.section_program_bg {\r\n  position: absolute;\r\n  z-index: 1;\r\n  width: 100%;\r\n  top: 33%;\r\n}\r\n\r\n.section_program_ellipse_pink {\r\n  position: absolute;\r\n  right: 0;\r\n  border-radius: 1413px;\r\n  background: rgba(255, 39, 174, 0.09);\r\n  filter: blur(264px);\r\n  width: 73.59vw;\r\n  height: 73.59vw;\r\n  transform: translateX(50%);\r\n  top: 30%;\r\n  z-index: 1;\r\n}\r\n.section_program_title {\r\n  @include section-title();\r\n}\r\n.section_program_undertitle {\r\n  color: #fff;\r\n  font-size: 25px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  margin-top: 37px;\r\n}\r\n.section_program_program {\r\n  margin-top: 90px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 90px;\r\n\r\n  .program_item_date {\r\n    color: #04bee0;\r\n    font-size: 55px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 500;\r\n    margin-bottom: 38px;\r\n    text-align: center;\r\n  }\r\n\r\n  .program_item_body {\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    tr {\r\n      transition: 0.3s ease-in-out background-color;\r\n      &:hover {\r\n        background-color: #40354d;\r\n        color: $blue;\r\n        td {\r\n          background-color: #40354d;\r\n          color: $blue;\r\n          border-bottom: 1px solid $blue;\r\n        }\r\n      }\r\n      // display: block;\r\n      td {\r\n        transition: 0.3s ease-in-out background-color, 0.3s ease-in-out color,\r\n          0.3s ease-in-out border;\r\n        padding: 62px 0 50px 0;\r\n        border-bottom: 1px solid #fff;\r\n        color: #fff;\r\n        &:nth-child(1),\r\n        &:nth-child(3) {\r\n          font-size: 50px;\r\n          font-family: SF Pro Display;\r\n        }\r\n        &:nth-child(1) {\r\n          width: 14.1146vw;\r\n        }\r\n        &:nth-child(3) {\r\n          width: 21.875vw;\r\n        }\r\n        &:nth-child(2) {\r\n          font-size: 60px;\r\n          font-family: SF Pro Display;\r\n          width: 5.4166vw;\r\n        }\r\n        &:nth-child(4) {\r\n          font-size: 25px;\r\n          font-family: SF Pro Display;\r\n          font-weight: 200;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (min-width: 1600px) {\r\n  .section_program_bg {\r\n    top: 19%;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .section_program {\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n    padding-top: 284px;\r\n    padding-bottom: 284px;\r\n  }\r\n  .section_program_bg {\r\n    top: 20%;\r\n  }\r\n  .section_program_undertitle {\r\n    font-size: 19px;\r\n    margin-top: 29px;\r\n  }\r\n  .section_program_program {\r\n    margin-top: 67px;\r\n  }\r\n  .section_program_program {\r\n    gap: 68px;\r\n    .program_item_date {\r\n      font-size: 41.745px;\r\n      margin-bottom: 30px;\r\n    }\r\n    .program_item_body {\r\n      width: 100%;\r\n      border-collapse: collapse;\r\n      tr {\r\n        transition: 0.3s ease-in-out background-color;\r\n        &:hover {\r\n          background-color: #40354d;\r\n          color: $blue;\r\n          td {\r\n            background-color: #40354d;\r\n            color: $blue;\r\n            border-bottom: 1px solid $blue;\r\n          }\r\n        }\r\n        td {\r\n          padding: 47px 0 40px 0;\r\n          &:nth-child(1),\r\n          &:nth-child(3) {\r\n            font-size: 38px;\r\n          }\r\n          &:nth-child(2) {\r\n            font-size: 45.539px;\r\n          }\r\n          &:nth-child(4) {\r\n            font-size: 19px;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_program {\r\n    &::before {\r\n      height: 124px;\r\n    }\r\n    padding-top: 200px;\r\n    padding-bottom: 200px;\r\n  }\r\n  .section_program_bg {\r\n    top: 13%;\r\n  }\r\n  .section_program_undertitle {\r\n    font-size: 12.702px;\r\n    margin-top: 20px;\r\n  }\r\n  .section_program_program {\r\n    margin-top: 46px;\r\n  }\r\n  .section_program_program {\r\n    gap: 46px;\r\n    .program_item_date {\r\n      font-size: 27.945px;\r\n      margin-bottom: 26px;\r\n    }\r\n    .program_item_body {\r\n      width: 100%;\r\n      border-collapse: collapse;\r\n      tr {\r\n        transition: 0.3s ease-in-out background-color;\r\n        &:hover {\r\n          background-color: #40354d;\r\n          color: $blue;\r\n          td {\r\n            background-color: #40354d;\r\n            color: $blue;\r\n            border-bottom: 1px solid $blue;\r\n          }\r\n        }\r\n        td {\r\n          padding: 32px 0 27px 0;\r\n          &:nth-child(1),\r\n          &:nth-child(3) {\r\n            font-size: 25.404px;\r\n          }\r\n          &:nth-child(2) {\r\n            font-size: 30.485px;\r\n          }\r\n          &:nth-child(4) {\r\n            font-size: 12.702px;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n",".section_tickets {\r\n  @include with-devider();\r\n  position: relative;\r\n  &::before {\r\n    height: 204px;\r\n    top: -304px;\r\n  }\r\n  padding-top: 90px;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  padding-bottom: 170px;\r\n}\r\n.section_tickets_palm {\r\n  position: absolute;\r\n  left: 0;\r\n  width: 23vw;\r\n  top: -105%;\r\n  z-index: 1;\r\n}\r\n.tickets_container {\r\n  display: flex;\r\n  gap: 20px;\r\n}\r\n.tickets_item {\r\n  padding-left: 34px;\r\n  padding-top: 34px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: calc(50% - 10px);\r\n  border: 1px solid #fff;\r\n}\r\n.tickets_item_title {\r\n  color: #fff;\r\n  font-size: 67px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 500;\r\n}\r\n.tickets_item_services {\r\n  margin-top: 40px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 10px;\r\n  p {\r\n    color: #fff;\r\n    font-size: 22px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n    line-height: 160%;\r\n  }\r\n}\r\n.tickets_item_bottom {\r\n  gap: 6.146vw;\r\n  margin-top: 47px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  .tickets_item_bottom_price {\r\n    align-self: flex-start;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 10px;\r\n    color: #fff;\r\n    font-size: 32.522px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n    text-transform: uppercase;\r\n    span {\r\n      font-weight: 700;\r\n      font-size: 56px;\r\n    }\r\n  }\r\n  .tickets_item_bottom_buy {\r\n    // min-width: 50%;\r\n    height: 136px;\r\n    position: relative;\r\n    right: -1px;\r\n    bottom: -1px;\r\n    flex-grow: 1;\r\n    color: #000;\r\n    padding-left: 62px;\r\n    font-size: 32.522px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 600;\r\n    position: relative;\r\n    background-color: $accent-color;\r\n    display: flex;\r\n    justify-content: flex-start;\r\n    align-items: center;\r\n    cursor: pointer;\r\n    border: none;\r\n    transition: background-color 0.3s ease-in-out;\r\n\r\n    &:hover {\r\n      background-color: $blue;\r\n    }\r\n    .tickets_item_arrow {\r\n      position: absolute;\r\n      right: 20px;\r\n      bottom: 20px;\r\n    }\r\n  }\r\n}\r\n@media screen and (max-width: 1600px) {\r\n  .section_tickets_palm {\r\n    top: -85%;\r\n  }\r\n}\r\n@media screen and (max-width: 1440px) {\r\n  .section_tickets {\r\n    &::before {\r\n      height: 154px;\r\n      top: -154px;\r\n    }\r\n    padding-top: 140px;\r\n    padding-bottom: 130px;\r\n    .section_tickets_palm {\r\n      top: -80%;\r\n    }\r\n  }\r\n  .tickets_container {\r\n    gap: 15px;\r\n  }\r\n  .tickets_item {\r\n    padding-top: 25.67px;\r\n    padding-left: 25.67px;\r\n  }\r\n  .tickets_item_title {\r\n    font-size: 50.214px;\r\n  }\r\n  .tickets_item_services {\r\n    margin-top: 31px;\r\n    gap: 8px;\r\n    p {\r\n      font-size: 16.488px;\r\n      line-height: 157%;\r\n    }\r\n  }\r\n  .tickets_item_bottom {\r\n    margin-top: 40.5px;\r\n\r\n    .tickets_item_bottom_buy {\r\n      padding-left: 46.41px;\r\n      font-size: 24.374px;\r\n\r\n      height: 101px;\r\n\r\n      .tickets_item_arrow {\r\n        width: 26.66px;\r\n        height: 35.55px;\r\n        bottom: 16px;\r\n        right: 16px;\r\n      }\r\n    }\r\n\r\n    .tickets_item_bottom_price {\r\n      font-size: 24.374px;\r\n      gap: 6px;\r\n      span {\r\n        font-size: 40px;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_tickets {\r\n    &::before {\r\n      height: 124px;\r\n      top: -124px;\r\n    }\r\n    padding-top: 90px;\r\n    padding-bottom: 90px;\r\n    .section_tickets_palm {\r\n      top: -90%;\r\n    }\r\n  }\r\n  .tickets_container {\r\n    gap: 9px;\r\n  }\r\n  .tickets_item {\r\n    padding-top: 17px;\r\n    padding-left: 17px;\r\n  }\r\n  .tickets_item_title {\r\n    font-size: 33.614px;\r\n  }\r\n  .tickets_item_services {\r\n    margin-top: 21px;\r\n    gap: 6px;\r\n    p {\r\n      font-size: 11.038px;\r\n      line-height: 157%;\r\n    }\r\n  }\r\n  .tickets_item_bottom {\r\n    margin-top: 26px;\r\n\r\n    .tickets_item_bottom_buy {\r\n      padding-left: 31px;\r\n      font-size: 16.317px;\r\n\r\n      height: 68px;\r\n\r\n      .tickets_item_arrow {\r\n        width: 18px;\r\n        height: 24px;\r\n        bottom: 10px;\r\n        right: 10px;\r\n      }\r\n    }\r\n\r\n    .tickets_item_bottom_price {\r\n      font-size: 16.317px;\r\n      gap: 4px;\r\n      span {\r\n        font-size: 27px;\r\n      }\r\n    }\r\n  }\r\n}\r\n",".section_where {\r\n  @include with-devider();\r\n  position: relative;\r\n  .container {\r\n    position: relative;\r\n    z-index: 2;\r\n  }\r\n  padding-top: 310px;\r\n  &::before {\r\n    height: 204px;\r\n  }\r\n}\r\n.section_where_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  top: -10%;\r\n  width: 15.88vw;\r\n}\r\n.section_where_content {\r\n  padding-bottom: 74px;\r\n  padding-top: 50px;\r\n}\r\n.section_where_left_main {\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n.section_where_title {\r\n  @include section-title();\r\n  margin-bottom: 63px;\r\n}\r\n.section_where_edition {\r\n  width: 255px;\r\n  height: 46px;\r\n}\r\n.section_where_left {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.section_where_left_subscription {\r\n  margin-top: 78px;\r\n\r\n  color: #fff;\r\n  font-size: 33px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  line-height: 90%;\r\n}\r\n.section_where_left_bottom {\r\n  display: flex;\r\n  gap: 20px;\r\n\r\n  img {\r\n    cursor: pointer;\r\n  }\r\n}\r\n.section_where_right_map {\r\n  width: 405px;\r\n  height: 741px;\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .section_where {\r\n    padding-top: 247px;\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n  }\r\n  .section_where_content {\r\n    padding-top: 37px;\r\n  }\r\n  .section_where_edition {\r\n    width: 194px;\r\n    height: 35px;\r\n  }\r\n  .section_where_left_subscription {\r\n    font-size: 25.047px;\r\n    margin-top: 59px;\r\n  }\r\n  .section_where_right_map,\r\n  .section_where_right_map iframe {\r\n    width: 307px;\r\n    height: 562px;\r\n  }\r\n  .section_where_left_bottom {\r\n    gap: 16px;\r\n\r\n    img {\r\n      width: 200px;\r\n      height: 146px;\r\n    }\r\n  }\r\n  .section_where_content {\r\n    padding-bottom: 56px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_where {\r\n    padding-top: 187px;\r\n    &::before {\r\n      height: 124px;\r\n    }\r\n  }\r\n  .section_where_content {\r\n    padding-top: 25px;\r\n  }\r\n  .section_where_edition {\r\n    width: 130px;\r\n    height: 23px;\r\n  }\r\n  .section_where_left_subscription {\r\n    font-size: 16.767px;\r\n    margin-top: 40px;\r\n  }\r\n  .section_where_right_map,\r\n  .section_where_right_map iframe {\r\n    width: 206px;\r\n    height: 376px;\r\n  }\r\n  .section_where_left_bottom {\r\n    gap: 11px;\r\n\r\n    img {\r\n      width: 134px;\r\n      height: 98px;\r\n    }\r\n  }\r\n  .section_where_content {\r\n    padding-bottom: 37px;\r\n  }\r\n}\r\n",".section_sponsors {\r\n  padding: 170px 0;\r\n}\r\n.sponsors_container {\r\n  gap: 68px;\r\n  margin-top: 38px;\r\n  display: grid;\r\n  grid-template-columns: repeat(4, 1fr);\r\n}\r\n.section_sponsors_title {\r\n  @include section-title();\r\n}\r\n.sponsor_item {\r\n  border: 1px solid #fff;\r\n  position: relative;\r\n  // width: 369px;\r\n  height: 322px;\r\n\r\n  .sponsor_item_name {\r\n    position: absolute;\r\n    bottom: 34px;\r\n    left: 50%;\r\n    transform: translateX(-50%);\r\n    color: #fff;\r\n    text-align: center;\r\n    font-size: 20px;\r\n    font-family: SF Pro Display;\r\n    font-weight: 300;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .section_sponsors {\r\n    padding: 130px 0;\r\n  }\r\n  .sponsors_container {\r\n    gap: 51px;\r\n  }\r\n  .sponsor_item {\r\n    height: 240px;\r\n\r\n    .sponsor_item_name {\r\n      font-size: 15.18px;\r\n    }\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_sponsors {\r\n    padding: 90px 0;\r\n  }\r\n  .sponsors_container {\r\n    gap: 34px;\r\n  }\r\n  .sponsor_item {\r\n    height: 161px;\r\n\r\n    .sponsor_item_name {\r\n      font-size: 10.162px;\r\n    }\r\n  }\r\n}\r\n",".section_questions {\r\n  position: relative;\r\n  @include with-devider();\r\n  &::before {\r\n    height: 204px;\r\n  }\r\n  padding-top: 344px;\r\n  padding-bottom: 253px;\r\n  // overflow: hidden;\r\n}\r\n.section_questions_palm {\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 0;\r\n  width: 22.6vw;\r\n}\r\n.section_questions_ellipse_blue {\r\n  position: absolute;\r\n  border-radius: 1380px;\r\n  background: rgba(0, 170, 201, 0.12);\r\n  filter: blur(264px);\r\n  width: 71.875vw;\r\n  height: 71.875vw;\r\n  top: -50%;\r\n}\r\n.section_questions_title {\r\n  @include section-title();\r\n}\r\n.section_questions_center {\r\n  position: relative;\r\n  z-index: 9;\r\n  flex-direction: column;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n.section_questions_email {\r\n  color: #fff;\r\n  text-align: center;\r\n  font-size: 40px;\r\n  font-family: SF Pro Display;\r\n  font-weight: 300;\r\n  margin-top: 59px;\r\n}\r\n.section_questions_social {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 72px;\r\n  margin-top: 65px;\r\n\r\n  svg {\r\n    width: 49px;\r\n    height: 49px;\r\n  }\r\n  a:hover path {\r\n    fill: $accent-color;\r\n  }\r\n}\r\n.section_questions_logo {\r\n  width: 256px;\r\n  height: 202px;\r\n  margin-top: 79px;\r\n}\r\n\r\n@media screen and (max-width: 1440px) {\r\n  .section_questions {\r\n    &::before {\r\n      height: 154px;\r\n    }\r\n    padding-top: 264px;\r\n    padding-bottom: 100px;\r\n  }\r\n  .section_questions_email {\r\n    font-size: 30.36px;\r\n    margin-top: 45px;\r\n  }\r\n  .section_questions_social {\r\n    margin-top: 50px;\r\n    svg {\r\n      width: 37px;\r\n      height: 37px;\r\n    }\r\n  }\r\n  .section_questions_logo {\r\n    width: 194px;\r\n    height: 153px;\r\n    margin-top: 61px;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 1024px) {\r\n  .section_questions {\r\n    &::before {\r\n      height: 124px;\r\n    }\r\n    padding-top: 204px;\r\n    padding-bottom: 66px;\r\n  }\r\n  .section_questions_email {\r\n    font-size: 20.323px;\r\n    margin-top: 30px;\r\n  }\r\n  .section_questions_social {\r\n    margin-top: 34px;\r\n    svg {\r\n      width: 25px;\r\n      height: 25px;\r\n    }\r\n  }\r\n  .section_questions_logo {\r\n    width: 130px;\r\n    height: 102px;\r\n    margin-top: 41px;\r\n  }\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16393,7 +17360,18 @@ whyCarousel.owlCarousel({
   pagination: false,
   dots: false,
   loop: true,
-  margin: 48
+  // margin: 48,
+  responsive: {
+    0: {
+      margin: 25
+    },
+    1025: {
+      margin: 37
+    },
+    1441: {
+      margin: 48
+    }
+  }
 });
 var nextBtnWhy = $('.why_carousel_btn_next');
 var prevBtnWhy = $('.why_carousel_btn_prev');
@@ -16408,8 +17386,16 @@ howCarousel.owlCarousel({
   items: 1,
   pagination: false,
   loop: true,
-  margin: 40,
-  dots: true
+  // margin: 40,
+  dots: true,
+  responsive: {
+    0: {
+      margin: 30
+    },
+    1440: {
+      margin: 40
+    }
+  }
 });
 var nextBtnHow = $('.how_carousel_btn_next');
 var prevBtnHow = $('.how_carousel_btn_prev');
@@ -16424,7 +17410,15 @@ speakersCarousel.owlCarousel({
   items: 3,
   pagination: false,
   loop: true,
-  margin: 42
+  // margin: 42,
+  responsive: {
+    0: {
+      margin: 32
+    },
+    1440: {
+      margin: 42
+    }
+  }
 });
 var nextBtnSpeakers = $('.speakers_carousel_btn_next');
 var prevBtnSpeakers = $('.speakers_carousel_btn_prev');
